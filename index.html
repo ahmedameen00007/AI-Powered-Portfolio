@@ -4,8 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio website for Ahmed Ameen, GenAI Engineer & Data scientist">
-  <title>Ahmed Ameen - GenAI Engineer & Data Scientist</title>
+  <meta name="description" content="Ahmed Ameen — Generative AI Engineer & Data Scientist. Building intelligent systems with LLMs, RAG, and Deep Learning.">
+  <title>Ahmed Ameen — GenAI Engineer & Data Scientist</title>
+
+  <!-- Favicon / Brand Logo -->
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- CSS Files -->
   <link rel="stylesheet" href="css/variables.css">
@@ -13,76 +21,101 @@
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/chat.css">
 </head>
 
 <body>
-  <!-- Athar Interactive Guide -->
-  <aside class="chatbot-container is-closed" id="chatbot">
-    <div class="chat-header">
-      <div class="ai-info">
-        <div class="brand-logo"
-          style="font-family: var(--font-display); font-weight: 800; font-size: 1.8rem; color: white;">أثر</div>
-        <div class="status-indicator" style="margin-left: var(--spacing-16); font-size: 1.2rem;">
-          💚
-        </div>
-      </div>
-      <button id="close-chat" aria-label="Close chat">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round">
-          <path d="M18 6L6 18M6 6l12 12"></path>
-        </svg>
-      </button>
-    </div>
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true" style="
+    position: fixed;
+    top: 0; left: 0;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    z-index: 9999;
+    transition: width 0.1s linear;
+    pointer-events: none;
+  "></div>
 
-    <div class="chat-messages" id="chat-messages">
-      <!-- Messages appear here -->
-      <div id="typing-indicator" class="typing-indicator">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
-    </div>
-
-    <div class="chat-input-area">
-      <div class="input-wrapper">
-        <input type="text" id="chat-input" placeholder="Type a message..." autocomplete="off">
-        <button id="send-btn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <line x1="22" y1="2" x2="11" y2="13"></line>
-            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </aside>
-
-  <!-- Navigation -->
-  <nav class="navigation">
+  <!-- ══════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════ -->
+  <nav class="navigation" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
-      <ul class="nav-menu">
-        <li><a href="#hero" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#certificates" class="nav-link">Certificates</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-    </div>
+
+      <!-- Brand Logo -->
+      <a href="identity.html" class="nav-brand" aria-label="Ahmed Ameen — Home">
+        <img src="images/Logo.png" alt="Ahmed Ameen Logo" class="nav-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <span class="nav-logo-fallback">
+          <span class="logo-letter">A</span><span class="logo-dot">·</span><span class="logo-letter">A</span>
+        </span>
+      </a>
+
+      <!-- Colorful Social Icons (in place of nav menu) -->
+      <div class="nav-social" role="list" aria-label="Social media links">
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/ahmedameen00007/" target="_blank" rel="noopener noreferrer"
+           class="nav-social-btn nav-social-btn--linkedin" data-label="LinkedIn" aria-label="LinkedIn Profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/ahmedameen00007" target="_blank" rel="noopener noreferrer"
+           class="nav-social-btn nav-social-btn--github" data-label="GitHub" aria-label="GitHub Profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+        </a>
+
+        <!-- Email -->
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmedameen.contact@gmail.com"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-social-btn nav-social-btn--gmail" data-label="Gmail" aria-label="Send Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/201282329726" target="_blank" rel="noopener noreferrer"
+           class="nav-social-btn nav-social-btn--whatsapp" data-label="WhatsApp" aria-label="WhatsApp Contact">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/anmedameen00007/" target="_blank" rel="noopener noreferrer"
+           class="nav-social-btn nav-social-btn--instagram" data-label="Instagram" aria-label="Instagram Profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+
+      </div><!-- /nav-social -->
+
+    </div><!-- /nav-container -->
   </nav>
 
-  <!-- Main Content -->
+  <!-- ══════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════ -->
   <main>
-    <!-- Hero Section -->
+
+
+    <!-- ── Hero Section ── -->
     <section id="hero" class="hero-section">
       <div class="hero-glow"></div>
+      <div class="hero-vignette"></div>
+
       <div class="hero-container">
         <div class="hero-content">
           <h1 class="hero-title animate-fade-up">Ahmed Ameen</h1>
           <p class="hero-tagline animate-fade-up" style="animation-delay: 0.1s;">
-            Aspiring Generative AI Engineer aiming to solve real-world business problems through AI integration and
-            solutions.
+            Aspiring Generative AI Engineer aiming to solve real-world business problems through AI integration and solutions.
           </p>
           <div class="btn-group animate-fade-up" style="animation-delay: 0.2s;">
             <a href="projects.html" class="btn">View Work</a>
@@ -95,81 +128,126 @@
           <div class="floating-badge badge-2"><span>📈</span> Data Science</div>
           <div class="floating-badge badge-3"><span>🧠</span> LLMs</div>
 
-          <div class="hero-image-wrapper">
-            <img src="css/RECORCES/Ahmed.jpeg" alt="Ahmed Ameen" style="width: 100%; height: 100%; object-fit: cover;"
-              loading="lazy" decoding="async" />
+          <div class="hero-image-wrapper float-portrait">
+            <img src="css/RECORCES/Ahmed.jpeg" alt="Ahmed Ameen — GenAI Engineer" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
-      <h2 class="section-title scroll-reveal"><span>Expertise</span>About Me</h2>
-      <div class="glass scroll-reveal delay-1" style="padding: var(--spacing-48); max-width: 1000px; margin: 0 auto;">
-        <p style="font-size: var(--text-lg); text-align: center;">
-          Passionate AI specialist with deep expertise in Large Language Models, Data Engineering, and Predictive
-          Analytics.
-          Dedicated to building scalable, ethical, and performant AI systems.
-        </p>
-        <div
-          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-32); margin-top: var(--spacing-48);">
-          <div>
-            <h3 style="font-size: var(--text-xl); color: var(--color-primary);">AI & ML</h3>
-            <ul style="color: var(--color-text-muted); line-height: 2;">
-              <li>LLM Fine-tuning (RAG)</li>
-              <li>Neural Architectures</li>
-              <li>Computer Vision</li>
+    <!-- ── About Section ── -->
+    <section id="about" class="section-padding">
+      <div class="container">
+        <h2 class="section-title scroll-reveal"><span>Expertise</span>About Me</h2>
+        
+        <div class="bento-grid">
+          <!-- Intro Card (Spans full width) -->
+          <div class="glass bento-card bento-intro scroll-reveal delay-1">
+            <p class="bento-text">
+              Passionate AI specialist with deep expertise in Generative AI, Agentic Systems, and Advanced Data Science. Dedicated to building intelligent, autonomous, and scalable AI solutions.
+            </p>
+          </div>
+
+          <!-- AI & ML Card -->
+          <div class="glass bento-card bento-item scroll-reveal delay-2">
+            <div class="bento-icon">🤖</div>
+            <h3 class="bento-title">Generative AI</h3>
+            <ul class="bento-list">
+              <li>LLMs & Fine-Tuning</li>
+              <li>RAG Architectures</li>
+              <li>Prompt Engineering</li>
             </ul>
           </div>
-          <div>
-            <h3 style="font-size: var(--text-xl); color: var(--color-primary);">Machine & Deep Learning</h3>
-            <ul style="color: var(--color-text-muted); line-height: 2;">
-              <li>Predictive Modeling</li>
-              <li>Data Engineering</li>
-              <li>Big Data Analytics</li>
+
+          <!-- Machine Learning Card -->
+          <div class="glass bento-card bento-item scroll-reveal delay-3">
+            <div class="bento-icon">⚙️</div>
+            <h3 class="bento-title">Agentic AI</h3>
+            <ul class="bento-list">
+              <li>Autonomous Agents</li>
+              <li>LangChain & LlamaIndex</li>
+              <li>Tool-Augmented LLMs</li>
             </ul>
           </div>
-          <div>
-            <h3 style="font-size: var(--text-xl); color: var(--color-primary);">Data Analysis</h3>
-            <ul style="color: var(--color-text-muted); line-height: 2;">
-              <li>PowerBi Visualization</li>
-              <li>SQL Query Optimization</li>
-              <li>Python Data Analysis</li>
-              <li style="font-size: var(--text-xs); margin-top: 8px; line-height: 1.4; opacity: 0.8;">Solving and
-                understanding real business data problems.</li>
+
+          <!-- Data Analysis Card -->
+          <div class="glass bento-card bento-item scroll-reveal delay-4">
+            <div class="bento-icon">📈</div>
+            <h3 class="bento-title">Data Science</h3>
+            <ul class="bento-list">
+              <li>Machine Learning Models</li>
+              <li>Predictive Analytics</li>
+              <li>Statistical Modeling</li>
+            </ul>
+              <li class="bento-list-sub">Solving real business data problems.</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience">
-      <h2 class="section-title scroll-reveal"><span>Journey</span>Experience</h2>
-      <div class="timeline">
-        <div class="timeline-item scroll-reveal delay-1">
-          <h3 style="margin-bottom: 4px;">Hex Softwares Pvt. Ltd. | Data Science Intern</h3>
-          <p style="color: var(--color-secondary); font-weight: 500; font-size: var(--text-sm);">Jan 1 – Feb 2, 2026</p>
-          <p>Applying machine learning models and analytical solvers to address real-world business challenges.</p>
-        </div>
-        <div class="timeline-item scroll-reveal delay-2">
-          <h3 style="margin-bottom: 4px;">NTI | Big Data Analysis Trainee</h3>
-          <p style="color: var(--color-secondary); font-weight: 500; font-size: var(--text-sm);">Jul 27 – Aug 21, 2025
-          </p>
-          <p>Applied analytical techniques to real-world datasets and developed practical solutions for data-driven
-            problems.</p>
+    <!-- ── Experience Section ── -->
+    <section id="experience" class="section-padding">
+      <div class="container">
+        <h2 class="section-title scroll-reveal"><span>Journey</span>Experience</h2>
+        <div class="timeline">
+          <!-- KFS Gov -->
+          <div class="timeline-item scroll-reveal from-left delay-1">
+            <div class="glass" style="padding: var(--spacing-24);">
+              <h3 style="margin-bottom: 4px; font-size: var(--text-xl);">KFS Gov – Gen AI & Data Science Intern</h3>
+              <p style="color: var(--color-secondary); font-weight: 500; font-size: var(--text-sm); margin-bottom: var(--spacing-12);">Feb 2026 – Present</p>
+              <ul style="margin: 0; color: var(--color-text-muted); padding-left: 20px; list-style-type: disc;">
+                <li>Developed and contributed to AI solutions designed for real-world governmental applications across KFS Gov.</li>
+                <li>Collaborated on scalable AI applications aimed at improving operational efficiency and decision-making.</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Freelance -->
+          <div class="timeline-item scroll-reveal from-right delay-2">
+            <div class="glass" style="padding: var(--spacing-24);">
+              <h3 style="margin-bottom: 4px; font-size: var(--text-xl);">Freelance – Gen AI Eng & Data Scientist</h3>
+              <p style="color: var(--color-secondary); font-weight: 500; font-size: var(--text-sm); margin-bottom: var(--spacing-12);">Feb 2026 – Present</p>
+              <ul style="margin: 0; color: var(--color-text-muted); padding-left: 20px; list-style-type: disc;">
+                <li>Developed projects in computer vision, RAG systems, data analytics, and business intelligence dashboards.</li>
+                <li>Built AI-powered solutions using Python, TensorFlow, Scikit-learn, and Generative AI technologies.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Hex Softwares -->
+          <div class="timeline-item scroll-reveal from-left delay-3">
+            <div class="glass" style="padding: var(--spacing-24);">
+              <h3 style="margin-bottom: 4px; font-size: var(--text-xl);">Hex Softwares Pvt. Ltd. – Data Science Intern</h3>
+              <p style="color: var(--color-secondary); font-weight: 500; font-size: var(--text-sm); margin-bottom: var(--spacing-12);">Jan 2026 – Feb 2026</p>
+              <ul style="margin: 0; color: var(--color-text-muted); padding-left: 20px; list-style-type: disc;">
+                <li>Applied data science and machine learning techniques to real-world datasets.</li>
+                <li>Developed practical experience in end-to-end data science project execution.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- NTI -->
+          <div class="timeline-item scroll-reveal from-right delay-4">
+            <div class="glass" style="padding: var(--spacing-24);">
+              <h3 style="margin-bottom: 4px; font-size: var(--text-xl);">NTI – Big Data Analysis Trainee</h3>
+              <p style="color: var(--color-secondary); font-weight: 500; font-size: var(--text-sm); margin-bottom: var(--spacing-12);">Jul 27 – Aug 21, 2025 | 120 Hours (90 Technical + 30 Freelancing) 97.5% overall score</p>
+              <ul style="margin: 0; color: var(--color-text-muted); padding-left: 20px; list-style-type: disc;">
+                <li>Gained hands-on experience in data processing, analysis of large datasets, and analytics workflows.</li>
+                <li>Learned freelancing fundamentals, including project delivery, client communication, and professional practices.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ── Projects Section ── -->
     <section id="projects" class="projects-section section-padding">
       <div class="container">
         <h2 class="section-title scroll-reveal"><span>Portfolio</span>Projects</h2>
-        <!-- Dynamic GitHub Projects Grid -->
         <div id="dynamic-projects-grid" class="projects-grid-premium scroll-reveal delay-1">
-          <!-- Fallback/Skeleton Content -->
+          <!-- Skeleton Loader -->
           <div class="project-featured glass">
             <div class="project-img-wrapper" style="background: var(--color-bg-light); height: 300px;"></div>
             <div class="project-details">
@@ -178,9 +256,7 @@
             </div>
           </div>
         </div>
-
-        <div style="margin-top: var(--spacing-64); display: flex; justify-content: center;"
-          class="scroll-reveal delay-2">
+        <div style="margin-top: var(--spacing-64); display: flex; justify-content: center;" class="scroll-reveal delay-2">
           <a href="projects.html" class="btn">
             View All Projects
             <span style="margin-left: 8px;">→</span>
@@ -189,11 +265,10 @@
       </div>
     </section>
 
-    <!-- Certificates Section -->
+    <!-- ── Certificates Section ── -->
     <section id="certificates" class="certificates-section section-padding">
       <div class="container text-center">
-        <div class="certificates-grid-layout"
-          style="display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-32);">
+        <div class="certificates-grid-layout" style="display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-32);">
           <div class="certificates-container scroll-reveal">
             <a href="certificates.html" class="btn-premium btn-certificates">
               <span class="btn-inner">
@@ -214,102 +289,60 @@
       </div>
     </section>
 
-    <!-- Leaderboard Modal -->
-    <div id="leaderboard-modal" class="modal">
-      <div class="modal-content glass">
-        <div class="modal-header">
-          <h2 style="font-family: var(--font-display); margin: 0; color: var(--color-primary);">Certificates Leaderboard
-          </h2>
-          <button class="close-modal">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="leaderboard-grid">
-            <div class="leaderboard-item">
-              <div class="cert-placeholder">AI</div>
-              <h4>GenAI Masterclass</h4>
-              <p>DeepLearning.AI</p>
-            </div>
-            <div class="leaderboard-item">
-              <div class="cert-placeholder">DS</div>
-              <h4>Data Science Pro</h4>
-              <p>IBM</p>
-            </div>
-            <div class="leaderboard-item">
-              <div class="cert-placeholder">ML</div>
-              <h4>Machine Learning</h4>
-              <p>Stanford</p>
-            </div>
-            <div class="leaderboard-item">
-              <div class="cert-placeholder">ML</div>
-              <h4>MLOps Specialization</h4>
-              <p>DeepLearning.AI</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Contact Section -->
+    <!-- ── Contact Section ── -->
     <section id="contact" class="contact-section section-padding">
       <div class="container">
         <div class="contact-card glass scroll-reveal">
           <div class="contact-glow"></div>
           <h2 class="section-title"><span>Connection</span>Let's Build the Future</h2>
-          <p class="contact-description">I'm currently open to new opportunities and interesting collaborations to
-            solving real-world business problems</p>
+          <p class="contact-description">I'm currently open to new opportunities and interesting collaborations to solve real-world business problems</p>
 
           <div class="contact-actions">
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmedkhaledyt2005@gmail.com"
-              class="btn-premium email-pill" target="_blank">
-              <span class="btn-inner">ahmedkhaledyt2005@gmail.com</span>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmedameen.contact@gmail.com"
+              class="btn-premium email-pill" target="_blank" rel="noopener noreferrer">
+              <span class="btn-inner">ahmedameen.contact@gmail.com</span>
             </a>
           </div>
 
           <div class="social-links-premium">
-            <a href="https://github.com/ahmedkhaled00007" target="_blank" class="social-icon-btn" data-label="GitHub">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+
+            <a href="https://github.com/ahmedameen00007" target="_blank" rel="noopener noreferrer"
+               class="social-icon-btn" data-label="GitHub" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
               </svg>
             </a>
-            <a href="https://www.linkedin.com/in/ahmed-ameen-003845303/" target="_blank" class="social-icon-btn"
-              data-label="LinkedIn">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+
+            <a href="https://www.linkedin.com/in/ahmedameen00007/" target="_blank" rel="noopener noreferrer"
+               class="social-icon-btn" data-label="LinkedIn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
               </svg>
             </a>
-            <a href="https://wa.me/201282329726" target="_blank" class="social-icon-btn" data-label="WhatsApp">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+
+            <a href="https://wa.me/201282329726" target="_blank" rel="noopener noreferrer"
+               class="social-icon-btn" data-label="WhatsApp" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
               </svg>
             </a>
-            <a href="https://www.instagram.com/ahmed_khaled00007/" target="_blank" class="social-icon-btn"
-              data-label="Instagram">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+
+            <a href="https://www.instagram.com/anmedameen00007/" target="_blank" rel="noopener noreferrer"
+               class="social-icon-btn" data-label="Instagram" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
               </svg>
             </a>
+
           </div>
         </div>
       </div>
     </section>
   </main>
-
-
-  <!-- Chat Trigger -->
-  <div id="chat-trigger" class="chat-trigger">
-    <span class="trigger-brand">أثر</span>
-    <span class="trigger-text">Hi!</span>
-  </div>
-
   <!-- JavaScript Files -->
   <script src="js/navigation.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/github-projects.js"></script>
-  <script src="js/chat.js?v=2.1"></script>
   <script src="js/main.js"></script>
 </body>
 

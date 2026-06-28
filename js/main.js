@@ -13,7 +13,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize animations module
   initAnimations();
-
-  // Initialize AI Chatbot
-  initChatbot();
 });

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none">
+  <defs>
+    <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#491fdf;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6b46f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Diamond / Hexagon Mark -->
+  <polygon points="20,4 34,12 34,28 20,36 6,28 6,12" fill="url(#logo-grad)" opacity="0.95"/>
+  <text x="20" y="24" text-anchor="middle" font-family="Outfit, Inter, sans-serif" font-weight="900" font-size="13" fill="white" letter-spacing="-0.5">AA</text>
+  <!-- Wordmark -->
+  <text x="44" y="17" font-family="Outfit, Inter, sans-serif" font-weight="800" font-size="11" fill="#f5f3ff" letter-spacing="-0.3">Ahmed</text>
+  <text x="44" y="31" font-family="Inter, sans-serif" font-weight="500" font-size="8.5" fill="#6b46f6" letter-spacing="1.5">AMEEN</text>
+</svg>

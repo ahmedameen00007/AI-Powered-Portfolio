@@ -3,7 +3,7 @@
  * Automatically fetches and renders GitHub repositories into the portfolio.
  */
 
-const GITHUB_USERNAME = 'ahmedkhaled00007';
+const GITHUB_USERNAME = 'ahmedameen00007';
 
 // Mapping topics to category titles
 const CATEGORY_MAP = {
@@ -113,7 +113,7 @@ async function renderProjects() {
     // Home Page Logic
     if (homeContainer) {
         const featured = repos[0];
-        const side = repos.slice(1, 3);
+        const side = repos.slice(1); // display all remaining public repos in the sub-projects section
         let html = createProjectFeaturedHTML(featured);
         if (side.length > 0) {
             html += `<div class="projects-side-grid">${side.map(repo => createProjectSideHTML(repo)).join('')}</div>`;

@@ -1,59 +1,93 @@
 :root {
-  /* Colors - Professional Purple Theme */
-  --color-bg: #030712;
-  --color-surface: rgba(17, 24, 39, 0.7);
-  --color-surface-hover: rgba(31, 41, 55, 0.9);
-  --color-primary: #7c3aed;
-  /* Royal Purple */
-  --color-secondary: #a855f7;
-  /* Electric Purple */
-  --color-accent: #ddd6fe;
-  /* Soft Lavender */
-  --color-text-main: #f9fafb;
-  --color-text-muted: #9ca3af;
-  --color-border: rgba(124, 58, 237, 0.2);
-  --color-border-accent: rgba(168, 85, 247, 0.5);
+  /* ═══════════════════════════════════════════
+     PERSONAL BRAND PALETTE — Ahmed Ameen
+     Primary: #491fdf (Deep Electric Violet)
+     ═══════════════════════════════════════════ */
+
+  /* Core Brand Colors */
+  --color-brand:          #491fdf;   /* Signature violet */
+  --color-brand-light:    #6b46f6;   /* Hover / active state */
+  --color-brand-bright:   #7c5af7;   /* Bright interactive */
+  --color-brand-dim:      #3615a8;   /* Pressed / deep shadow */
+  --color-brand-ultra:    #2a0f8a;   /* Ultra dark brand */
+
+  /* Semantic Color Aliases */
+  --color-primary:        #491fdf;
+  --color-primary-dark:   #3615a8;
+  --color-secondary:      #6b46f6;
+  --color-accent:         #c4b5fd;   /* Soft lavender — readable on dark */
+
+  /* Backgrounds */
+  --color-bg:             #08050f;   /* Near-black with violet tint */
+  --color-bg-light:       #110a22;   /* Slightly lighter surface */
+  --color-surface:        rgba(26, 14, 58, 0.75);
+  --color-surface-hover:  rgba(40, 22, 80, 0.9);
+
+  /* Text */
+  --color-text-main:      #f5f3ff;   /* Warm white with lavender tint */
+  --color-text-muted:     #a89ec4;   /* Accessible muted — 4.5:1 on bg */
+  --color-text-subtle:    #6b5f8a;   /* Placeholder / disabled */
+
+  /* Borders */
+  --color-border:         rgba(73, 31, 223, 0.25);
+  --color-border-accent:  rgba(107, 70, 246, 0.55);
+  --color-border-glow:    rgba(73, 31, 223, 0.6);
 
   /* Gradients */
-  --gradient-main: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-  --gradient-surface: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, transparent 100%);
-  --glow-primary: 0 0 25px rgba(124, 58, 237, 0.4);
+  --gradient-main:        linear-gradient(135deg, #491fdf 0%, #6b46f6 100%);
+  --gradient-vibrant:     linear-gradient(135deg, #491fdf 0%, #7c5af7 50%, #a78bfa 100%);
+  --gradient-surface:     linear-gradient(135deg, rgba(73, 31, 223, 0.12) 0%, transparent 100%);
+  --gradient-hero:        radial-gradient(ellipse at 20% 50%, rgba(73, 31, 223, 0.18) 0%, transparent 60%),
+                          radial-gradient(ellipse at 80% 20%, rgba(107, 70, 246, 0.12) 0%, transparent 50%);
 
-  /* Spacing */
-  --spacing-4: 0.25rem;
-  --spacing-8: 0.5rem;
-  --spacing-16: 1rem;
-  --spacing-24: 1.5rem;
-  --spacing-32: 2rem;
-  --spacing-48: 3rem;
-  --spacing-64: 4rem;
-  --spacing-96: 6rem;
+  /* Glows */
+  --glow-primary:         0 0 30px rgba(73, 31, 223, 0.45);
+  --glow-secondary:       0 0 20px rgba(107, 70, 246, 0.35);
+  --glow-subtle:          0 0 15px rgba(73, 31, 223, 0.2);
+
+  /* Spacing Scale */
+  --spacing-4:   0.25rem;
+  --spacing-8:   0.5rem;
+  --spacing-12:  0.75rem;
+  --spacing-16:  1rem;
+  --spacing-20:  1.25rem;
+  --spacing-24:  1.5rem;
+  --spacing-32:  2rem;
+  --spacing-48:  3rem;
+  --spacing-64:  4rem;
+  --spacing-80:  5rem;
+  --spacing-96:  6rem;
 
   /* Typography */
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-display: 'Outfit', 'Inter', var(--font-sans);
 
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
   --text-base: 1rem;
-  --text-lg: 1.125rem;
-  --text-xl: 1.25rem;
-  --text-2xl: 1.5rem;
-  --text-3xl: 1.875rem;
-  --text-4xl: 2.25rem;
-  --text-5xl: 3rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-4xl:  2.25rem;
+  --text-5xl:  3rem;
 
-  /* Effects */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
+  /* Border Radius */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-2xl:  24px;
   --radius-full: 9999px;
 
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  /* Shadows */
+  --shadow-sm:  0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md:  0 4px 6px -1px rgba(0, 0, 0, 0.15), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg:  0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+  --shadow-xl:  0 25px 50px -12px rgba(0, 0, 0, 0.4);
 
-  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* Transitions */
+  --transition-fast:   150ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow:   600ms cubic-bezier(0.16, 1, 0.3, 1);
 }

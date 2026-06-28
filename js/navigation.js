@@ -12,14 +12,36 @@
 function initNavigation() {
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('section[id]');
+  const nav = document.querySelector('.navigation');
 
   // Add click handlers to navigation links
   navLinks.forEach(link => {
     link.addEventListener('click', handleNavClick);
   });
 
-  // Set up scroll listener for active section tracking
-  window.addEventListener('scroll', () => updateActiveNavItem(sections, navLinks));
+  // Shrink nav on scroll + track active section + progress bar
+  const progressBar = document.getElementById('scroll-progress');
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
+        // Toggle .scrolled class on nav
+        if (nav) {
+          nav.classList.toggle('scrolled', scrollY > 40);
+        }
+        // Update scroll progress bar
+        if (progressBar) {
+          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+          progressBar.style.width = `${progress}%`;
+        }
+        updateActiveNavItem(sections, navLinks);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
 
   // Set initial active state
   updateActiveNavItem(sections, navLinks);

@@ -1,79 +1,93 @@
-/* Entrance Animations */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 30px, 0);
-  }
+/* ============================================
+   ANIMATIONS SYSTEM — Ahmed Ameen Portfolio
+   ============================================ */
 
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
+/* ── Core Keyframes ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translate3d(0, 40px, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 @keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
 
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.88); }
+  to   { opacity: 1; transform: scale(1); }
 }
 
 @keyframes glowPulse {
-  0% {
-    box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
-  }
-
-  50% {
-    box-shadow: 0 0 40px rgba(99, 102, 241, 0.4);
-  }
-
-  100% {
-    box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
-  }
+  0%, 100% { box-shadow: 0 0 20px rgba(73, 31, 223, 0.25); }
+  50%       { box-shadow: 0 0 45px rgba(73, 31, 223, 0.55); }
 }
 
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33%       { transform: translateY(-12px) rotate(1deg); }
+  66%       { transform: translateY(-6px) rotate(-0.5deg); }
+}
+
+@keyframes floatPortrait {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-14px); }
+}
+
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(73, 31, 223, 0.6); }
+  50%       { box-shadow: 0 0 0 8px rgba(73, 31, 223, 0); }
+}
+
+@keyframes borderGlow {
+  0%, 100% { border-color: rgba(73, 31, 223, 0.25); }
+  50%       { border-color: rgba(107, 70, 246, 0.6); }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes rotate360 {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Hero Animations ── */
 .animate-fade-up {
-  opacity: 1;
-  transform: none;
-  /* animation: fadeUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards; */
+  animation: fadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .animate-fade-in {
-  opacity: 1;
-  /* animation: fadeIn 0.8s ease forwards; */
+  animation: fadeIn 0.8s ease both;
 }
 
-.hero-image-wrapper {
-  /* Animation removed to prevent flickering issues */
-  box-shadow: 0 0 40px rgba(99, 102, 241, 0.3);
-}
-
-.section-title {
-  opacity: 1;
-  transform: none;
-  /* animation: fadeUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) both; */
-}
-
-/* Standardized Scroll Reveal (Disabled per user request for instant visibility) */
+/* ── Scroll Reveal System ── */
 .scroll-reveal {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-  /* transition removed to prevent any delayed appearance */
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .scroll-reveal.active {
@@ -81,7 +95,49 @@
   transform: translate3d(0, 0, 0);
 }
 
-.reveal.active {
+.scroll-reveal.from-left {
+  transform: translate3d(-32px, 0, 0);
+}
+
+.scroll-reveal.from-right {
+  transform: translate3d(32px, 0, 0);
+}
+
+.scroll-reveal.scale-in {
+  transform: scale(0.9);
+}
+
+.scroll-reveal.from-left.active,
+.scroll-reveal.from-right.active,
+.scroll-reveal.scale-in.active {
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+/* ── Stagger Delays ── */
+.delay-1 { transition-delay: 0.08s; }
+.delay-2 { transition-delay: 0.16s; }
+.delay-3 { transition-delay: 0.24s; }
+.delay-4 { transition-delay: 0.32s; }
+.delay-5 { transition-delay: 0.40s; }
+.delay-6 { transition-delay: 0.48s; }
+
+/* ── Portrait ── */
+.float-portrait {
+  animation: floatPortrait 7s ease-in-out infinite;
+}
+
+/* ── Section Title ── */
+.section-title {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
