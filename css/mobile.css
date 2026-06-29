@@ -149,25 +149,35 @@ html, body {
   }
 
   /* ── NAVIGATION LAYOUT ── */
-  /* Logo stays LEFT, social icons are centered in the row */
+  /* Logo absolutely left, social icons perfectly centered on full width */
   .navigation {
     padding: 10px 0;
   }
 
   .nav-container {
     padding: 0 14px;
-    flex-direction: row;        /* keep logo left + icons row */
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;   /* center the social row */
     align-items: center;
-    gap: 8px;
+    position: relative;         /* so logo can be absolute */
+    gap: 0;
   }
 
-  /* Social row: centered between logo and right edge */
+  /* Logo pinned to the left edge */
+  .nav-brand {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Social row: full-width centered */
   .nav-social {
-    flex: 1;
-    gap: 8px;
+    flex: none;
+    width: 100%;
+    gap: 12px;
     display: flex;
-    justify-content: center;    /* icons centered in remaining space */
+    justify-content: center;   /* exactly centered on screen */
     align-items: center;
   }
 
