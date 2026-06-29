@@ -5,7 +5,7 @@
    ============================================================ */
 
 /* ─────────────────────────────────
-   GLOBAL MOBILE GUARD
+   GLOBAL GUARD (always applied)
 ───────────────────────────────── */
 html, body {
   overflow-x: hidden;
@@ -17,31 +17,29 @@ html, body {
 ───────────────────────────────── */
 @media (max-width: 1024px) {
 
-  /* Bento: 2 columns */
   .bento-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
 
-  /* Projects: single column */
+  /* Projects: collapse the 1.5fr/1fr grid to single column
+     so featured card + side-grid stack vertically */
   .projects-grid-premium {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-24);
+    display: flex !important;
+    flex-direction: column;
+    gap: 24px;
   }
 
+  /* Side grid: show as 2-column horizontal grid */
   .projects-side-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
     max-height: none;
-    overflow-y: visible;
+    overflow: visible;
     padding-right: 0;
-    flex-direction: row;
-    flex-wrap: wrap;
   }
 
-  .project-side {
-    flex: 1 1 calc(50% - 12px);
-  }
-
-  /* Certificates: stack side-by-side stays, slightly smaller */
   .btn-certificates,
   .btn-awards {
     width: 360px;
@@ -58,56 +56,70 @@ html, body {
 ───────────────────────────────── */
 @media (max-width: 768px) {
 
-  /* ── SECTION PADDING ── */
+  /* ── PERFORMANCE: reduce heavy GPU effects on mobile ── */
+  .glass {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .hero-glow,
+  .contact-glow {
+    display: none;
+  }
+
+  /* Pause complex animations */
+  .float-portrait {
+    animation: none;
+  }
+
+  /* ── SPACING ── */
   section,
   .section-padding {
-    padding: 60px 18px;
+    padding: 56px 16px;
   }
 
   .container {
-    padding: 0 18px;
+    padding: 0 16px;
   }
 
   /* ── SECTION TITLE ── */
   .section-title {
-    font-size: clamp(1.8rem, 7vw, 2.4rem);
-    margin-bottom: 40px;
-    line-height: 1.15;
+    font-size: clamp(1.75rem, 7vw, 2.25rem);
+    margin-bottom: 36px;
+    line-height: 1.2;
   }
 
   /* ── NAVIGATION ── */
   .navigation {
-    padding: 12px 0;
+    padding: 10px 0;
   }
 
   .nav-container {
-    padding: 0 16px;
-    gap: 10px;
+    padding: 0 14px;
+    gap: 8px;
   }
 
   .nav-logo-img {
-    height: 34px;
+    height: 32px;
   }
 
-  /* Social icons: tighter spacing on mobile */
   .nav-social {
-    gap: 6px;
+    gap: 5px;
     justify-content: flex-end;
     flex: 1;
   }
 
   .nav-social-btn {
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
   }
 
   .nav-social-btn svg {
-    width: 16px;
-    height: 16px;
+    width: 15px;
+    height: 15px;
   }
 
-  /* Hide tooltip on mobile (no hover) */
   .nav-social-btn::after {
     display: none;
   }
@@ -115,58 +127,58 @@ html, body {
   /* ── HERO ── */
   .hero-section {
     min-height: 100svh;
-    padding: calc(70px + env(safe-area-inset-top)) 18px 60px;
-    align-items: flex-start;
+    padding: 80px 16px 48px;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 32px;
-    padding-top: 20px;
+    gap: 28px;
   }
 
-  .hero-content {
-    text-align: center;
-    order: 2; /* Text below image on mobile */
-  }
-
+  /* Photo on TOP, text below */
   .hero-image-area {
-    order: 1; /* Image first on mobile */
+    order: 1;
     flex: none;
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-top: 10px;
+    position: relative;
+  }
+
+  .hero-content {
+    order: 2;
+    text-align: center;
   }
 
   .hero-title {
-    font-size: clamp(2.8rem, 11vw, 4rem);
-    line-height: 1;
-    margin-bottom: 16px;
+    font-size: clamp(2.6rem, 11vw, 3.8rem);
+    line-height: 1.0;
+    margin-bottom: 14px;
   }
 
   .hero-tagline {
-    font-size: var(--text-base);
+    font-size: 0.95rem;
     line-height: 1.65;
-    margin-bottom: 28px;
-    max-width: 380px;
+    margin-bottom: 24px;
+    max-width: 340px;
     margin-left: auto;
     margin-right: auto;
   }
 
   .hero-image-wrapper {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
   }
 
-  /* Hide floating badges on mobile */
   .floating-badge {
     display: none;
   }
 
-  /* Buttons */
+  /* CTA Buttons: stacked, full width */
   .btn-group {
     flex-direction: column;
     align-items: center;
@@ -175,231 +187,265 @@ html, body {
 
   .btn-group .btn {
     width: 100%;
-    max-width: 280px;
-    padding: 14px 32px;
-    font-size: var(--text-sm);
+    max-width: 260px;
+    padding: 13px 28px;
+    font-size: 0.78rem;
   }
 
   /* ── ABOUT (BENTO) ── */
   .bento-grid {
-    grid-template-columns: 1fr;
+    display: flex !important;
+    flex-direction: column;
     gap: 12px;
   }
 
   .bento-intro {
-    grid-column: 1 / -1;
+    grid-column: auto;
   }
 
   .bento-card {
-    padding: 24px 20px;
+    padding: 22px 18px;
+    border-radius: var(--radius-lg);
   }
 
   .bento-text {
-    font-size: var(--text-base);
+    font-size: 0.95rem;
     line-height: 1.75;
   }
 
   .bento-icon {
-    font-size: 2rem;
-    margin-bottom: 14px;
-  }
-
-  .bento-title {
-    font-size: var(--text-lg);
+    font-size: 1.8rem;
     margin-bottom: 12px;
   }
 
+  .bento-title {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+  }
+
   .bento-list {
-    font-size: var(--text-sm);
-    line-height: 1.9;
+    font-size: 0.87rem;
+    line-height: 1.85;
   }
 
   /* ── TIMELINE (EXPERIENCE) ── */
   .timeline {
     max-width: 100%;
-    gap: 28px;
+    gap: 20px;
   }
 
   .timeline::before {
-    left: 10px; /* shift line inward */
+    left: 8px;
   }
 
   .timeline-item {
-    padding-left: 36px;
+    padding-left: 32px;
   }
 
   .timeline-item::before {
-    left: 4px;
+    left: 2px;
     width: 12px;
     height: 12px;
   }
 
   .timeline-item .glass {
-    padding: 20px 18px !important;
+    padding: 18px 16px !important;
   }
 
   .timeline-item h3 {
-    font-size: var(--text-base) !important;
+    font-size: 0.97rem !important;
     line-height: 1.35;
     margin-bottom: 6px !important;
   }
 
   .timeline-item p {
-    font-size: 0.8rem !important;
-    margin-bottom: 10px !important;
+    font-size: 0.78rem !important;
+    margin-bottom: 8px !important;
     line-height: 1.5;
   }
 
   .timeline-item ul {
     padding-left: 16px !important;
-    font-size: var(--text-sm);
+    font-size: 0.85rem;
     line-height: 1.7;
   }
 
-  /* Disable side-slide animation on mobile (can cause overflow) */
+  /* No slide animation on mobile */
   .timeline-item:hover .glass {
     transform: none;
   }
 
   /* ── PROJECTS ── */
-  .projects-grid-premium {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  /* Force the dynamically-rendered grid to stack vertically */
+  .projects-grid-premium,
+  #dynamic-projects-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 100% !important;
   }
 
+  /* Side grid: show all repos as 1-column stacked cards */
   .projects-side-grid {
-    max-height: none;
-    overflow-y: visible;
-    padding-right: 0;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding-right: 0 !important;
+    width: 100% !important;
   }
 
-  .project-side {
-    flex: 1 1 100%;
+  /* Featured project card */
+  .project-featured {
+    width: 100% !important;
+    min-height: auto;
   }
 
   .project-img-wrapper {
-    height: 200px;
+    height: 180px;
   }
 
   .project-details {
-    padding: 20px 18px;
+    padding: 16px 14px;
   }
 
   .project-title-text {
-    font-size: var(--text-xl);
+    font-size: 1.05rem;
+    margin: 6px 0 10px;
   }
 
   .project-tags {
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
   }
 
-  /* View All Projects button */
+  /* Side project card */
+  .project-side {
+    width: 100% !important;
+    flex: none !important;
+    display: block !important;
+  }
+
+  .project-details-sm {
+    padding: 16px 14px;
+  }
+
+  /* "View All" button */
+  #projects .btn,
   .projects-section .btn {
     width: 100%;
-    max-width: 280px;
+    max-width: 260px;
+    display: block;
+    margin: 0 auto;
   }
 
   /* ── CERTIFICATES ── */
   .certificates-grid-layout {
     flex-direction: column !important;
     align-items: center;
-    gap: 16px !important;
+    gap: 14px !important;
   }
 
   .certificates-container,
   .awards-container-btn {
     margin-top: 0;
     width: 100%;
-    max-width: 420px;
+    max-width: 100%;
   }
 
   .btn-certificates,
   .btn-awards {
     width: 100% !important;
-    max-width: 420px;
-    height: 110px !important;
-    margin: 0 auto;
+    height: 100px !important;
+    margin: 0;
+    border-radius: var(--radius-xl);
   }
 
   .btn-title {
-    font-size: 1.75rem !important;
+    font-size: 1.65rem !important;
   }
 
   .btn-category {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     letter-spacing: 2px;
   }
 
   /* ── CONTACT ── */
   .contact-section {
-    padding: 60px 12px;
+    padding: 56px 12px;
   }
 
   .contact-card {
-    padding: 40px 20px !important;
+    padding: 36px 18px !important;
     border-radius: var(--radius-xl);
     max-width: 100%;
   }
 
   .contact-card .section-title {
-    font-size: clamp(1.6rem, 6vw, 2rem);
-    margin-bottom: 16px;
+    font-size: clamp(1.5rem, 6vw, 1.9rem);
+    margin-bottom: 14px;
   }
 
   .contact-description {
-    font-size: var(--text-sm);
+    font-size: 0.9rem;
     line-height: 1.75;
-    margin-bottom: 28px;
-    max-width: 100%;
+    margin-bottom: 24px;
   }
 
-  /* Email pill: full width, no overflow */
   .contact-actions {
-    margin: 28px 0;
+    margin: 24px 0;
     display: flex;
     justify-content: center;
   }
 
+  /* Email pill: no overflow */
   .btn-premium.email-pill {
     width: 100%;
     max-width: 100%;
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-lg);
   }
 
   .email-pill .btn-inner {
-    padding: 16px 18px !important;
-    font-size: 0.82rem !important;
+    padding: 14px 16px !important;
+    font-size: 0.8rem !important;
     word-break: break-all;
     white-space: normal;
     text-align: center;
-    border-radius: calc(var(--radius-xl) - 3px);
+    border-radius: calc(var(--radius-lg) - 3px);
   }
 
-  /* Social icons in contact: 4-across row */
+  /* Social icons: row of 4 */
   .social-links-premium {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 16px;
-    margin-top: 36px;
+    gap: 14px;
+    margin-top: 32px;
   }
 
   .social-icon-btn {
-    width: 56px;
-    height: 56px;
+    width: 52px;
+    height: 52px;
     border-radius: var(--radius-lg);
   }
 
   .social-icon-btn svg {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
   }
 
-  /* Disable hover tooltip on touch */
   .social-icon-btn::after {
     display: none;
+  }
+
+  /* Disable heavy hover on touch */
+  .social-icon-btn:hover {
+    transform: none;
+  }
+
+  .bento-card:hover {
+    transform: none;
   }
 }
 
@@ -410,83 +456,73 @@ html, body {
 
   section,
   .section-padding {
-    padding: 48px 14px;
+    padding: 44px 12px;
   }
 
   .container {
-    padding: 0 14px;
+    padding: 0 12px;
   }
 
-  /* Hero */
   .hero-section {
-    padding: calc(64px + env(safe-area-inset-top)) 14px 48px;
+    padding: 76px 12px 44px;
   }
 
   .hero-title {
-    font-size: clamp(2.4rem, 12vw, 3.2rem);
-  }
-
-  .hero-tagline {
-    font-size: 0.9rem;
+    font-size: clamp(2.2rem, 12vw, 3rem);
   }
 
   .hero-image-wrapper {
-    width: 190px;
-    height: 190px;
+    width: 175px;
+    height: 175px;
   }
 
-  /* Nav logo smaller */
   .nav-logo-img {
-    height: 30px;
+    height: 28px;
   }
 
   .nav-social-btn {
-    width: 32px;
-    height: 32px;
-    border-radius: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
   }
 
   .nav-social-btn svg {
-    width: 15px;
-    height: 15px;
+    width: 14px;
+    height: 14px;
   }
 
-  /* Bento */
   .bento-card {
-    padding: 20px 16px;
+    padding: 18px 14px;
   }
 
-  /* Timeline */
   .timeline-item .glass {
-    padding: 16px 14px !important;
+    padding: 14px 12px !important;
   }
 
   .timeline-item h3 {
-    font-size: 0.92rem !important;
+    font-size: 0.9rem !important;
   }
 
-  /* Certificates */
   .btn-certificates,
   .btn-awards {
-    height: 96px !important;
+    height: 88px !important;
   }
 
   .btn-title {
-    font-size: 1.5rem !important;
+    font-size: 1.4rem !important;
   }
 
-  /* Contact */
   .contact-card {
-    padding: 32px 14px !important;
+    padding: 28px 12px !important;
   }
 
   .social-icon-btn {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
   }
 
   .social-links-premium {
-    gap: 12px;
+    gap: 10px;
   }
 }
 
@@ -496,30 +532,35 @@ html, body {
 @media (max-width: 360px) {
 
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .hero-image-wrapper {
-    width: 160px;
-    height: 160px;
+    width: 155px;
+    height: 155px;
   }
 
   .nav-social-btn {
-    width: 28px;
-    height: 28px;
+    width: 27px;
+    height: 27px;
   }
 
   .nav-social-btn svg {
-    width: 13px;
-    height: 13px;
+    width: 12px;
+    height: 12px;
   }
 
   .btn-group .btn {
-    padding: 12px 24px;
+    padding: 12px 20px;
+    font-size: 0.75rem;
   }
 
   .social-icon-btn {
     width: 44px;
     height: 44px;
+  }
+
+  .social-links-premium {
+    gap: 8px;
   }
 }
