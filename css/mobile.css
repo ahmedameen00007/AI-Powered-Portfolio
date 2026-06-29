@@ -91,12 +91,14 @@ html, body {
 
   /* ── NAVIGATION ── */
   .navigation {
-    padding: 10px 0;
+    padding: 12px 0;
   }
 
   .nav-container {
     padding: 0 14px;
-    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
   }
 
   .nav-logo-img {
@@ -104,9 +106,9 @@ html, body {
   }
 
   .nav-social {
-    gap: 5px;
-    justify-content: flex-end;
-    flex: 1;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
   }
 
   .nav-social-btn {
@@ -127,7 +129,7 @@ html, body {
   /* ── HERO ── */
   .hero-section {
     min-height: 100svh;
-    padding: 80px 16px 48px;
+    padding: 120px 16px 48px; /* Added extra padding top to account for stacked nav */
     align-items: center;
     justify-content: center;
   }
@@ -294,6 +296,11 @@ html, body {
     overflow: visible !important;
     padding-right: 0 !important;
     width: 100% !important;
+  }
+
+  /* Limit visible projects on mobile to exactly 3 total (1 featured + 2 side projects) */
+  .projects-side-grid a:nth-child(n+3) {
+    display: none !important;
   }
 
   /* Featured project card */
