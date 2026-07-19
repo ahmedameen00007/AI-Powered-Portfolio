@@ -21,12 +21,9 @@ body {
   color: var(--color-text-main);
   background-color: var(--color-bg);
   background-image: 
-    radial-gradient(at 0% 0%, rgba(73, 31, 223, 0.08) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(107, 70, 246, 0.08) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(73, 31, 223, 0.08) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(107, 70, 246, 0.08) 0px, transparent 50%);
-  background-size: 200% 200%;
-  animation: meshGradient 20s ease-in-out infinite;
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(73, 31, 223, 0.1) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 60% at 50% 100%, rgba(107, 70, 246, 0.07) 0%, transparent 70%);
+  background-size: 100% 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -59,11 +56,7 @@ html {
   scrollbar-color: rgba(73, 31, 223, 0.3) transparent;
 }
 
-@keyframes meshGradient {
-  0% { background-position: 0% 0%; }
-  50% { background-position: 100% 100%; }
-  100% { background-position: 0% 0%; }
-}
+
 
 /* Base Typography */
 h1,

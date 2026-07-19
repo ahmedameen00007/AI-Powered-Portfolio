@@ -711,3 +711,49 @@ html {
     gap: 8px;
   }
 }
+
+/* ─────────────────────────────────
+   RTL MOBILE OVERRIDES (≤ 768px)
+   Force Arabic hero to match English centered layout
+───────────────────────────────── */
+@media (max-width: 768px) {
+  /* Force hero container to center-column in RTL — same as LTR */
+  [dir="rtl"] .hero-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    direction: ltr !important; /* keep column order: image top, text bottom */
+  }
+
+  /* Hero content: centered, not right-aligned on mobile */
+  [dir="rtl"] .hero-content {
+    text-align: center !important;
+    direction: rtl; /* text reads RTL but block is centered */
+    width: 100%;
+  }
+
+  /* Title: centered, same as English */
+  [dir="rtl"] .hero-title {
+    text-align: center !important;
+    padding-top: 8px !important;
+  }
+
+  /* Tagline: centered, equal auto margins */
+  [dir="rtl"] .hero-tagline {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Buttons: centered column, same as English */
+  [dir="rtl"] .btn-group {
+    align-items: center !important;
+    flex-direction: column !important;
+  }
+
+  [dir="rtl"] .btn-group .btn {
+    width: 100% !important;
+    max-width: 260px !important;
+  }
+}
+
