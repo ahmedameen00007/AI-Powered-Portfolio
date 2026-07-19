@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
   <meta charset="UTF-8">
@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&family=Cairo:wght@400;600;700;800;900&display=swap"
     rel="stylesheet">
 
   <!-- CSS Files -->
@@ -25,6 +25,16 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/mobile.css">
+
+  <!-- CRITICAL: Apply saved language BEFORE render to prevent English flash -->
+  <script>
+    (function() {
+      var lang = localStorage.getItem('portfolio_lang') || 'en';
+      var dir  = lang === 'ar' ? 'rtl' : 'ltr';
+      document.documentElement.setAttribute('lang', lang);
+      document.documentElement.setAttribute('dir',  dir);
+    }());
+  </script>
 </head>
 
 <body>
@@ -46,14 +56,24 @@
   <nav class="navigation" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
 
-      <!-- Brand Logo -->
-      <a href="identity.html" class="nav-brand" aria-label="Ahmed Ameen — Home">
-        <img src="images/Logo.png" alt="Ahmed Ameen Logo" class="nav-logo-img"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-        <span class="nav-logo-fallback">
-          <span class="logo-letter">A</span><span class="logo-dot">·</span><span class="logo-letter">A</span>
-        </span>
-      </a>
+      <!-- Brand & Home Group -->
+      <div style="display: flex; align-items: center; gap: var(--spacing-16); z-index: 10;">
+        <!-- Brand Logo -->
+        <a href="identity.html" class="nav-brand nav-brand--glow" aria-label="Ahmed Ameen — Home">
+          <img src="images/Logo.png" alt="Ahmed Ameen Logo" class="nav-logo-img"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <span class="nav-logo-fallback">
+            <span class="logo-letter">A</span><span class="logo-dot">·</span><span class="logo-letter">A</span>
+          </span>
+        </a>
+        <!-- Home Button -->
+        <a href="index.html" class="nav-home-link" aria-label="Home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-home-icon">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </a>
+      </div>
 
       <!-- Colorful Social Icons (in place of nav menu) -->
       <div class="nav-social" role="list" aria-label="Social media links">
@@ -107,6 +127,13 @@
 
       </div><!-- /nav-social -->
 
+      <!-- Language Switcher -->
+      <div class="lang-switcher" id="lang-switcher" role="group" aria-label="Language selection">
+        <button class="lang-btn lang-btn--active" id="btn-en" data-lang="en" aria-pressed="true">EN</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" id="btn-ar" data-lang="ar" aria-pressed="false">عربية</button>
+      </div>
+
     </div><!-- /nav-container -->
   </nav>
 
@@ -123,21 +150,21 @@
 
       <div class="hero-container">
         <div class="hero-content">
-          <h1 class="hero-title animate-fade-up">Ahmed Ameen</h1>
-          <p class="hero-tagline animate-fade-up" style="animation-delay: 0.1s;">
+          <h1 class="hero-title animate-fade-up" data-i18n="hero_title">Ahmed Ameen</h1>
+          <p class="hero-tagline animate-fade-up" style="animation-delay: 0.1s;" data-i18n="hero_tagline">
             Aspiring Generative AI Engineer aiming to solve real-world business problems through AI integration and
             solutions.
           </p>
           <div class="btn-group animate-fade-up" style="animation-delay: 0.2s;">
-            <a href="projects.html" class="btn">View Work</a>
-            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            <a href="work.html" class="btn" data-i18n="btn_view_work">View Work</a>
+            <a href="#contact" class="btn btn-secondary" data-i18n="btn_contact">Contact Me</a>
           </div>
         </div>
 
         <div class="hero-image-area animate-fade-up" style="animation-delay: 0.3s;">
-          <div class="floating-badge badge-1"><span>🤖</span> GenAI</div>
-          <div class="floating-badge badge-2"><span>📈</span> Data Science</div>
-          <div class="floating-badge badge-3"><span>🧠</span> LLMs</div>
+          <div class="floating-badge badge-1"><span>🤖</span><span data-i18n="badge_genai"> GenAI</span></div>
+          <div class="floating-badge badge-2"><span>📈</span><span data-i18n="badge_data"> Data Science</span></div>
+          <div class="floating-badge badge-3"><span>🧠</span><span data-i18n="badge_llms"> LLMs</span></div>
 
           <div class="float-portrait">
             <div class="hero-image-wrapper">
@@ -152,12 +179,12 @@
     <!-- ── About Section ── -->
     <section id="about" class="section-padding">
       <div class="container">
-        <h2 class="section-title scroll-reveal"><span>Expertise</span>About Me</h2>
+        <h2 class="section-title scroll-reveal"><span data-i18n="about_label">Expertise</span><span data-i18n="about_title">About Me</span></h2>
 
         <div class="bento-grid">
           <!-- Intro Card (Spans full width) -->
           <div class="glass bento-card bento-intro scroll-reveal delay-1">
-            <p class="bento-text">
+            <p class="bento-text" data-i18n="about_intro">
               Passionate AI specialist with deep expertise in Generative AI, Agentic Systems, and Advanced Data Science.
               Dedicated to building intelligent, autonomous, and scalable AI solutions.
             </p>
@@ -166,35 +193,33 @@
           <!-- AI & ML Card -->
           <div class="glass bento-card bento-item scroll-reveal delay-2">
             <div class="bento-icon">🤖</div>
-            <h3 class="bento-title">Generative AI</h3>
+            <h3 class="bento-title" data-i18n="card_genai">Generative AI</h3>
             <ul class="bento-list">
-              <li>LLMs & Fine-Tuning</li>
-              <li>RAG Architectures</li>
-              <li>Prompt Engineering</li>
+              <li data-i18n="skill_llms">LLMs &amp; Fine-Tuning</li>
+              <li data-i18n="skill_rag">RAG Architectures</li>
+              <li data-i18n="skill_prompt">Prompt Engineering</li>
             </ul>
           </div>
 
           <!-- Machine Learning Card -->
           <div class="glass bento-card bento-item scroll-reveal delay-3">
             <div class="bento-icon">⚙️</div>
-            <h3 class="bento-title">Agentic AI</h3>
+            <h3 class="bento-title" data-i18n="card_agentic">Agentic AI</h3>
             <ul class="bento-list">
-              <li>Autonomous Agents</li>
-              <li>LangChain & LlamaIndex</li>
-              <li>Tool-Augmented LLMs</li>
+              <li data-i18n="skill_agents">Autonomous Agents</li>
+              <li data-i18n="skill_langchain">LangChain &amp; LlamaIndex</li>
+              <li data-i18n="skill_tools">Tool-Augmented LLMs</li>
             </ul>
           </div>
 
           <!-- Data Analysis Card -->
           <div class="glass bento-card bento-item scroll-reveal delay-4">
             <div class="bento-icon">📈</div>
-            <h3 class="bento-title">Data Science</h3>
+            <h3 class="bento-title" data-i18n="card_datascience">Data Science</h3>
             <ul class="bento-list">
-              <li>Machine Learning Models</li>
-              <li>Predictive Analytics</li>
-              <li>Statistical Modeling</li>
-            </ul>
-            <li class="bento-list-sub">Solving real business data problems.</li>
+              <li data-i18n="skill_ml">Machine Learning Models</li>
+              <li data-i18n="skill_predictive">Predictive Analytics</li>
+              <li data-i18n="skill_stats">Statistical Modeling</li>
             </ul>
           </div>
         </div>
@@ -204,19 +229,19 @@
     <!-- ── Experience Section ── -->
     <section id="experience" class="section-padding">
       <div class="container">
-        <h2 class="section-title scroll-reveal"><span>Journey</span>Experience</h2>
+        <h2 class="section-title scroll-reveal"><span data-i18n="exp_label">Journey</span><span data-i18n="exp_title">Experience</span></h2>
         <div class="timeline">
           <!-- KFS Gov -->
           <div class="timeline-item scroll-reveal from-left delay-1">
             <div class="glass" style="padding: var(--spacing-24);">
-              <h3 style="margin-bottom: 4px; font-size: var(--text-xl);">KFS Gov – Gen AI & Data Science Intern</h3>
+              <h3 style="margin-bottom: 4px; font-size: var(--text-xl);" data-i18n="exp1_title">KFS Gov – Gen AI &amp; Data Science Intern</h3>
               <p
-                style="color: var(--color-secondary); font-weight: 500; font-size: var(--text-sm); margin-bottom: var(--spacing-12);">
+                style="color: var(--color-secondary); font-weight: 500; font-size: var(--text-sm); margin-bottom: var(--spacing-12);" data-i18n="exp1_date">
                 Feb 2026 – Present</p>
               <ul style="margin: 0; color: var(--color-text-muted); padding-left: 20px; list-style-type: disc;">
-                <li>Developed and contributed to AI solutions designed for real-world governmental applications across
+                <li data-i18n="exp1_bullet1">Developed and contributed to AI solutions designed for real-world governmental applications across
                   KFS Gov.</li>
-                <li>Collaborated on scalable AI applications aimed at improving operational efficiency and
+                <li data-i18n="exp1_bullet2">Collaborated on scalable AI applications aimed at improving operational efficiency and
                   decision-making.</li>
               </ul>
             </div>
@@ -225,14 +250,14 @@
           <!-- Freelance -->
           <div class="timeline-item scroll-reveal from-right delay-2">
             <div class="glass" style="padding: var(--spacing-24);">
-              <h3 style="margin-bottom: 4px; font-size: var(--text-xl);">Freelance – Gen AI Eng & Data Scientist</h3>
+              <h3 style="margin-bottom: 4px; font-size: var(--text-xl);" data-i18n="exp2_title">Freelance – Gen AI Eng &amp; Data Scientist</h3>
               <p
-                style="color: var(--color-secondary); font-weight: 500; font-size: var(--text-sm); margin-bottom: var(--spacing-12);">
+                style="color: var(--color-secondary); font-weight: 500; font-size: var(--text-sm); margin-bottom: var(--spacing-12);" data-i18n="exp2_date">
                 Feb 2026 – Present</p>
               <ul style="margin: 0; color: var(--color-text-muted); padding-left: 20px; list-style-type: disc;">
-                <li>Developed projects in computer vision, RAG systems, data analytics, and business intelligence
+                <li data-i18n="exp2_bullet1">Developed projects in computer vision, RAG systems, data analytics, and business intelligence
                   dashboards.</li>
-                <li>Built AI-powered solutions using Python, TensorFlow, Scikit-learn, and Generative AI technologies.
+                <li data-i18n="exp2_bullet2">Built AI-powered solutions using Python, TensorFlow, Scikit-learn, and Generative AI technologies.
                 </li>
               </ul>
             </div>
@@ -241,14 +266,12 @@
           <!-- Hex Softwares -->
           <div class="timeline-item scroll-reveal from-left delay-3">
             <div class="glass" style="padding: var(--spacing-24);">
-              <h3 style="margin-bottom: 4px; font-size: var(--text-xl);">Hex Softwares Pvt. Ltd. – Data Science Intern
-              </h3>
-              <p
-                style="color: var(--color-secondary); font-weight: 500; font-size: var(--text-sm); margin-bottom: var(--spacing-12);">
+              <h3 style="margin-bottom: 4px; font-size: var(--text-xl);" data-i18n="exp3_title">Hex Softwares Pvt. Ltd. – Data Science Intern</h3>
+              <p style="color: var(--color-secondary); font-weight: 500; font-size: var(--text-sm); margin-bottom: var(--spacing-12);" data-i18n="exp3_date">
                 Jan 2026 – Feb 2026</p>
               <ul style="margin: 0; color: var(--color-text-muted); padding-left: 20px; list-style-type: disc;">
-                <li>Applied data science and machine learning techniques to real-world datasets.</li>
-                <li>Developed practical experience in end-to-end data science project execution.</li>
+                <li data-i18n="exp3_bullet1">Applied data science and machine learning techniques to real-world datasets.</li>
+                <li data-i18n="exp3_bullet2">Developed practical experience in end-to-end data science project execution.</li>
               </ul>
             </div>
           </div>
@@ -256,15 +279,12 @@
           <!-- NTI -->
           <div class="timeline-item scroll-reveal from-right delay-4">
             <div class="glass" style="padding: var(--spacing-24);">
-              <h3 style="margin-bottom: 4px; font-size: var(--text-xl);">NTI – Big Data Analysis Trainee</h3>
-              <p
-                style="color: var(--color-secondary); font-weight: 500; font-size: var(--text-sm); margin-bottom: var(--spacing-12);">
+              <h3 style="margin-bottom: 4px; font-size: var(--text-xl);" data-i18n="exp4_title">NTI – Big Data Analysis Trainee</h3>
+              <p style="color: var(--color-secondary); font-weight: 500; font-size: var(--text-sm); margin-bottom: var(--spacing-12);" data-i18n="exp4_date">
                 Jul 27 – Aug 21, 2025 | 120 Hours (90 Technical + 30 Freelancing) 97.5% overall score</p>
               <ul style="margin: 0; color: var(--color-text-muted); padding-left: 20px; list-style-type: disc;">
-                <li>Gained hands-on experience in data processing, analysis of large datasets, and analytics workflows.
-                </li>
-                <li>Learned freelancing fundamentals, including project delivery, client communication, and professional
-                  practices.</li>
+                <li data-i18n="exp4_bullet1">Gained hands-on experience in data processing, analysis of large datasets, and analytics workflows.</li>
+                <li data-i18n="exp4_bullet2">Learned freelancing fundamentals, including project delivery, client communication, and professional practices.</li>
               </ul>
             </div>
           </div>
@@ -275,21 +295,84 @@
     <!-- ── Projects Section ── -->
     <section id="projects" class="projects-section section-padding">
       <div class="container">
-        <h2 class="section-title scroll-reveal"><span>Portfolio</span>Projects</h2>
-        <div id="dynamic-projects-grid" class="projects-grid-premium scroll-reveal delay-1">
-          <!-- Skeleton Loader -->
-          <div class="project-featured glass">
-            <div class="project-img-wrapper" style="background: var(--color-bg-light); height: 300px;"></div>
-            <div class="project-details">
-              <div style="width: 100px; height: 20px; background: var(--color-border); margin-bottom: 10px;"></div>
-              <div style="width: 100%; height: 40px; background: var(--color-border);"></div>
+        <h2 class="section-title scroll-reveal"><span data-i18n="projects_label">Portfolio</span><span data-i18n="projects_title">Projects</span></h2>
+
+        <!-- Static Work Project Cards (SignMeasure AI, Eagle Vision, National ID Reader) -->
+        <div class="projects-grid-premium scroll-reveal delay-1">
+
+          <!-- Featured: SignMeasure AI -->
+          <a href="work.html#sign_measure" class="project-featured glass animate-fade-up" style="text-decoration: none; color: inherit; display: block;">
+            <div class="project-img-wrapper" style="position:relative; overflow:hidden;">
+              <video
+                src="Work/SignMeasure_AI/SignMeasure_AI.mp4"
+                muted autoplay loop playsinline preload="metadata"
+                style="width:100%; height:100%; object-fit:cover; display:block;"
+                aria-label="SignMeasure AI demo"
+              ></video>
+              <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(5,5,15,0.85));"></div>
             </div>
-          </div>
-        </div>
+            <div class="project-details">
+              <span class="project-category" data-i18n="badge_genai">GenAI</span>
+              <h3 class="project-title-text" data-i18n="vid_sign_title">SignMeasure AI — Shop Signboard Measurement</h3>
+              <p data-i18n="vid_sign_desc">A Computer Vision system that identifies and measures commercial shop signboards from a photo, enabling local authorities to apply fees or regulations based on measured sign area.</p>
+              <div class="project-tags">
+                <span>Computer Vision</span><span>Object Detection</span><span>Smart Government</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Side grid with Eagle Vision + National ID Reader -->
+          <div class="projects-side-grid">
+
+            <!-- Eagle Vision -->
+            <a href="work.html#eagle_vision" class="project-side glass animate-fade-up" style="text-decoration: none; color: inherit; display: block;" data-project-id="eagle_vision">
+              <div class="project-img-wrapper" style="height:160px; position:relative; overflow:hidden;">
+                <video
+                  src="Work/Eagle_Vision/Eagle_Vision.mp4"
+                  muted autoplay loop playsinline preload="metadata"
+                  style="width:100%; height:100%; object-fit:cover; display:block;"
+                  aria-label="Eagle Vision demo"
+                ></video>
+                <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(5,5,15,0.8));"></div>
+              </div>
+              <div class="project-details-sm">
+                <span class="project-category">AI Monitoring</span>
+                <h3 class="project-title-text" data-i18n="vid_eagle_title">Eagle Vision — Exam Cheating Detection</h3>
+                <p data-i18n="vid_eagle_desc" style="font-size: 0.85rem;">Computer Vision system for monitoring students during exams, detecting cheating via eye movement and behavior analysis.</p>
+                <div class="project-tags">
+                  <span>Computer Vision</span><span>Eye Tracking</span><span>Real-time</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- National ID Reader -->
+            <a href="work.html#national_id" class="project-side glass animate-fade-up" style="text-decoration: none; color: inherit; display: block;" data-project-id="national_id">
+              <div class="project-img-wrapper" style="height:160px; position:relative; overflow:hidden;">
+                <video
+                  src="Work/NationalID_Reader/NationalID_Reader.mp4"
+                  muted autoplay loop playsinline preload="metadata"
+                  style="width:100%; height:100%; object-fit:cover; display:block;"
+                  aria-label="National ID Reader demo"
+                ></video>
+                <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(5,5,15,0.8));"></div>
+              </div>
+              <div class="project-details-sm">
+                <span class="project-category">Document AI</span>
+                <h3 class="project-title-text" data-i18n="vid_national_title">National ID Reader — Document Intelligence</h3>
+                <p data-i18n="vid_national_desc" style="font-size: 0.85rem;">Computer Vision and OCR system extracting structured data from Egyptian national ID cards for digital systems.</p>
+                <div class="project-tags">
+                  <span>OCR</span><span>Computer Vision</span><span>Data Extraction</span>
+                </div>
+              </div>
+            </a>
+
+          </div><!-- end projects-side-grid -->
+        </div><!-- end projects-grid-premium -->
+
         <div style="margin-top: var(--spacing-64); display: flex; justify-content: center;"
           class="scroll-reveal delay-2">
-          <a href="projects.html" class="btn">
-            View All Projects
+          <a href="work.html" class="btn" data-i18n="btn_view_work">
+            View Work
             <span style="margin-left: 8px;">→</span>
           </a>
         </div>
@@ -304,16 +387,16 @@
           <div class="certificates-container scroll-reveal">
             <a href="certificates.html" class="btn-premium btn-certificates">
               <span class="btn-inner">
-                <span class="btn-category">Achievements</span>
-                <span class="btn-title">Certificates</span>
+                <span class="btn-category" data-i18n="cert_label">Achievements</span>
+                <span class="btn-title" data-i18n="cert_title">Certificates</span>
               </span>
             </a>
           </div>
           <div class="awards-container-btn scroll-reveal delay-1">
             <a href="awards.html" class="btn-premium btn-awards">
               <span class="btn-inner">
-                <span class="btn-category">Recognition</span>
-                <span class="btn-title">Honors & Awards</span>
+                <span class="btn-category" data-i18n="awards_label">Recognition</span>
+                <span class="btn-title" data-i18n="awards_title">Honors &amp; Awards</span>
               </span>
             </a>
           </div>
@@ -326,8 +409,8 @@
       <div class="container">
         <div class="contact-card glass scroll-reveal">
           <div class="contact-glow"></div>
-          <h2 class="section-title"><span>Connection</span>Let's Build the Future</h2>
-          <p class="contact-description">I'm currently open to new opportunities and interesting collaborations to solve
+          <h2 class="section-title"><span data-i18n="contact_label">Connection</span><span data-i18n="contact_title">Let's Build the Future</span></h2>
+          <p class="contact-description" data-i18n="contact_desc">I'm currently open to new opportunities and interesting collaborations to solve
             real-world business problems</p>
 
           <div class="contact-actions">
@@ -379,7 +462,7 @@
   <!-- JavaScript Files -->
   <script src="js/navigation.js"></script>
   <script src="js/animations.js"></script>
-  <script src="js/github-projects.js"></script>
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 

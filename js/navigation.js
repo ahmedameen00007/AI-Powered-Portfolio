@@ -80,12 +80,14 @@ function initScrollManagement() {
       window.history.replaceState({}, document.title, window.location.pathname);
     }, 50);
   } else {
-    // 3. Normal fresh load or manual reload - force scroll to top
+    // 3. Normal fresh load or manual reload - force scroll to top if no hash is present
     // Also clear any lingering scroll pos just in case
     sessionStorage.removeItem('portfolioScrollPos');
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'instant' });
-    }, 10);
+    if (!window.location.hash) {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      }, 10);
+    }
   }
 
   // 4. Track scroll position when clicking specific internal links

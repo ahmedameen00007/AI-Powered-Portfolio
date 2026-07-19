@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ahmed Ameen — Work Showcase. Watch project demos and case study videos.">
+  <title data-i18n="page_title">Work Showcase | Ahmed Ameen</title>
+
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/mobile.css">
+
+  <style>
+    /* ── Work Page Styles ── */
+    .work-page {
+      min-height: 100vh;
+      background: var(--color-bg);
+      padding-top: 100px;
+    }
+
+    .work-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--spacing-64) var(--spacing-24);
+    }
+
+    /* ── Back Button ── */
+    .back-nav {
+      margin-bottom: var(--spacing-48);
+    }
+
+    .btn-back {
+      color: var(--color-text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: var(--text-xs);
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-full);
+      backdrop-filter: blur(8px);
+      text-decoration: none;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .btn-back:hover {
+      color: #fff;
+      background: rgba(73, 31, 223, 0.15);
+      border-color: var(--color-primary);
+      transform: translateX(-5px);
+    }
+
+    /* ── Page Header ── */
+    .work-header {
+      text-align: center;
+      margin-bottom: var(--spacing-80);
+      position: relative;
+    }
+
+    .work-header::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 300px;
+      background: radial-gradient(ellipse, rgba(73, 31, 223, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .work-header-label {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--color-secondary);
+      background: rgba(73, 31, 223, 0.1);
+      border: 1px solid rgba(73, 31, 223, 0.25);
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      margin-bottom: var(--spacing-16);
+      position: relative;
+      z-index: 1;
+    }
+
+    .work-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 900;
+      background: var(--gradient-vibrant);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: var(--spacing-16);
+      position: relative;
+      z-index: 1;
+      line-height: 1.1;
+    }
+
+    .work-subtitle {
+      font-size: var(--text-lg);
+      color: var(--color-text-muted);
+      max-width: 550px;
+      margin: 0 auto;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── Video Grid ── */
+    .videos-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--spacing-64);
+    }
+
+    .video-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      scroll-margin-top: 100px;
+    }
+
+    .video-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gradient-surface);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .video-card:hover {
+      border-color: var(--color-border-accent);
+      box-shadow: 0 0 40px rgba(73, 31, 223, 0.15), 0 30px 60px rgba(0, 0, 0, 0.3);
+      transform: translateY(-4px);
+    }
+
+    .video-card:hover::before {
+      opacity: 1;
+    }
+
+    /* ── Video Description (Above Video) ── */
+    .video-description-area {
+      padding: var(--spacing-32) var(--spacing-32) var(--spacing-24);
+      position: relative;
+      z-index: 1;
+    }
+
+    .video-number {
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--color-secondary);
+      margin-bottom: var(--spacing-12);
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-8);
+    }
+
+    .video-number::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 2px;
+      background: var(--gradient-main);
+      border-radius: 2px;
+    }
+
+    .video-card-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+      font-weight: 800;
+      color: var(--color-text-main);
+      margin-bottom: var(--spacing-12);
+      line-height: 1.2;
+    }
+
+    .video-card-desc {
+      font-size: var(--text-base);
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      max-width: 800px;
+    }
+
+    .video-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: var(--spacing-16);
+    }
+
+    .video-tag {
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      padding: 4px 12px;
+      background: rgba(73, 31, 223, 0.1);
+      border: 1px solid rgba(73, 31, 223, 0.25);
+      border-radius: var(--radius-full);
+      color: var(--color-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Video Player Area ── */
+    .video-player-wrapper {
+      position: relative;
+      width: 100%;
+      background: #000;
+      overflow: hidden;
+    }
+
+    .video-player-wrapper video {
+      width: 100%;
+      display: block;
+      max-height: 600px;
+      object-fit: contain;
+      background: #000;
+    }
+
+    /* Custom video overlay controls */
+    .video-overlay-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .video-card:hover .video-overlay-bar {
+      opacity: 1;
+    }
+
+    /* ── Empty State ── */
+    .work-empty {
+      text-align: center;
+      padding: var(--spacing-96) var(--spacing-24);
+    }
+
+    .work-empty-icon {
+      font-size: 4rem;
+      margin-bottom: var(--spacing-24);
+      display: block;
+    }
+
+    .work-empty-title {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--color-text-main);
+      margin-bottom: var(--spacing-12);
+    }
+
+    .work-empty-desc {
+      color: var(--color-text-muted);
+      font-size: var(--text-base);
+      max-width: 400px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ── Footer note ── */
+    .work-footer-note {
+      text-align: center;
+      margin-top: var(--spacing-80);
+      padding-top: var(--spacing-48);
+      border-top: 1px solid var(--color-border);
+      color: var(--color-text-subtle);
+      font-size: var(--text-sm);
+    }
+
+    /* ── RTL support ── */
+    [dir="rtl"] *,
+    [dir="rtl"] body,
+    [dir="rtl"] h1,
+    [dir="rtl"] h2,
+    [dir="rtl"] h3,
+    [dir="rtl"] h4,
+    [dir="rtl"] h5,
+    [dir="rtl"] h6,
+    [dir="rtl"] p,
+    [dir="rtl"] a,
+    [dir="rtl"] span,
+    [dir="rtl"] button,
+    [dir="rtl"] .btn {
+      font-family: var(--font-arabic) !important;
+      letter-spacing: 0 !important;
+    }
+
+    [dir="rtl"] .video-number {
+      flex-direction: row-reverse;
+    }
+
+    /* In RTL: swap ← to → without rotation */
+    [dir="rtl"] .btn-back .btn-back-arrow {
+      font-size: 0;       /* hide the ← character */
+    }
+    [dir="rtl"] .btn-back .btn-back-arrow::before {
+      content: '→';      /* show → instead */
+      font-size: 0.875rem;
+    }
+
+    [dir="rtl"] .btn-back:hover {
+      transform: translateX(5px); /* slide right for RTL */
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .work-container {
+        padding: var(--spacing-48) var(--spacing-16);
+      }
+
+      .video-description-area {
+        padding: var(--spacing-24) var(--spacing-20) var(--spacing-16);
+      }
+
+      .video-player-wrapper video {
+        max-height: 260px;
+      }
+    }
+  </style>
+  <!-- CRITICAL: Apply saved language BEFORE render to prevent English flash -->
+  <script>
+    (function() {
+      var lang = localStorage.getItem('portfolio_lang') || 'en';
+      var dir  = lang === 'ar' ? 'rtl' : 'ltr';
+      document.documentElement.setAttribute('lang', lang);
+      document.documentElement.setAttribute('dir',  dir);
+    }());
+  </script>
+</head>
+
+<body class="animate-fade-in">
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress" aria-hidden="true" style="
+    position: fixed; top: 0; left: 0;
+    height: 2px; width: 0%;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    z-index: 9999; transition: width 0.1s linear; pointer-events: none;
+  "></div>
+
+  <!-- ══ NAVIGATION ══ -->
+  <nav class="navigation" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+
+      <!-- Brand & Home Group -->
+      <div style="display: flex; align-items: center; gap: var(--spacing-16); z-index: 10;">
+        <!-- Brand Logo -->
+        <a href="identity.html" class="nav-brand nav-brand--glow" aria-label="Ahmed Ameen — Home">
+          <img src="images/Logo.png" alt="Ahmed Ameen Logo" class="nav-logo-img"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <span class="nav-logo-fallback">
+            <span class="logo-letter">A</span><span class="logo-dot">·</span><span class="logo-letter">A</span>
+          </span>
+        </a>
+        <!-- Home Button -->
+        <a href="index.html" class="nav-home-link" aria-label="Home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-home-icon">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Language Switcher -->
+      <div class="lang-switcher" id="lang-switcher" role="group" aria-label="Language selection">
+        <button class="lang-btn lang-btn--active" id="btn-en" data-lang="en" aria-pressed="true">EN</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" id="btn-ar" data-lang="ar" aria-pressed="false">عربية</button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ══ MAIN CONTENT ══ -->
+  <main class="work-page">
+    <div class="work-container">
+
+      <!-- Back Navigation -->
+      <nav class="back-nav" aria-label="Breadcrumb">
+        <a href="index.html?return=true" class="btn-back" id="btn-back">
+          <span class="btn-back-arrow" aria-hidden="true">←</span>
+          <span data-i18n="back_btn">Back to Portfolio</span>
+        </a>
+      </nav>
+
+      <!-- Page Header -->
+      <header class="work-header">
+        <div class="work-header-label" data-i18n="header_label">Showcase</div>
+        <h1 class="work-title" data-i18n="page_heading">My Work</h1>
+        <p class="work-subtitle" data-i18n="page_subheading">
+          A curated collection of project demos, case studies, and AI solutions I've built.
+        </p>
+      </header>
+
+      <!-- Videos Grid — injected by JS -->
+      <div id="videos-grid" class="videos-grid">
+        <!-- Loading state -->
+        <div id="work-loading" style="text-align:center; padding: var(--spacing-96) 0; color: var(--color-text-muted);">
+          <div style="font-size: 2.5rem; margin-bottom: var(--spacing-16);">⏳</div>
+          <p data-i18n="loading_text">Loading videos…</p>
+        </div>
+      </div>
+
+      <!-- Footer note -->
+      <p class="work-footer-note" data-i18n="footer_note">
+        More projects coming soon — stay tuned!
+      </p>
+
+    </div>
+  </main>
+
+  <!-- JavaScript Files -->
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/work.js"></script>
+
+</body>
+</html>

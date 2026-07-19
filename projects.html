@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
@@ -15,13 +15,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800;900&family=Cairo:wght@400;600;700;800;900&display=swap"
         rel="stylesheet">
     <style>
+        [dir="rtl"] body,
+        [dir="rtl"] h1,
+        [dir="rtl"] h2,
+        [dir="rtl"] h3,
+        [dir="rtl"] p,
+        [dir="rtl"] a,
+        [dir="rtl"] span {
+            font-family: var(--font-arabic) !important;
+            letter-spacing: 0 !important;
+        }
+
+        /* In RTL: swap ← to → without rotation */
+        [dir="rtl"] .btn-back .btn-back-arrow {
+            font-size: 0;
+        }
+        [dir="rtl"] .btn-back .btn-back-arrow::before {
+            content: '→';
+            font-size: 0.875rem;
+        }
+
+        [dir="rtl"] .btn-back:hover {
+            transform: translateX(5px);
+        }
+
         body {
             background-color: var(--color-bg);
             color: var(--color-text-main);
         }
+
 
         .projects-archive-container {
             max-width: 1400px;
@@ -207,17 +232,26 @@
             transform: translateX(-5px);
         }
     </style>
+  <!-- CRITICAL: Apply saved language BEFORE render to prevent English flash -->
+  <script>
+    (function() {
+      var lang = localStorage.getItem('portfolio_lang') || 'en';
+      var dir  = lang === 'ar' ? 'rtl' : 'ltr';
+      document.documentElement.setAttribute('lang', lang);
+      document.documentElement.setAttribute('dir',  dir);
+    }());
+  </script>
 </head>
 
 <body class="animate-fade-in">
     <div class="projects-archive-container">
         <nav class="back-nav">
-            <a href="index.html?return=true" class="btn-back"><span>←</span> RETURN TO JOURNEY</a>
+            <a href="index.html?return=true" class="btn-back"><span class="btn-back-arrow" aria-hidden="true">←</span> <span data-i18n="return_to_journey">RETURN TO JOURNEY</span></a>
         </nav>
 
         <header class="archive-header">
-            <h1 class="archive-title">Projects Archive</h1>
-            <p style="color: var(--color-text-muted); max-width: 600px; margin: 0 auto;">A comprehensive timeline of
+            <h1 class="archive-title" data-i18n="projects_archive">Projects Archive</h1>
+            <p style="color: var(--color-text-muted); max-width: 600px; margin: 0 auto;" data-i18n="projects_archive_desc">A comprehensive timeline of
                 Engineering, Data Science, and AI Solutions.</p>
         </header>
 
@@ -234,6 +268,7 @@
     <script src="js/navigation.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/github-projects.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/chat.js"></script>
 </body>
 
