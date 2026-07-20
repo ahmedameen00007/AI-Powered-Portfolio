@@ -128,6 +128,11 @@ var translations = {
     vid_sign_title:     'SignMeasure AI — Shop Signboard Measurement',
     vid_sign_desc:      "A Computer Vision system that helps identify and measure commercial shop signboards from a photo taken by the shop owner. The system analyzes the image, detects the sign, determines its dimensions, and calculates its area — enabling local authorities to accurately know the sign size and use the data for assessments, fee calculations, or regulation enforcement.",
     vid_sign_tags:      ['Computer Vision', 'Object Detection', 'AI Measurement', 'Image Analysis', 'Data Extraction', 'Smart Government'],
+
+    // ── Project 06 — LeakLens ─────────────────────────────────────────
+    vid_leaklens_title: 'LeakLens — AI-Powered Smart Water Management',
+    vid_leaklens_desc:  'LeakLens is an AI-powered smart water management system designed to detect, analyze, and locate water leaks across water networks. By analyzing key network parameters such as flow rates and pressure levels, the system uses artificial intelligence to identify abnormal patterns, estimate the severity of leaks, and determine their potential locations. Once a leak is detected, LeakLens notifies the responsible engineers, enabling them to take the necessary action quickly and efficiently. The system also includes a mobile application for both engineers and citizens, facilitating communication, reporting water-related issues, monitoring leaks, and reviewing their status in real time.',
+    vid_leaklens_tags:  ['AI', 'Water Management', 'Anomaly Detection', 'IoT', 'Mobile App', 'Smart Infrastructure'],
   },
 
 
@@ -249,6 +254,11 @@ var translations = {
     vid_sign_title:     'SignMeasure AI — قياس لافتات المحلات',
     vid_sign_desc:      'نظام Computer Vision يساعد على تحديد وقياس لافتات المحلات التجارية من خلال صورة يلتقطها صاحب المحل للافتة. يقوم النظام بتحليل الصورة والتعرف على اللافتة، ثم تحديد أبعادها وحساب مساحتها. ويساعد ذلك الجهات المحلية على معرفة مساحة اللافتة بدقة، واستخدام البيانات الناتجة في إجراءات التقييم وتطبيق الرسوم أو اللوائح المرتبطة بها.',
     vid_sign_tags:      ['Computer Vision', 'اكتشاف الأجسام', 'القياس بالذكاء الاصطناعي', 'تحليل الصور', 'استخراج البيانات', 'الحكومة الذكية'],
+
+    // ── Project 06 — LeakLens ─────────────────────────────────────────
+    vid_leaklens_title: 'LeakLens — نظام ذكي لإدارة شبكات المياه',
+    vid_leaklens_desc:  'LeakLens هو نظام ذكي لإدارة شبكات المياه باستخدام الذكاء الاصطناعي، يهدف إلى اكتشاف وتحليل وتحديد مواقع تسريبات المياه داخل الشبكة. يعتمد النظام على تحليل بيانات مهمة مثل معدلات تدفق المياه ومستويات الضغط لاكتشاف الأنماط غير الطبيعية، وتحديد وجود التسريبات، وتحليل شدتها، وتقدير موقعها المحتمل. وعند اكتشاف أي تسريب، يقوم النظام بإبلاغ المهندسين المسؤولين لاتخاذ الإجراءات اللازمة بسرعة وكفاءة. كما يدعم LeakLens تطبيقًا للهواتف المحمولة يخدم المهندسين والمواطنين، مما يسهّل الإبلاغ عن مشكلات المياه والتسريبات، وتحسين التواصل بين المواطنين والجهات المسؤولة، ومراجعة حالة البلاغات والتسريبات ومتابعتها.',
+    vid_leaklens_tags:  ['الذكاء الاصطناعي', 'إدارة المياه', 'كشف الشذوذ', 'إنترنت الأشياء', 'تطبيق جوال', 'البنية التحتية الذكية'],
   }
 
 }; // end translations

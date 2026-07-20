@@ -10,28 +10,12 @@
 
 const workProjects = [
   {
-    id:       'closer',
-    folder:   'Closer',
-    file:     'Closer.mp4',
-    titleKey: 'vid_closer_title',
-    descKey:  'vid_closer_desc',
-    tagsKey:  'vid_closer_tags',
-  },
-  {
-    id:       'eagle_vision',
-    folder:   'Eagle_Vision',
-    file:     'Eagle_Vision.mp4',
-    titleKey: 'vid_eagle_title',
-    descKey:  'vid_eagle_desc',
-    tagsKey:  'vid_eagle_tags',
-  },
-  {
-    id:       'hr_validator',
-    folder:   'HR_Validator',
-    file:     'HR_Validator.mp4',
-    titleKey: 'vid_hr_title',
-    descKey:  'vid_hr_desc',
-    tagsKey:  'vid_hr_tags',
+    id:       'sign_measure',
+    folder:   'SignMeasure_AI',
+    file:     'SignMeasure_AI.mp4',
+    titleKey: 'vid_sign_title',
+    descKey:  'vid_sign_desc',
+    tagsKey:  'vid_sign_tags',
   },
   {
     id:       'national_id',
@@ -42,12 +26,36 @@ const workProjects = [
     tagsKey:  'vid_national_tags',
   },
   {
-    id:       'sign_measure',
-    folder:   'SignMeasure_AI',
-    file:     'SignMeasure_AI.mp4',
-    titleKey: 'vid_sign_title',
-    descKey:  'vid_sign_desc',
-    tagsKey:  'vid_sign_tags',
+    id:       'eagle_vision',
+    folder:   'Eagle_Vision',
+    file:     'Eagle_Vision.mp4',
+    titleKey: 'vid_eagle_title',
+    descKey:  'vid_eagle_desc',
+    tagsKey:  'vid_eagle_tags',
+  },
+  {
+    id:       'leaklens',
+    folder:   'Leaklens',
+    file:     'Leaklens.mp4',
+    titleKey: 'vid_leaklens_title',
+    descKey:  'vid_leaklens_desc',
+    tagsKey:  'vid_leaklens_tags',
+  },
+  {
+    id:       'hr_validator',
+    folder:   'HR_Validator',
+    file:     'HR_Validator.mp4',
+    titleKey: 'vid_hr_title',
+    descKey:  'vid_hr_desc',
+    tagsKey:  'vid_hr_tags',
+  },
+  {
+    id:       'closer',
+    folder:   'Closer',
+    file:     'Closer.mp4',
+    titleKey: 'vid_closer_title',
+    descKey:  'vid_closer_desc',
+    tagsKey:  'vid_closer_tags',
   },
 ];
 
@@ -73,6 +81,10 @@ const fallbackEN = {
   vid_sign_title:     'SignMeasure AI — Shop Signboard Measurement',
   vid_sign_desc:      "A Computer Vision system that helps identify and measure commercial shop signboards from a photo. The system analyzes the image, detects the sign, determines its dimensions, and calculates its area — enabling local authorities to apply fees or regulations based on the measured sign area.",
   vid_sign_tags:      ['Computer Vision', 'Object Detection', 'AI Measurement', 'Image Analysis', 'Data Extraction', 'Smart Government'],
+
+  vid_leaklens_title: 'LeakLens — AI-Powered Smart Water Management',
+  vid_leaklens_desc:  'LeakLens is an AI-powered smart water management system designed to detect, analyze, and locate water leaks across water networks. By analyzing key network parameters such as flow rates and pressure levels, the system uses artificial intelligence to identify abnormal patterns, estimate the severity of leaks, and determine their potential locations. Once a leak is detected, LeakLens notifies the responsible engineers, enabling them to take the necessary action quickly and efficiently. The system also includes a mobile application for both engineers and citizens, facilitating communication, reporting water-related issues, monitoring leaks, and reviewing their status in real time.',
+  vid_leaklens_tags:  ['AI', 'Water Management', 'Anomaly Detection', 'IoT', 'Mobile App', 'Smart Infrastructure'],
 };
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
