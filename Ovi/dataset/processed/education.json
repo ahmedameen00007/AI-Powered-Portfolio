@@ -1,0 +1,36 @@
+{
+  "degree": "Bachelor's Degree in Bio-AI (Biological Artificial Intelligence)",
+  "university": "Kafr El Sheikh University",
+  "faculty": "Faculty of Artificial Intelligence",
+  "department": "Bio-AI",
+  "major": "Artificial Intelligence",
+  "minor": "Biology",
+  "academic_level": "Fourth-year student (2026)",
+  "graduation_date": "2027",
+  "gpa": {
+    "scale": "4.0",
+    "year_1": 3.0,
+    "year_2": 3.5,
+    "year_3": 3.9,
+    "year_4": null
+  },
+  "academic_achievements": [
+    "Certificate of participation in a university-level artistic competition."
+  ],
+  "thesis": {
+    "status": "Undisclosed"
+  },
+  "academic_projects": [
+    {
+      "name": "AI-Enabled Medical ECG Device",
+      "description": "A medical ECG device enhanced with Artificial Intelligence technologies and IoT capabilities.",
+      "technologies": [
+        "Artificial Intelligence",
+        "IoT"
+      ]
+    }
+  ],
+  "academic_interests": [
+    "Agentic AI"
+  ]
+}

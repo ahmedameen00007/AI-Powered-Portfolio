@@ -1,0 +1,59 @@
+{
+  "bio": "Aspiring Generative AI Engineer focused on solving real-world business problems through AI integration and intelligent solutions.",
+
+  "interests": [
+    "Generative AI",
+    "Computer Vision",
+    "Data Science",
+    "AI Solutions",
+    "Business Problem Solving",
+    "Continuous Learning"
+  ],
+
+  "goals": [
+    "Solve as many real-world problems as possible using AI technologies.",
+    "Continuously improve my technical knowledge and ability to build intelligent solutions."
+  ],
+
+  "personality": [
+    "Kind",
+    "Calm",
+    "Thoughtful",
+    "Overthinker"
+  ],
+
+  "strengths": [
+    "Problem Solving",
+    "Critical Thinking",
+    "Multitasking",
+    "Time Management"
+  ],
+
+  "languages": [
+    {
+      "language": "Arabic",
+      "proficiency": "Native"
+    },
+    {
+      "language": "English",
+      "proficiency": "Fluent"
+    }
+  ],
+
+  "areas_of_interest": [
+    "Discovering the unknown",
+    "Continuous learning",
+    "Exploring new knowledge and scientific concepts"
+  ],
+
+  "career_interests": [
+    "Scientific Fields",
+    "Engineering"
+  ],
+
+  "learning_interests": [
+    "LLMs",
+    "Agentic AI",
+    "Computer Vision"
+  ]
+}

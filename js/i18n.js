@@ -133,6 +133,23 @@ var translations = {
     vid_leaklens_title: 'LeakLens — AI-Powered Smart Water Management',
     vid_leaklens_desc:  'LeakLens is an AI-powered smart water management system designed to detect, analyze, and locate water leaks across water networks. By analyzing key network parameters such as flow rates and pressure levels, the system uses artificial intelligence to identify abnormal patterns, estimate the severity of leaks, and determine their potential locations. Once a leak is detected, LeakLens notifies the responsible engineers, enabling them to take the necessary action quickly and efficiently. The system also includes a mobile application for both engineers and citizens, facilitating communication, reporting water-related issues, monitoring leaks, and reviewing their status in real time.',
     vid_leaklens_tags:  ['AI', 'Water Management', 'Anomaly Detection', 'IoT', 'Mobile App', 'Smart Infrastructure'],
+
+    // ── Chatbot ──────────────────────────────────────────────────────
+    chat_header_title:  'Ovi — AI Assistant',
+    chat_header_status: 'Online',
+    chat_trigger_brand: 'Ovi',
+    chat_trigger_text:  'Ask AI',
+    chat_placeholder:   'Ask anything about Ahmed...',
+    chat_greeting:      "Hi there! 👋\n\nI'm Ovi, Ahmed's AI assistant. Ask me anything about Ahmed's background, education, projects, experience, or certifications! How can I help you today?",
+    chat_error:         'Something went wrong. Please check your backend connection and try again!',
+
+    // ── API Key Modal ─────────────────────────────────────────────────
+    chat_key_title:     'Connect to Ovi',
+    chat_key_desc:      "Enter your Groq API key to start chatting with Ahmed's AI assistant.",
+    chat_key_placeholder: 'gsk_••••••••••••••••••••••',
+    chat_key_submit:    'Start Chatting',
+    chat_key_link:      'Get a free API key →',
+    chat_key_invalid:   "Invalid key. Groq API keys start with 'gsk_'",
   },
 
 
@@ -259,6 +276,23 @@ var translations = {
     vid_leaklens_title: 'LeakLens — نظام ذكي لإدارة شبكات المياه',
     vid_leaklens_desc:  'LeakLens هو نظام ذكي لإدارة شبكات المياه باستخدام الذكاء الاصطناعي، يهدف إلى اكتشاف وتحليل وتحديد مواقع تسريبات المياه داخل الشبكة. يعتمد النظام على تحليل بيانات مهمة مثل معدلات تدفق المياه ومستويات الضغط لاكتشاف الأنماط غير الطبيعية، وتحديد وجود التسريبات، وتحليل شدتها، وتقدير موقعها المحتمل. وعند اكتشاف أي تسريب، يقوم النظام بإبلاغ المهندسين المسؤولين لاتخاذ الإجراءات اللازمة بسرعة وكفاءة. كما يدعم LeakLens تطبيقًا للهواتف المحمولة يخدم المهندسين والمواطنين، مما يسهّل الإبلاغ عن مشكلات المياه والتسريبات، وتحسين التواصل بين المواطنين والجهات المسؤولة، ومراجعة حالة البلاغات والتسريبات ومتابعتها.',
     vid_leaklens_tags:  ['الذكاء الاصطناعي', 'إدارة المياه', 'كشف الشذوذ', 'إنترنت الأشياء', 'تطبيق جوال', 'البنية التحتية الذكية'],
+
+    // ── Chatbot ──────────────────────────────────────────────────────
+    chat_header_title:  'أوفي — مساعد ذكاء اصطناعي',
+    chat_header_status: 'نشط الآن',
+    chat_trigger_brand: 'أوفي',
+    chat_trigger_text:  'اسأل الذكاء الاصطناعي',
+    chat_placeholder:   'اسأل أي شيء عن أحمد...',
+    chat_greeting:      "أهلاً بيك! 👋\n\nأنا أوفي، مساعد الذكاء الاصطناعي الخاص بأحمد. تقدر تسألني عن شهاداته، مشاريعه، خبراته، دراسته، أو أي معلومات تانية عنه. أقدر أساعدك بإيه النهاردة؟",
+    chat_error:         'حصل خطأ. يا ريت تتأكد إن السيرفر شغال وتحاول تاني!',
+
+    // ── API Key Modal ─────────────────────────────────────────────────
+    chat_key_title:     'اتصل بأوفي',
+    chat_key_desc:      'أدخل مفتاح Groq API الخاص بك لتبدأ الدردشة مع مساعد الذكاء الاصطناعي الخاص بأحمد.',
+    chat_key_placeholder: 'gsk_••••••••••••••••••••••',
+    chat_key_submit:    'ابدأ الدردشة',
+    chat_key_link:      'احصل على مفتاح API مجاني ←',
+    chat_key_invalid:   "مفتاح غير صالح. مفاتيح Groq API تبدأ بـ 'gsk_'",
   }
 
 }; // end translations

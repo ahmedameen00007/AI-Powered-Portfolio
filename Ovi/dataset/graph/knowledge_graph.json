@@ -1,0 +1,3306 @@
+{
+  "entities": [
+    {
+      "id": "ahmed_ameen",
+      "type": "Person",
+      "name": "Ahmed Ameen",
+      "aliases": [
+        "Ahmed",
+        "Ahmed Khaled Mohamed Ameen"
+      ],
+      "attributes": {
+        "full_name": "Ahmed Khaled Mohamed Ameen",
+        "birth_date": "2005-11-05",
+        "city": "Zagazig, Sharkia, Egypt",
+        "specialist": "Generative AI Engineer",
+        "bio": "Aspiring Generative AI Engineer focused on solving real-world business problems through AI integration and intelligent solutions.",
+        "goals": [
+          "Solve as many real-world problems as possible using AI technologies.",
+          "Continuously improve my technical knowledge and ability to build intelligent solutions."
+        ],
+        "personality": [
+          "Kind",
+          "Calm",
+          "Thoughtful",
+          "Overthinker"
+        ],
+        "hobbies": [
+          "Anime",
+          "Movies",
+          "Gaming",
+          "Graphic Design",
+          "Art",
+          "Music",
+          "Boxing",
+          "Gym",
+          "Calisthenics",
+          "Powerlifting"
+        ],
+        "languages": [
+          {
+            "language": "Arabic",
+            "proficiency": "Native"
+          },
+          {
+            "language": "English",
+            "proficiency": "Fluent"
+          }
+        ],
+        "professional_value": [
+          "Can design and develop AI-powered solutions aimed at solving real-world business and operational problems.",
+          "Combines Generative AI, Computer Vision, Data Science, and intelligent automation to address different types of problems.",
+          "Has experience translating practical problems into AI-based systems, including document intelligence, anomaly detection, intelligent monitoring, and data-driven applications.",
+          "Can work across the AI development lifecycle, from understanding the problem and processing data to developing models and integrating AI capabilities into applications.",
+          "Has experience building solutions for practical domains such as government services, document processing, smart infrastructure, education, accessibility, and business intelligence."
+        ],
+        "problem_solving_capabilities": [
+          "Analyzing real-world problems and identifying opportunities where AI can provide practical value.",
+          "Designing intelligent systems that combine multiple AI technologies rather than relying on a single model.",
+          "Transforming unstructured information such as images and documents into structured, usable data.",
+          "Developing systems capable of detecting patterns, anomalies, and meaningful information from complex data.",
+          "Building AI solutions that support operational efficiency and data-driven decision-making.",
+          "Connecting AI capabilities with software applications and real-world workflows."
+        ]
+      }
+    },
+    {
+      "id": "location_zagazig,_sharkia,_egypt",
+      "type": "Location",
+      "name": "Zagazig, Sharkia, Egypt",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "topic_generative_ai",
+      "type": "Topic",
+      "name": "Generative AI",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "topic_computer_vision",
+      "type": "Topic",
+      "name": "Computer Vision",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "topic_data_science",
+      "type": "Topic",
+      "name": "Data Science",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "topic_ai_solutions",
+      "type": "Topic",
+      "name": "AI Solutions",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "topic_business_problem_solving",
+      "type": "Topic",
+      "name": "Business Problem Solving",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "topic_continuous_learning",
+      "type": "Topic",
+      "name": "Continuous Learning",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "skill_problem_solving",
+      "type": "Skill",
+      "name": "Problem Solving",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "skill_critical_thinking",
+      "type": "Skill",
+      "name": "Critical Thinking",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "skill_multitasking",
+      "type": "Skill",
+      "name": "Multitasking",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "skill_time_management",
+      "type": "Skill",
+      "name": "Time Management",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "university_kafr_el_sheikh_university",
+      "type": "University",
+      "name": "Kafr El Sheikh University",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "faculty_faculty_of_artificial_intelligence",
+      "type": "Faculty",
+      "name": "Faculty of Artificial Intelligence",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "project_ai-enabled_medical_ecg_device",
+      "type": "Project",
+      "name": "AI-Enabled Medical ECG Device",
+      "aliases": [],
+      "attributes": {
+        "description": "A medical ECG device enhanced with Artificial Intelligence technologies and IoT capabilities.",
+        "category": "academic"
+      }
+    },
+    {
+      "id": "technology_artificial_intelligence",
+      "type": "Technology",
+      "name": "Artificial Intelligence",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_iot",
+      "type": "Technology",
+      "name": "IoT",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "cert_001_neural_networks_and_deep_learning",
+      "type": "Certification",
+      "name": "Neural Networks and Deep Learning",
+      "aliases": [],
+      "attributes": {
+        "type": "Course",
+        "completion_date": "2025-07-18",
+        "platform": "Coursera"
+      }
+    },
+    {
+      "id": "organization_deeplearning.ai",
+      "type": "Organization",
+      "name": "DeepLearning.AI",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "platform_coursera",
+      "type": "Platform",
+      "name": "Coursera",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "cert_002_getting_started_with_deep_learning",
+      "type": "Certification",
+      "name": "Getting Started with Deep Learning",
+      "aliases": [],
+      "attributes": {
+        "type": "Certificate of Competency",
+        "completion_date": "2025-08-29",
+        "platform": "NVIDIA Deep Learning Institute"
+      }
+    },
+    {
+      "id": "organization_nvidia",
+      "type": "Organization",
+      "name": "NVIDIA",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "cert_003_data_analysis_with_python",
+      "type": "Certification",
+      "name": "Data Analysis with Python",
+      "aliases": [],
+      "attributes": {
+        "type": "Course",
+        "completion_date": "2025-09-24",
+        "platform": "Coursera"
+      }
+    },
+    {
+      "id": "organization_ibm",
+      "type": "Organization",
+      "name": "IBM",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "cert_004_microsoft_power_bi_data_analyst",
+      "type": "Certification",
+      "name": "Microsoft Power BI Data Analyst",
+      "aliases": [],
+      "attributes": {
+        "type": "Professional Certificate",
+        "completion_date": "2025-10-07",
+        "platform": "Coursera"
+      }
+    },
+    {
+      "id": "organization_microsoft",
+      "type": "Organization",
+      "name": "Microsoft",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "cert_005_the_first_data_journey_–_introduction_to_data_analysis",
+      "type": "Certification",
+      "name": "The First Data Journey – Introduction to Data Analysis",
+      "aliases": [],
+      "attributes": {
+        "type": "Certificate of Attendance",
+        "completion_date": null,
+        "platform": null
+      }
+    },
+    {
+      "id": "organization_tharaa_training_company",
+      "type": "Organization",
+      "name": "Tharaa Training Company",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "topic_data_analysis_fundamentals",
+      "type": "Topic",
+      "name": "Data Analysis Fundamentals",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "topic_excel_for_data_processing",
+      "type": "Topic",
+      "name": "Excel for Data Processing",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "topic_power_bi_for_data_visualization_and_reporting",
+      "type": "Topic",
+      "name": "Power BI for Data Visualization and Reporting",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "topic_kpis_and_performance_metrics",
+      "type": "Topic",
+      "name": "KPIs and Performance Metrics",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "topic_professional_preparation_for_data_analyst_roles",
+      "type": "Topic",
+      "name": "Professional Preparation for Data Analyst Roles",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "topic_cv_and_linkedin_optimization",
+      "type": "Topic",
+      "name": "CV and LinkedIn Optimization",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "cert_006_ibm_introduction_to_machine_learning",
+      "type": "Certification",
+      "name": "IBM Introduction to Machine Learning",
+      "aliases": [],
+      "attributes": {
+        "type": "Specialization",
+        "completion_date": "2025-10-31",
+        "platform": "Coursera"
+      }
+    },
+    {
+      "id": "cert_007_microsoft_sql_server",
+      "type": "Certification",
+      "name": "Microsoft SQL Server",
+      "aliases": [],
+      "attributes": {
+        "type": "Professional Certificate",
+        "completion_date": "2025-11-13",
+        "platform": "Coursera"
+      }
+    },
+    {
+      "id": "cert_008_ai_for_all:_from_basics_to_genai_practice",
+      "type": "Certification",
+      "name": "AI for All: From Basics to GenAI Practice",
+      "aliases": [],
+      "attributes": {
+        "type": "Certificate of Completion",
+        "completion_date": "2025-11",
+        "platform": "NVIDIA Deep Learning Institute"
+      }
+    },
+    {
+      "id": "cert_009_nvidia_dli_summer_training_program:_generative_ai_(beginner_level)",
+      "type": "Certification",
+      "name": "NVIDIA DLI Summer Training Program: Generative AI (Beginner Level)",
+      "aliases": [],
+      "attributes": {
+        "type": "Training Program",
+        "completion_date": null,
+        "platform": "NVIDIA Deep Learning Institute"
+      }
+    },
+    {
+      "id": "organization_information_technology_institute_(iti)",
+      "type": "Organization",
+      "name": "Information Technology Institute (ITI)",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "cert_010_introduction_to_deep_learning",
+      "type": "Certification",
+      "name": "Introduction to Deep Learning",
+      "aliases": [],
+      "attributes": {
+        "type": "Course",
+        "completion_date": "2026-01-26",
+        "platform": null
+      }
+    },
+    {
+      "id": "organization_mahara-tech",
+      "type": "Organization",
+      "name": "Mahara-Tech",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "cert_011_building_rag_agents_with_llms",
+      "type": "Certification",
+      "name": "Building RAG Agents with LLMs",
+      "aliases": [],
+      "attributes": {
+        "type": "Certificate of Competency",
+        "completion_date": "2026-02-25",
+        "platform": "NVIDIA Deep Learning Institute"
+      }
+    },
+    {
+      "id": "cert_012_deep_learning",
+      "type": "Certification",
+      "name": "Deep Learning",
+      "aliases": [],
+      "attributes": {
+        "type": "Specialization",
+        "completion_date": "2026-02-28",
+        "platform": "Coursera"
+      }
+    },
+    {
+      "id": "cert_013_generative_ai_engineering_with_llms",
+      "type": "Certification",
+      "name": "Generative AI Engineering with LLMs",
+      "aliases": [],
+      "attributes": {
+        "type": "Specialization",
+        "completion_date": "2026-08-04",
+        "platform": "Coursera"
+      }
+    },
+    {
+      "id": "organization_kfs_gov",
+      "type": "Organization",
+      "name": "KFS Gov",
+      "aliases": [],
+      "attributes": {
+        "type": "Government Organization"
+      }
+    },
+    {
+      "id": "role_generative_ai_&_data_science_intern",
+      "type": "Role",
+      "name": "Generative AI & Data Science Intern",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_generative_ai",
+      "type": "Technology",
+      "name": "Generative AI",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_data_science",
+      "type": "Technology",
+      "name": "Data Science",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "organization_freelance",
+      "type": "Organization",
+      "name": "Freelance",
+      "aliases": [],
+      "attributes": {
+        "type": "Independent Work"
+      }
+    },
+    {
+      "id": "role_generative_ai_engineer_&_data_scientist",
+      "type": "Role",
+      "name": "Generative AI Engineer & Data Scientist",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_python",
+      "type": "Technology",
+      "name": "Python",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_tensorflow",
+      "type": "Technology",
+      "name": "TensorFlow",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_scikit-learn",
+      "type": "Technology",
+      "name": "Scikit-learn",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_computer_vision",
+      "type": "Technology",
+      "name": "Computer Vision",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_rag",
+      "type": "Technology",
+      "name": "RAG",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_data_analytics",
+      "type": "Technology",
+      "name": "Data Analytics",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_business_intelligence",
+      "type": "Technology",
+      "name": "Business Intelligence",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "organization_hex_softwares_pvt._ltd",
+      "type": "Organization",
+      "name": "Hex Softwares Pvt. Ltd.",
+      "aliases": [],
+      "attributes": {
+        "type": "Software Company"
+      }
+    },
+    {
+      "id": "role_data_science_intern",
+      "type": "Role",
+      "name": "Data Science Intern",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_machine_learning",
+      "type": "Technology",
+      "name": "Machine Learning",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "organization_nti",
+      "type": "Organization",
+      "name": "NTI",
+      "aliases": [],
+      "attributes": {
+        "type": "Training Organization"
+      }
+    },
+    {
+      "id": "role_big_data_analysis_trainee",
+      "type": "Role",
+      "name": "Big Data Analysis Trainee",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_big_data",
+      "type": "Technology",
+      "name": "Big Data",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_data_processing",
+      "type": "Technology",
+      "name": "Data Processing",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_data_analysis",
+      "type": "Technology",
+      "name": "Data Analysis",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_analytics",
+      "type": "Technology",
+      "name": "Analytics",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "project_001_signmeasure_ai",
+      "type": "Project",
+      "name": "SignMeasure AI",
+      "aliases": [],
+      "attributes": {
+        "title": "Shop Signboard Measurement",
+        "description": "A Computer Vision system designed to identify and measure commercial shop signboards from images captured by shop owners. The system detects the signboard, determines its dimensions, and calculates its area, enabling local authorities to accurately assess sign sizes for regulatory purposes, fee calculations, and enforcement.",
+        "category": "professional"
+      }
+    },
+    {
+      "id": "technology_object_detection",
+      "type": "Technology",
+      "name": "Object Detection",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_ai_measurement",
+      "type": "Technology",
+      "name": "AI Measurement",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_image_analysis",
+      "type": "Technology",
+      "name": "Image Analysis",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_data_extraction",
+      "type": "Technology",
+      "name": "Data Extraction",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "domain_smart_government",
+      "type": "Domain",
+      "name": "Smart Government",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "domain_government_ai",
+      "type": "Domain",
+      "name": "Government AI",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "domain_computer_vision",
+      "type": "Domain",
+      "name": "Computer Vision",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "project_002_national_id_reader",
+      "type": "Project",
+      "name": "National ID Reader",
+      "aliases": [],
+      "attributes": {
+        "title": "Document Intelligence",
+        "description": "A Computer Vision and OCR system designed to extract structured information from Egyptian national ID card images. The system identifies the document, detects key data regions, extracts relevant information, and converts the extracted content into structured data suitable for integration with digital systems and applications.",
+        "category": "professional"
+      }
+    },
+    {
+      "id": "technology_computer_vision_1",
+      "type": "Technology",
+      "name": "Computer Vision",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_ocr",
+      "type": "Technology",
+      "name": "OCR",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_document_ai",
+      "type": "Technology",
+      "name": "Document AI",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "domain_document_intelligence",
+      "type": "Domain",
+      "name": "Document Intelligence",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "domain_computer_vision_1",
+      "type": "Domain",
+      "name": "Computer Vision",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "project_003_eagle_vision",
+      "type": "Project",
+      "name": "Eagle Vision",
+      "aliases": [],
+      "attributes": {
+        "title": "Exam Cheating Detection",
+        "description": "A Computer Vision system designed to monitor students during examinations in college computer laboratories. The system analyzes eye movement and visual behavior to detect potentially suspicious activity. When suspicious behavior is identified, the system alerts the responsible supervisor, who can choose to warn the student or automatically lock the student's device.",
+        "category": "professional"
+      }
+    },
+    {
+      "id": "technology_computer_vision_2",
+      "type": "Technology",
+      "name": "Computer Vision",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_ai_monitoring",
+      "type": "Technology",
+      "name": "AI Monitoring",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_behavior_analysis",
+      "type": "Technology",
+      "name": "Behavior Analysis",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_eye_tracking",
+      "type": "Technology",
+      "name": "Eye Tracking",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_real-time_surveillance",
+      "type": "Technology",
+      "name": "Real-time Surveillance",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "domain_education",
+      "type": "Domain",
+      "name": "Education",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "domain_ai_monitoring",
+      "type": "Domain",
+      "name": "AI Monitoring",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "domain_computer_vision_2",
+      "type": "Domain",
+      "name": "Computer Vision",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "domain_real-time_ai",
+      "type": "Domain",
+      "name": "Real-time AI",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "project_004_leaklens",
+      "type": "Project",
+      "name": "LeakLens",
+      "aliases": [],
+      "attributes": {
+        "title": "AI-Powered Smart Water Management",
+        "description": "An AI-powered smart water management system designed to detect, analyze, and locate water leaks across water networks. The system analyzes network parameters such as flow rates and pressure levels to identify abnormal patterns, estimate leak severity, and determine potential leak locations. When a leak is detected, the system notifies responsible engineers, enabling rapid intervention. The system also includes a mobile application for engineers and citizens to facilitate communication, issue reporting, leak monitoring, and real-time status tracking.",
+        "category": "professional"
+      }
+    },
+    {
+      "id": "technology_anomaly_detection",
+      "type": "Technology",
+      "name": "Anomaly Detection",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_water_network_analysis",
+      "type": "Technology",
+      "name": "Water Network Analysis",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_mobile_application",
+      "type": "Technology",
+      "name": "Mobile Application",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "domain_smart_infrastructure",
+      "type": "Domain",
+      "name": "Smart Infrastructure",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "domain_water_management",
+      "type": "Domain",
+      "name": "Water Management",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "domain_iot",
+      "type": "Domain",
+      "name": "IoT",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "project_005_hr_validator",
+      "type": "Project",
+      "name": "HR Validator",
+      "aliases": [],
+      "attributes": {
+        "title": "Intelligent Document Validation",
+        "description": "An AI-powered system for validating HR and official documents. The system identifies document types, detects and extracts key information, and verifies multiple elements including stamps, document data, and information consistency. It combines Computer Vision, OCR, and specialized validation models to generate a validation result and provide reasons for any detected issues.",
+        "category": "professional"
+      }
+    },
+    {
+      "id": "technology_computer_vision_3",
+      "type": "Technology",
+      "name": "Computer Vision",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_document_classification",
+      "type": "Technology",
+      "name": "Document Classification",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_document_validation",
+      "type": "Technology",
+      "name": "Document Validation",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_stamp_detection",
+      "type": "Technology",
+      "name": "Stamp Detection",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "domain_hr_technology",
+      "type": "Domain",
+      "name": "HR Technology",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "domain_ai_validation",
+      "type": "Domain",
+      "name": "AI Validation",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "domain_computer_vision_3",
+      "type": "Domain",
+      "name": "Computer Vision",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "project_006_closer",
+      "type": "Project",
+      "name": "Closer",
+      "aliases": [],
+      "attributes": {
+        "title": "AI-Powered Assistive Communication Devices",
+        "description": "An AI-powered assistive communication system designed to facilitate interaction between deaf or hard-of-hearing individuals and blind or visually impaired individuals. The system consists of two integrated smart devices: AI-powered smart glasses and a smartwatch. It uses Artificial Intelligence, Computer Vision, NLP, LLMs, and Speech Recognition to translate and convert information across different communication modalities, enabling more accessible communication between users.",
+        "category": "professional"
+      }
+    },
+    {
+      "id": "technology_computer_vision_4",
+      "type": "Technology",
+      "name": "Computer Vision",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_nlp",
+      "type": "Technology",
+      "name": "NLP",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_llms",
+      "type": "Technology",
+      "name": "LLMs",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_speech_recognition",
+      "type": "Technology",
+      "name": "Speech Recognition",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_smart_glasses",
+      "type": "Technology",
+      "name": "Smart Glasses",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "technology_smartwatch",
+      "type": "Technology",
+      "name": "Smartwatch",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "domain_assistive_technology",
+      "type": "Domain",
+      "name": "Assistive Technology",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "domain_accessibility",
+      "type": "Domain",
+      "name": "Accessibility",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "domain_ai",
+      "type": "Domain",
+      "name": "AI",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "domain_human-computer_interaction",
+      "type": "Domain",
+      "name": "Human-Computer Interaction",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "activity_001_huawei_hire6_itb_recruitment_expo",
+      "type": "Achievement",
+      "name": "Huawei HiRE6 ITB Recruitment Expo",
+      "aliases": [],
+      "attributes": {
+        "type": "Recruitment Expo",
+        "participation": "Attended and actively participated",
+        "date": "2025-10",
+        "year": null
+      }
+    },
+    {
+      "id": "organization_huawei",
+      "type": "Organization",
+      "name": "Huawei",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "activity_002_university-level_art_exhibition",
+      "type": "Achievement",
+      "name": "University-Level Art Exhibition",
+      "aliases": [],
+      "attributes": {
+        "type": "University Activity",
+        "participation": "Participated",
+        "date": null,
+        "year": null
+      }
+    },
+    {
+      "id": "organization_faculty_of_artificial_intelligence,_kafrelsheikh_university",
+      "type": "Organization",
+      "name": "Faculty of Artificial Intelligence, Kafrelsheikh University",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "activity_003_digitopia",
+      "type": "Achievement",
+      "name": "DIGITOPIA",
+      "aliases": [],
+      "attributes": {
+        "type": "Competition",
+        "participation": "Active Participant",
+        "date": null,
+        "year": 2025
+      }
+    },
+    {
+      "id": "organization_ministry_of_communications_and_information_technology_(mcit)",
+      "type": "Organization",
+      "name": "Ministry of Communications and Information Technology (MCIT)",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "skill_generative_ai_and_llm-based_applications",
+      "type": "Skill",
+      "name": "Generative AI and LLM-based applications",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "skill_rag_systems_and_knowledge-based_ai_applications",
+      "type": "Skill",
+      "name": "RAG systems and knowledge-based AI applications",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "skill_ai_agents_and_agentic_ai_concepts",
+      "type": "Skill",
+      "name": "AI Agents and Agentic AI concepts",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "skill_computer_vision_and_object_detection",
+      "type": "Skill",
+      "name": "Computer Vision and Object Detection",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "skill_ocr_and_document_intelligence",
+      "type": "Skill",
+      "name": "OCR and Document Intelligence",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "skill_machine_learning_and_deep_learning",
+      "type": "Skill",
+      "name": "Machine Learning and Deep Learning",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "skill_data_science_and_data_analysis",
+      "type": "Skill",
+      "name": "Data Science and Data Analysis",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "skill_anomaly_detection_and_intelligent_monitoring",
+      "type": "Skill",
+      "name": "Anomaly Detection and intelligent monitoring",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "skill_business_intelligence_and_data_visualization",
+      "type": "Skill",
+      "name": "Business Intelligence and data visualization",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "skill_ai-powered_automation_and_decision-support_systems",
+      "type": "Skill",
+      "name": "AI-powered automation and decision-support systems",
+      "aliases": [],
+      "attributes": {}
+    }
+  ],
+  "relationships": [
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "located_in",
+      "target_id": "location_zagazig,_sharkia,_egypt",
+      "source_dataset": "basic_info",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "interested_in",
+      "target_id": "topic_generative_ai",
+      "source_dataset": "personal_info",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "interested_in",
+      "target_id": "topic_computer_vision",
+      "source_dataset": "personal_info",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "interested_in",
+      "target_id": "topic_data_science",
+      "source_dataset": "personal_info",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "interested_in",
+      "target_id": "topic_ai_solutions",
+      "source_dataset": "personal_info",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "interested_in",
+      "target_id": "topic_business_problem_solving",
+      "source_dataset": "personal_info",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "interested_in",
+      "target_id": "topic_continuous_learning",
+      "source_dataset": "personal_info",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "skilled_in",
+      "target_id": "skill_problem_solving",
+      "source_dataset": "personal_info",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "skilled_in",
+      "target_id": "skill_critical_thinking",
+      "source_dataset": "personal_info",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "skilled_in",
+      "target_id": "skill_multitasking",
+      "source_dataset": "personal_info",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "skilled_in",
+      "target_id": "skill_time_management",
+      "source_dataset": "personal_info",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "studied_at",
+      "target_id": "university_kafr_el_sheikh_university",
+      "source_dataset": "education",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {
+        "degree": "Bachelor's Degree in Bio-AI (Biological Artificial Intelligence)",
+        "major": "Artificial Intelligence",
+        "graduation_date": "2027"
+      }
+    },
+    {
+      "source_id": "university_kafr_el_sheikh_university",
+      "relationship_type": "has_faculty",
+      "target_id": "faculty_faculty_of_artificial_intelligence",
+      "source_dataset": "education",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "enrolled_in",
+      "target_id": "faculty_faculty_of_artificial_intelligence",
+      "source_dataset": "education",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "built",
+      "target_id": "project_ai-enabled_medical_ecg_device",
+      "source_dataset": "education",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_ai-enabled_medical_ecg_device",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_artificial_intelligence",
+      "source_dataset": "education",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_ai-enabled_medical_ecg_device",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_iot",
+      "source_dataset": "education",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "completed",
+      "target_id": "cert_001_neural_networks_and_deep_learning",
+      "source_dataset": "courses",
+      "source_record_id": "cert_001",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": "2025-07-18",
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_001_neural_networks_and_deep_learning",
+      "relationship_type": "provided_by",
+      "target_id": "organization_deeplearning.ai",
+      "source_dataset": "courses",
+      "source_record_id": "cert_001",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_001_neural_networks_and_deep_learning",
+      "relationship_type": "hosted_on",
+      "target_id": "platform_coursera",
+      "source_dataset": "courses",
+      "source_record_id": "cert_001",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "completed",
+      "target_id": "cert_002_getting_started_with_deep_learning",
+      "source_dataset": "courses",
+      "source_record_id": "cert_002",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": "2025-08-29",
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_002_getting_started_with_deep_learning",
+      "relationship_type": "provided_by",
+      "target_id": "organization_nvidia",
+      "source_dataset": "courses",
+      "source_record_id": "cert_002",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_002_getting_started_with_deep_learning",
+      "relationship_type": "hosted_on",
+      "target_id": "organization_nvidia",
+      "source_dataset": "courses",
+      "source_record_id": "cert_002",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "completed",
+      "target_id": "cert_003_data_analysis_with_python",
+      "source_dataset": "courses",
+      "source_record_id": "cert_003",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": "2025-09-24",
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_003_data_analysis_with_python",
+      "relationship_type": "provided_by",
+      "target_id": "organization_ibm",
+      "source_dataset": "courses",
+      "source_record_id": "cert_003",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_003_data_analysis_with_python",
+      "relationship_type": "hosted_on",
+      "target_id": "platform_coursera",
+      "source_dataset": "courses",
+      "source_record_id": "cert_003",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "completed",
+      "target_id": "cert_004_microsoft_power_bi_data_analyst",
+      "source_dataset": "courses",
+      "source_record_id": "cert_004",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": "2025-10-07",
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_004_microsoft_power_bi_data_analyst",
+      "relationship_type": "provided_by",
+      "target_id": "organization_microsoft",
+      "source_dataset": "courses",
+      "source_record_id": "cert_004",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_004_microsoft_power_bi_data_analyst",
+      "relationship_type": "hosted_on",
+      "target_id": "platform_coursera",
+      "source_dataset": "courses",
+      "source_record_id": "cert_004",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "completed",
+      "target_id": "cert_005_the_first_data_journey_–_introduction_to_data_analysis",
+      "source_dataset": "courses",
+      "source_record_id": "cert_005",
+      "confidence": 1.0,
+      "start_date": "2025-09-27",
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_005_the_first_data_journey_–_introduction_to_data_analysis",
+      "relationship_type": "provided_by",
+      "target_id": "organization_tharaa_training_company",
+      "source_dataset": "courses",
+      "source_record_id": "cert_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_005_the_first_data_journey_–_introduction_to_data_analysis",
+      "relationship_type": "covers",
+      "target_id": "topic_data_analysis_fundamentals",
+      "source_dataset": "courses",
+      "source_record_id": "cert_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "topic_data_analysis_fundamentals",
+      "relationship_type": "covered_in",
+      "target_id": "cert_005_the_first_data_journey_–_introduction_to_data_analysis",
+      "source_dataset": "courses",
+      "source_record_id": "cert_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_005_the_first_data_journey_–_introduction_to_data_analysis",
+      "relationship_type": "covers",
+      "target_id": "topic_excel_for_data_processing",
+      "source_dataset": "courses",
+      "source_record_id": "cert_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "topic_excel_for_data_processing",
+      "relationship_type": "covered_in",
+      "target_id": "cert_005_the_first_data_journey_–_introduction_to_data_analysis",
+      "source_dataset": "courses",
+      "source_record_id": "cert_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_005_the_first_data_journey_–_introduction_to_data_analysis",
+      "relationship_type": "covers",
+      "target_id": "topic_power_bi_for_data_visualization_and_reporting",
+      "source_dataset": "courses",
+      "source_record_id": "cert_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "topic_power_bi_for_data_visualization_and_reporting",
+      "relationship_type": "covered_in",
+      "target_id": "cert_005_the_first_data_journey_–_introduction_to_data_analysis",
+      "source_dataset": "courses",
+      "source_record_id": "cert_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_005_the_first_data_journey_–_introduction_to_data_analysis",
+      "relationship_type": "covers",
+      "target_id": "topic_kpis_and_performance_metrics",
+      "source_dataset": "courses",
+      "source_record_id": "cert_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "topic_kpis_and_performance_metrics",
+      "relationship_type": "covered_in",
+      "target_id": "cert_005_the_first_data_journey_–_introduction_to_data_analysis",
+      "source_dataset": "courses",
+      "source_record_id": "cert_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_005_the_first_data_journey_–_introduction_to_data_analysis",
+      "relationship_type": "covers",
+      "target_id": "topic_professional_preparation_for_data_analyst_roles",
+      "source_dataset": "courses",
+      "source_record_id": "cert_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "topic_professional_preparation_for_data_analyst_roles",
+      "relationship_type": "covered_in",
+      "target_id": "cert_005_the_first_data_journey_–_introduction_to_data_analysis",
+      "source_dataset": "courses",
+      "source_record_id": "cert_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_005_the_first_data_journey_–_introduction_to_data_analysis",
+      "relationship_type": "covers",
+      "target_id": "topic_cv_and_linkedin_optimization",
+      "source_dataset": "courses",
+      "source_record_id": "cert_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "topic_cv_and_linkedin_optimization",
+      "relationship_type": "covered_in",
+      "target_id": "cert_005_the_first_data_journey_–_introduction_to_data_analysis",
+      "source_dataset": "courses",
+      "source_record_id": "cert_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "completed",
+      "target_id": "cert_006_ibm_introduction_to_machine_learning",
+      "source_dataset": "courses",
+      "source_record_id": "cert_006",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": "2025-10-31",
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_006_ibm_introduction_to_machine_learning",
+      "relationship_type": "provided_by",
+      "target_id": "organization_ibm",
+      "source_dataset": "courses",
+      "source_record_id": "cert_006",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_006_ibm_introduction_to_machine_learning",
+      "relationship_type": "hosted_on",
+      "target_id": "platform_coursera",
+      "source_dataset": "courses",
+      "source_record_id": "cert_006",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "completed",
+      "target_id": "cert_007_microsoft_sql_server",
+      "source_dataset": "courses",
+      "source_record_id": "cert_007",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": "2025-11-13",
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_007_microsoft_sql_server",
+      "relationship_type": "provided_by",
+      "target_id": "organization_microsoft",
+      "source_dataset": "courses",
+      "source_record_id": "cert_007",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_007_microsoft_sql_server",
+      "relationship_type": "hosted_on",
+      "target_id": "platform_coursera",
+      "source_dataset": "courses",
+      "source_record_id": "cert_007",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "completed",
+      "target_id": "cert_008_ai_for_all:_from_basics_to_genai_practice",
+      "source_dataset": "courses",
+      "source_record_id": "cert_008",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": "2025-11",
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_008_ai_for_all:_from_basics_to_genai_practice",
+      "relationship_type": "provided_by",
+      "target_id": "organization_nvidia",
+      "source_dataset": "courses",
+      "source_record_id": "cert_008",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_008_ai_for_all:_from_basics_to_genai_practice",
+      "relationship_type": "hosted_on",
+      "target_id": "organization_nvidia",
+      "source_dataset": "courses",
+      "source_record_id": "cert_008",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "completed",
+      "target_id": "cert_009_nvidia_dli_summer_training_program:_generative_ai_(beginner_level)",
+      "source_dataset": "courses",
+      "source_record_id": "cert_009",
+      "confidence": 1.0,
+      "start_date": "2025-11-16",
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_009_nvidia_dli_summer_training_program:_generative_ai_(beginner_level)",
+      "relationship_type": "provided_by",
+      "target_id": "organization_information_technology_institute_(iti)",
+      "source_dataset": "courses",
+      "source_record_id": "cert_009",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_009_nvidia_dli_summer_training_program:_generative_ai_(beginner_level)",
+      "relationship_type": "hosted_on",
+      "target_id": "organization_nvidia",
+      "source_dataset": "courses",
+      "source_record_id": "cert_009",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "completed",
+      "target_id": "cert_010_introduction_to_deep_learning",
+      "source_dataset": "courses",
+      "source_record_id": "cert_010",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": "2026-01-26",
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_010_introduction_to_deep_learning",
+      "relationship_type": "provided_by",
+      "target_id": "organization_mahara-tech",
+      "source_dataset": "courses",
+      "source_record_id": "cert_010",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "completed",
+      "target_id": "cert_011_building_rag_agents_with_llms",
+      "source_dataset": "courses",
+      "source_record_id": "cert_011",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": "2026-02-25",
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_011_building_rag_agents_with_llms",
+      "relationship_type": "provided_by",
+      "target_id": "organization_nvidia",
+      "source_dataset": "courses",
+      "source_record_id": "cert_011",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_011_building_rag_agents_with_llms",
+      "relationship_type": "hosted_on",
+      "target_id": "organization_nvidia",
+      "source_dataset": "courses",
+      "source_record_id": "cert_011",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "completed",
+      "target_id": "cert_012_deep_learning",
+      "source_dataset": "courses",
+      "source_record_id": "cert_012",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": "2026-02-28",
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_012_deep_learning",
+      "relationship_type": "provided_by",
+      "target_id": "organization_deeplearning.ai",
+      "source_dataset": "courses",
+      "source_record_id": "cert_012",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_012_deep_learning",
+      "relationship_type": "hosted_on",
+      "target_id": "platform_coursera",
+      "source_dataset": "courses",
+      "source_record_id": "cert_012",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "completed",
+      "target_id": "cert_013_generative_ai_engineering_with_llms",
+      "source_dataset": "courses",
+      "source_record_id": "cert_013",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": "2026-08-04",
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_013_generative_ai_engineering_with_llms",
+      "relationship_type": "provided_by",
+      "target_id": "organization_ibm",
+      "source_dataset": "courses",
+      "source_record_id": "cert_013",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_013_generative_ai_engineering_with_llms",
+      "relationship_type": "hosted_on",
+      "target_id": "platform_coursera",
+      "source_dataset": "courses",
+      "source_record_id": "cert_013",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "worked_at",
+      "target_id": "organization_kfs_gov",
+      "source_dataset": "experience",
+      "source_record_id": "exp_001",
+      "confidence": 1.0,
+      "start_date": "2026-02",
+      "end_date": null,
+      "metadata": {
+        "role": "Generative AI & Data Science Intern",
+        "employment_type": "Internship",
+        "status": "Present"
+      }
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "worked_as",
+      "target_id": "role_generative_ai_&_data_science_intern",
+      "source_dataset": "experience",
+      "source_record_id": "exp_001",
+      "confidence": 1.0,
+      "start_date": "2026-02",
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_generative_ai",
+      "source_dataset": "experience",
+      "source_record_id": "exp_001",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_data_science",
+      "source_dataset": "experience",
+      "source_record_id": "exp_001",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_artificial_intelligence",
+      "source_dataset": "experience",
+      "source_record_id": "exp_001",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "worked_at",
+      "target_id": "organization_freelance",
+      "source_dataset": "experience",
+      "source_record_id": "exp_002",
+      "confidence": 1.0,
+      "start_date": "2026-02",
+      "end_date": null,
+      "metadata": {
+        "role": "Generative AI Engineer & Data Scientist",
+        "employment_type": "Freelance",
+        "status": "Present"
+      }
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "worked_as",
+      "target_id": "role_generative_ai_engineer_&_data_scientist",
+      "source_dataset": "experience",
+      "source_record_id": "exp_002",
+      "confidence": 1.0,
+      "start_date": "2026-02",
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_python",
+      "source_dataset": "experience",
+      "source_record_id": "exp_002",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_tensorflow",
+      "source_dataset": "experience",
+      "source_record_id": "exp_002",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_scikit-learn",
+      "source_dataset": "experience",
+      "source_record_id": "exp_002",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_generative_ai",
+      "source_dataset": "experience",
+      "source_record_id": "exp_002",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_computer_vision",
+      "source_dataset": "experience",
+      "source_record_id": "exp_002",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_rag",
+      "source_dataset": "experience",
+      "source_record_id": "exp_002",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_data_analytics",
+      "source_dataset": "experience",
+      "source_record_id": "exp_002",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_business_intelligence",
+      "source_dataset": "experience",
+      "source_record_id": "exp_002",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "worked_at",
+      "target_id": "organization_hex_softwares_pvt._ltd",
+      "source_dataset": "experience",
+      "source_record_id": "exp_003",
+      "confidence": 1.0,
+      "start_date": "2026-01",
+      "end_date": "2026-02",
+      "metadata": {
+        "role": "Data Science Intern",
+        "employment_type": "Internship",
+        "status": "Completed"
+      }
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "worked_as",
+      "target_id": "role_data_science_intern",
+      "source_dataset": "experience",
+      "source_record_id": "exp_003",
+      "confidence": 1.0,
+      "start_date": "2026-01",
+      "end_date": "2026-02",
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_data_science",
+      "source_dataset": "experience",
+      "source_record_id": "exp_003",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_machine_learning",
+      "source_dataset": "experience",
+      "source_record_id": "exp_003",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "worked_at",
+      "target_id": "organization_nti",
+      "source_dataset": "experience",
+      "source_record_id": "exp_004",
+      "confidence": 1.0,
+      "start_date": "2025-07-27",
+      "end_date": "2025-08-21",
+      "metadata": {
+        "role": "Big Data Analysis Trainee",
+        "employment_type": "Training",
+        "status": "Completed"
+      }
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "worked_as",
+      "target_id": "role_big_data_analysis_trainee",
+      "source_dataset": "experience",
+      "source_record_id": "exp_004",
+      "confidence": 1.0,
+      "start_date": "2025-07-27",
+      "end_date": "2025-08-21",
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_big_data",
+      "source_dataset": "experience",
+      "source_record_id": "exp_004",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_data_processing",
+      "source_dataset": "experience",
+      "source_record_id": "exp_004",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_data_analysis",
+      "source_dataset": "experience",
+      "source_record_id": "exp_004",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_analytics",
+      "source_dataset": "experience",
+      "source_record_id": "exp_004",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "built",
+      "target_id": "project_001_signmeasure_ai",
+      "source_dataset": "projects",
+      "source_record_id": "project_001",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_001_signmeasure_ai",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_computer_vision",
+      "source_dataset": "projects",
+      "source_record_id": "project_001",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_001_signmeasure_ai",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_object_detection",
+      "source_dataset": "projects",
+      "source_record_id": "project_001",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_001_signmeasure_ai",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_ai_measurement",
+      "source_dataset": "projects",
+      "source_record_id": "project_001",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_001_signmeasure_ai",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_image_analysis",
+      "source_dataset": "projects",
+      "source_record_id": "project_001",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_001_signmeasure_ai",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_data_extraction",
+      "source_dataset": "projects",
+      "source_record_id": "project_001",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_001_signmeasure_ai",
+      "relationship_type": "belongs_to_domain",
+      "target_id": "domain_smart_government",
+      "source_dataset": "projects",
+      "source_record_id": "project_001",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_001_signmeasure_ai",
+      "relationship_type": "belongs_to_domain",
+      "target_id": "domain_government_ai",
+      "source_dataset": "projects",
+      "source_record_id": "project_001",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_001_signmeasure_ai",
+      "relationship_type": "belongs_to_domain",
+      "target_id": "domain_computer_vision",
+      "source_dataset": "projects",
+      "source_record_id": "project_001",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "built",
+      "target_id": "project_002_national_id_reader",
+      "source_dataset": "projects",
+      "source_record_id": "project_002",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_002_national_id_reader",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_computer_vision_1",
+      "source_dataset": "projects",
+      "source_record_id": "project_002",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_002_national_id_reader",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_ocr",
+      "source_dataset": "projects",
+      "source_record_id": "project_002",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_002_national_id_reader",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_data_extraction",
+      "source_dataset": "projects",
+      "source_record_id": "project_002",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_002_national_id_reader",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_document_ai",
+      "source_dataset": "projects",
+      "source_record_id": "project_002",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_002_national_id_reader",
+      "relationship_type": "belongs_to_domain",
+      "target_id": "domain_document_intelligence",
+      "source_dataset": "projects",
+      "source_record_id": "project_002",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_002_national_id_reader",
+      "relationship_type": "belongs_to_domain",
+      "target_id": "domain_government_ai",
+      "source_dataset": "projects",
+      "source_record_id": "project_002",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_002_national_id_reader",
+      "relationship_type": "belongs_to_domain",
+      "target_id": "domain_computer_vision_1",
+      "source_dataset": "projects",
+      "source_record_id": "project_002",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "built",
+      "target_id": "project_003_eagle_vision",
+      "source_dataset": "projects",
+      "source_record_id": "project_003",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_003_eagle_vision",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_computer_vision_2",
+      "source_dataset": "projects",
+      "source_record_id": "project_003",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_003_eagle_vision",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_ai_monitoring",
+      "source_dataset": "projects",
+      "source_record_id": "project_003",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_003_eagle_vision",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_behavior_analysis",
+      "source_dataset": "projects",
+      "source_record_id": "project_003",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_003_eagle_vision",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_eye_tracking",
+      "source_dataset": "projects",
+      "source_record_id": "project_003",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_003_eagle_vision",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_object_detection",
+      "source_dataset": "projects",
+      "source_record_id": "project_003",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_003_eagle_vision",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_real-time_surveillance",
+      "source_dataset": "projects",
+      "source_record_id": "project_003",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_003_eagle_vision",
+      "relationship_type": "belongs_to_domain",
+      "target_id": "domain_education",
+      "source_dataset": "projects",
+      "source_record_id": "project_003",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_003_eagle_vision",
+      "relationship_type": "belongs_to_domain",
+      "target_id": "domain_ai_monitoring",
+      "source_dataset": "projects",
+      "source_record_id": "project_003",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_003_eagle_vision",
+      "relationship_type": "belongs_to_domain",
+      "target_id": "domain_computer_vision_2",
+      "source_dataset": "projects",
+      "source_record_id": "project_003",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_003_eagle_vision",
+      "relationship_type": "belongs_to_domain",
+      "target_id": "domain_real-time_ai",
+      "source_dataset": "projects",
+      "source_record_id": "project_003",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "built",
+      "target_id": "project_004_leaklens",
+      "source_dataset": "projects",
+      "source_record_id": "project_004",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_004_leaklens",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_artificial_intelligence",
+      "source_dataset": "projects",
+      "source_record_id": "project_004",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_004_leaklens",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_anomaly_detection",
+      "source_dataset": "projects",
+      "source_record_id": "project_004",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_004_leaklens",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_iot",
+      "source_dataset": "projects",
+      "source_record_id": "project_004",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_004_leaklens",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_water_network_analysis",
+      "source_dataset": "projects",
+      "source_record_id": "project_004",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_004_leaklens",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_mobile_application",
+      "source_dataset": "projects",
+      "source_record_id": "project_004",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_004_leaklens",
+      "relationship_type": "belongs_to_domain",
+      "target_id": "domain_smart_infrastructure",
+      "source_dataset": "projects",
+      "source_record_id": "project_004",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_004_leaklens",
+      "relationship_type": "belongs_to_domain",
+      "target_id": "domain_water_management",
+      "source_dataset": "projects",
+      "source_record_id": "project_004",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_004_leaklens",
+      "relationship_type": "belongs_to_domain",
+      "target_id": "domain_iot",
+      "source_dataset": "projects",
+      "source_record_id": "project_004",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_004_leaklens",
+      "relationship_type": "belongs_to_domain",
+      "target_id": "domain_ai_monitoring",
+      "source_dataset": "projects",
+      "source_record_id": "project_004",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "built",
+      "target_id": "project_005_hr_validator",
+      "source_dataset": "projects",
+      "source_record_id": "project_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_005_hr_validator",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_document_ai",
+      "source_dataset": "projects",
+      "source_record_id": "project_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_005_hr_validator",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_ocr",
+      "source_dataset": "projects",
+      "source_record_id": "project_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_005_hr_validator",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_computer_vision_3",
+      "source_dataset": "projects",
+      "source_record_id": "project_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_005_hr_validator",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_document_classification",
+      "source_dataset": "projects",
+      "source_record_id": "project_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_005_hr_validator",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_document_validation",
+      "source_dataset": "projects",
+      "source_record_id": "project_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_005_hr_validator",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_stamp_detection",
+      "source_dataset": "projects",
+      "source_record_id": "project_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_005_hr_validator",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_data_extraction",
+      "source_dataset": "projects",
+      "source_record_id": "project_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_005_hr_validator",
+      "relationship_type": "belongs_to_domain",
+      "target_id": "domain_hr_technology",
+      "source_dataset": "projects",
+      "source_record_id": "project_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_005_hr_validator",
+      "relationship_type": "belongs_to_domain",
+      "target_id": "domain_document_intelligence",
+      "source_dataset": "projects",
+      "source_record_id": "project_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_005_hr_validator",
+      "relationship_type": "belongs_to_domain",
+      "target_id": "domain_ai_validation",
+      "source_dataset": "projects",
+      "source_record_id": "project_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_005_hr_validator",
+      "relationship_type": "belongs_to_domain",
+      "target_id": "domain_computer_vision_3",
+      "source_dataset": "projects",
+      "source_record_id": "project_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "built",
+      "target_id": "project_006_closer",
+      "source_dataset": "projects",
+      "source_record_id": "project_006",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_006_closer",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_artificial_intelligence",
+      "source_dataset": "projects",
+      "source_record_id": "project_006",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_006_closer",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_computer_vision_4",
+      "source_dataset": "projects",
+      "source_record_id": "project_006",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_006_closer",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_nlp",
+      "source_dataset": "projects",
+      "source_record_id": "project_006",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_006_closer",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_llms",
+      "source_dataset": "projects",
+      "source_record_id": "project_006",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_006_closer",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_speech_recognition",
+      "source_dataset": "projects",
+      "source_record_id": "project_006",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_006_closer",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_smart_glasses",
+      "source_dataset": "projects",
+      "source_record_id": "project_006",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_006_closer",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_smartwatch",
+      "source_dataset": "projects",
+      "source_record_id": "project_006",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_006_closer",
+      "relationship_type": "belongs_to_domain",
+      "target_id": "domain_assistive_technology",
+      "source_dataset": "projects",
+      "source_record_id": "project_006",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_006_closer",
+      "relationship_type": "belongs_to_domain",
+      "target_id": "domain_accessibility",
+      "source_dataset": "projects",
+      "source_record_id": "project_006",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_006_closer",
+      "relationship_type": "belongs_to_domain",
+      "target_id": "domain_ai",
+      "source_dataset": "projects",
+      "source_record_id": "project_006",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "project_006_closer",
+      "relationship_type": "belongs_to_domain",
+      "target_id": "domain_human-computer_interaction",
+      "source_dataset": "projects",
+      "source_record_id": "project_006",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "achieved",
+      "target_id": "activity_001_huawei_hire6_itb_recruitment_expo",
+      "source_dataset": "achievements",
+      "source_record_id": "activity_001",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {
+        "date": "2025-10",
+        "year": null
+      }
+    },
+    {
+      "source_id": "activity_001_huawei_hire6_itb_recruitment_expo",
+      "relationship_type": "organized_by",
+      "target_id": "organization_huawei",
+      "source_dataset": "achievements",
+      "source_record_id": "activity_001",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "achieved",
+      "target_id": "activity_002_university-level_art_exhibition",
+      "source_dataset": "achievements",
+      "source_record_id": "activity_002",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {
+        "date": null,
+        "year": null
+      }
+    },
+    {
+      "source_id": "activity_002_university-level_art_exhibition",
+      "relationship_type": "organized_by",
+      "target_id": "organization_faculty_of_artificial_intelligence,_kafrelsheikh_university",
+      "source_dataset": "achievements",
+      "source_record_id": "activity_002",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "achieved",
+      "target_id": "activity_003_digitopia",
+      "source_dataset": "achievements",
+      "source_record_id": "activity_003",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {
+        "date": null,
+        "year": 2025
+      }
+    },
+    {
+      "source_id": "activity_003_digitopia",
+      "relationship_type": "organized_by",
+      "target_id": "organization_ministry_of_communications_and_information_technology_(mcit)",
+      "source_dataset": "achievements",
+      "source_record_id": "activity_003",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "skilled_in",
+      "target_id": "skill_generative_ai_and_llm-based_applications",
+      "source_dataset": "benefits",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "skilled_in",
+      "target_id": "skill_rag_systems_and_knowledge-based_ai_applications",
+      "source_dataset": "benefits",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "skilled_in",
+      "target_id": "skill_ai_agents_and_agentic_ai_concepts",
+      "source_dataset": "benefits",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "skilled_in",
+      "target_id": "skill_computer_vision_and_object_detection",
+      "source_dataset": "benefits",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "skilled_in",
+      "target_id": "skill_ocr_and_document_intelligence",
+      "source_dataset": "benefits",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "skilled_in",
+      "target_id": "skill_machine_learning_and_deep_learning",
+      "source_dataset": "benefits",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "skilled_in",
+      "target_id": "skill_data_science_and_data_analysis",
+      "source_dataset": "benefits",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "skilled_in",
+      "target_id": "skill_anomaly_detection_and_intelligent_monitoring",
+      "source_dataset": "benefits",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "skilled_in",
+      "target_id": "skill_business_intelligence_and_data_visualization",
+      "source_dataset": "benefits",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "skilled_in",
+      "target_id": "skill_ai-powered_automation_and_decision-support_systems",
+      "source_dataset": "benefits",
+      "source_record_id": null,
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    }
+  ],
+  "timeline": [
+    {
+      "event_id": "event_0024",
+      "event_type": "achievement_received",
+      "date": "2025",
+      "date_precision": "year",
+      "entity_id": "activity_003",
+      "description": "Achievement: DIGITOPIA",
+      "source_dataset": "achievements",
+      "source_record_id": "activity_003",
+      "metadata": {
+        "type": "Competition"
+      }
+    },
+    {
+      "event_id": "event_0002",
+      "event_type": "course_completed",
+      "date": "2025-07-18",
+      "date_precision": "day",
+      "entity_id": "cert_001",
+      "description": "Completed: Neural Networks and Deep Learning",
+      "source_dataset": "courses",
+      "source_record_id": "cert_001",
+      "metadata": {
+        "provider": "DeepLearning.AI",
+        "type": "Course"
+      }
+    },
+    {
+      "event_id": "event_0021",
+      "event_type": "job_started",
+      "date": "2025-07-27",
+      "date_precision": "day",
+      "entity_id": "exp_004",
+      "description": "Started as Big Data Analysis Trainee at NTI",
+      "source_dataset": "experience",
+      "source_record_id": "exp_004",
+      "metadata": {
+        "role": "Big Data Analysis Trainee",
+        "organization": "NTI"
+      }
+    },
+    {
+      "event_id": "event_0022",
+      "event_type": "job_ended",
+      "date": "2025-08-21",
+      "date_precision": "day",
+      "entity_id": "exp_004",
+      "description": "Ended role as Big Data Analysis Trainee at NTI",
+      "source_dataset": "experience",
+      "source_record_id": "exp_004",
+      "metadata": {
+        "role": "Big Data Analysis Trainee",
+        "organization": "NTI"
+      }
+    },
+    {
+      "event_id": "event_0003",
+      "event_type": "course_completed",
+      "date": "2025-08-29",
+      "date_precision": "day",
+      "entity_id": "cert_002",
+      "description": "Completed: Getting Started with Deep Learning",
+      "source_dataset": "courses",
+      "source_record_id": "cert_002",
+      "metadata": {
+        "provider": "NVIDIA",
+        "type": "Certificate of Competency"
+      }
+    },
+    {
+      "event_id": "event_0004",
+      "event_type": "course_completed",
+      "date": "2025-09-24",
+      "date_precision": "day",
+      "entity_id": "cert_003",
+      "description": "Completed: Data Analysis with Python",
+      "source_dataset": "courses",
+      "source_record_id": "cert_003",
+      "metadata": {
+        "provider": "IBM",
+        "type": "Course"
+      }
+    },
+    {
+      "event_id": "event_0006",
+      "event_type": "course_started",
+      "date": "2025-09-27",
+      "date_precision": "day",
+      "entity_id": "cert_005",
+      "description": "Started: The First Data Journey – Introduction to Data Analysis",
+      "source_dataset": "courses",
+      "source_record_id": "cert_005",
+      "metadata": {}
+    },
+    {
+      "event_id": "event_0023",
+      "event_type": "achievement_received",
+      "date": "2025-10",
+      "date_precision": "month",
+      "entity_id": "activity_001",
+      "description": "Achievement: Huawei HiRE6 ITB Recruitment Expo",
+      "source_dataset": "achievements",
+      "source_record_id": "activity_001",
+      "metadata": {
+        "type": "Recruitment Expo"
+      }
+    },
+    {
+      "event_id": "event_0007",
+      "event_type": "course_ended",
+      "date": "2025-10-01",
+      "date_precision": "day",
+      "entity_id": "cert_005",
+      "description": "Ended: The First Data Journey – Introduction to Data Analysis",
+      "source_dataset": "courses",
+      "source_record_id": "cert_005",
+      "metadata": {}
+    },
+    {
+      "event_id": "event_0005",
+      "event_type": "course_completed",
+      "date": "2025-10-07",
+      "date_precision": "day",
+      "entity_id": "cert_004",
+      "description": "Completed: Microsoft Power BI Data Analyst",
+      "source_dataset": "courses",
+      "source_record_id": "cert_004",
+      "metadata": {
+        "provider": "Microsoft",
+        "type": "Professional Certificate"
+      }
+    },
+    {
+      "event_id": "event_0008",
+      "event_type": "course_completed",
+      "date": "2025-10-31",
+      "date_precision": "day",
+      "entity_id": "cert_006",
+      "description": "Completed: IBM Introduction to Machine Learning",
+      "source_dataset": "courses",
+      "source_record_id": "cert_006",
+      "metadata": {
+        "provider": "IBM",
+        "type": "Specialization"
+      }
+    },
+    {
+      "event_id": "event_0010",
+      "event_type": "course_completed",
+      "date": "2025-11",
+      "date_precision": "month",
+      "entity_id": "cert_008",
+      "description": "Completed: AI for All: From Basics to GenAI Practice",
+      "source_dataset": "courses",
+      "source_record_id": "cert_008",
+      "metadata": {
+        "provider": "NVIDIA",
+        "type": "Certificate of Completion"
+      }
+    },
+    {
+      "event_id": "event_0009",
+      "event_type": "course_completed",
+      "date": "2025-11-13",
+      "date_precision": "day",
+      "entity_id": "cert_007",
+      "description": "Completed: Microsoft SQL Server",
+      "source_dataset": "courses",
+      "source_record_id": "cert_007",
+      "metadata": {
+        "provider": "Microsoft",
+        "type": "Professional Certificate"
+      }
+    },
+    {
+      "event_id": "event_0011",
+      "event_type": "course_started",
+      "date": "2025-11-16",
+      "date_precision": "day",
+      "entity_id": "cert_009",
+      "description": "Started: NVIDIA DLI Summer Training Program: Generative AI (Beginner Level)",
+      "source_dataset": "courses",
+      "source_record_id": "cert_009",
+      "metadata": {}
+    },
+    {
+      "event_id": "event_0012",
+      "event_type": "course_ended",
+      "date": "2025-12-03",
+      "date_precision": "day",
+      "entity_id": "cert_009",
+      "description": "Ended: NVIDIA DLI Summer Training Program: Generative AI (Beginner Level)",
+      "source_dataset": "courses",
+      "source_record_id": "cert_009",
+      "metadata": {}
+    },
+    {
+      "event_id": "event_0019",
+      "event_type": "job_started",
+      "date": "2026-01",
+      "date_precision": "month",
+      "entity_id": "exp_003",
+      "description": "Started as Data Science Intern at Hex Softwares Pvt. Ltd.",
+      "source_dataset": "experience",
+      "source_record_id": "exp_003",
+      "metadata": {
+        "role": "Data Science Intern",
+        "organization": "Hex Softwares Pvt. Ltd."
+      }
+    },
+    {
+      "event_id": "event_0013",
+      "event_type": "course_completed",
+      "date": "2026-01-26",
+      "date_precision": "day",
+      "entity_id": "cert_010",
+      "description": "Completed: Introduction to Deep Learning",
+      "source_dataset": "courses",
+      "source_record_id": "cert_010",
+      "metadata": {
+        "provider": "Mahara-Tech",
+        "type": "Course"
+      }
+    },
+    {
+      "event_id": "event_0017",
+      "event_type": "job_started",
+      "date": "2026-02",
+      "date_precision": "month",
+      "entity_id": "exp_001",
+      "description": "Started as Generative AI & Data Science Intern at KFS Gov",
+      "source_dataset": "experience",
+      "source_record_id": "exp_001",
+      "metadata": {
+        "role": "Generative AI & Data Science Intern",
+        "organization": "KFS Gov"
+      }
+    },
+    {
+      "event_id": "event_0018",
+      "event_type": "job_started",
+      "date": "2026-02",
+      "date_precision": "month",
+      "entity_id": "exp_002",
+      "description": "Started as Generative AI Engineer & Data Scientist at Freelance",
+      "source_dataset": "experience",
+      "source_record_id": "exp_002",
+      "metadata": {
+        "role": "Generative AI Engineer & Data Scientist",
+        "organization": "Freelance"
+      }
+    },
+    {
+      "event_id": "event_0020",
+      "event_type": "job_ended",
+      "date": "2026-02",
+      "date_precision": "month",
+      "entity_id": "exp_003",
+      "description": "Ended role as Data Science Intern at Hex Softwares Pvt. Ltd.",
+      "source_dataset": "experience",
+      "source_record_id": "exp_003",
+      "metadata": {
+        "role": "Data Science Intern",
+        "organization": "Hex Softwares Pvt. Ltd."
+      }
+    },
+    {
+      "event_id": "event_0014",
+      "event_type": "course_completed",
+      "date": "2026-02-25",
+      "date_precision": "day",
+      "entity_id": "cert_011",
+      "description": "Completed: Building RAG Agents with LLMs",
+      "source_dataset": "courses",
+      "source_record_id": "cert_011",
+      "metadata": {
+        "provider": "NVIDIA",
+        "type": "Certificate of Competency"
+      }
+    },
+    {
+      "event_id": "event_0015",
+      "event_type": "course_completed",
+      "date": "2026-02-28",
+      "date_precision": "day",
+      "entity_id": "cert_012",
+      "description": "Completed: Deep Learning",
+      "source_dataset": "courses",
+      "source_record_id": "cert_012",
+      "metadata": {
+        "provider": "DeepLearning.AI",
+        "type": "Specialization"
+      }
+    },
+    {
+      "event_id": "event_0016",
+      "event_type": "course_completed",
+      "date": "2026-08-04",
+      "date_precision": "day",
+      "entity_id": "cert_013",
+      "description": "Completed: Generative AI Engineering with LLMs",
+      "source_dataset": "courses",
+      "source_record_id": "cert_013",
+      "metadata": {
+        "provider": "IBM",
+        "type": "Specialization"
+      }
+    },
+    {
+      "event_id": "event_0001",
+      "event_type": "education_graduation",
+      "date": "2027",
+      "date_precision": "year",
+      "entity_id": null,
+      "description": "Expected graduation: Bachelor's Degree in Bio-AI (Biological Artificial Intelligence)",
+      "source_dataset": "education",
+      "source_record_id": null,
+      "metadata": {
+        "university": "Kafr El Sheikh University"
+      }
+    }
+  ],
+  "statistics": {
+    "datasets_processed": 8,
+    "entities_created": 132,
+    "relationships_created": 169,
+    "timeline_events": 24,
+    "errors": []
+  }
+}

@@ -1,0 +1,382 @@
+{
+  "certifications": [
+    {
+      "id": "cert_001",
+      "title": "Neural Networks and Deep Learning",
+      "type": "Course",
+      "provider": "DeepLearning.AI",
+      "platform": "Coursera",
+      "completion_date": "2025-07-18",
+      "start_date": null,
+      "end_date": null,
+      "duration": null,
+      "duration_hours": null,
+      "certificate_id": null,
+      "verification": {
+        "id": "UJC3QS4IZECD",
+        "url": "https://coursera.org/verify/UJC3QS4IZECD"
+      },
+      "included_courses": [],
+      "topics": []
+    },
+    {
+      "id": "cert_002",
+      "title": "Getting Started with Deep Learning",
+      "type": "Certificate of Competency",
+      "provider": "NVIDIA",
+      "platform": "NVIDIA Deep Learning Institute",
+      "completion_date": "2025-08-29",
+      "start_date": null,
+      "end_date": null,
+      "duration": null,
+      "duration_hours": null,
+      "certificate_id": "IteDRiGpTyCh5_7zdwlq_A",
+      "verification": null,
+      "included_courses": [],
+      "topics": []
+    },
+    {
+      "id": "cert_003",
+      "title": "Data Analysis with Python",
+      "type": "Course",
+      "provider": "IBM",
+      "platform": "Coursera",
+      "completion_date": "2025-09-24",
+      "start_date": null,
+      "end_date": null,
+      "duration": null,
+      "duration_hours": null,
+      "certificate_id": null,
+      "verification": {
+        "id": "KOIH03YJNEJS",
+        "url": "https://coursera.org/verify/KOIH03YJNEJS"
+      },
+      "included_courses": [],
+      "topics": []
+    },
+    {
+      "id": "cert_004",
+      "title": "Microsoft Power BI Data Analyst",
+      "type": "Professional Certificate",
+      "provider": "Microsoft",
+      "platform": "Coursera",
+      "completion_date": "2025-10-07",
+      "start_date": null,
+      "end_date": null,
+      "duration": null,
+      "duration_hours": null,
+      "certificate_id": null,
+      "verification": {
+        "id": "SO9V5TMT3C1K",
+        "url": "https://coursera.org/verify/professional-cert/SO9V5TMT3C1K"
+      },
+      "included_courses": [
+        {
+          "title": "Preparing Data for Analysis with Microsoft Excel",
+          "hours": null
+        },
+        {
+          "title": "Harnessing the Power of Data with Power BI",
+          "hours": null
+        },
+        {
+          "title": "Extract, Transform and Load Data in Power BI",
+          "hours": null
+        },
+        {
+          "title": "Data Modeling in Power BI",
+          "hours": null
+        },
+        {
+          "title": "Data Analysis and Visualization with Power BI",
+          "hours": null
+        },
+        {
+          "title": "Creative Designing in Power BI",
+          "hours": null
+        },
+        {
+          "title": "Deploy and Maintain Power BI Assets and Capstone Project",
+          "hours": null
+        },
+        {
+          "title": "Microsoft PL-300 Exam Preparation and Practice",
+          "hours": null
+        }
+      ],
+      "topics": []
+    },
+    {
+      "id": "cert_005",
+      "title": "The First Data Journey – Introduction to Data Analysis",
+      "type": "Certificate of Attendance",
+      "provider": "Tharaa Training Company",
+      "platform": null,
+      "completion_date": null,
+      "start_date": "2025-09-27",
+      "end_date": "2025-10-01",
+      "duration": null,
+      "duration_hours": 15.0,
+      "certificate_id": null,
+      "verification": null,
+      "included_courses": [],
+      "topics": [
+        "Data Analysis Fundamentals",
+        "Excel for Data Processing",
+        "Power BI for Data Visualization and Reporting",
+        "KPIs and Performance Metrics",
+        "Professional Preparation for Data Analyst Roles",
+        "CV and LinkedIn Optimization"
+      ]
+    },
+    {
+      "id": "cert_006",
+      "title": "IBM Introduction to Machine Learning",
+      "type": "Specialization",
+      "provider": "IBM",
+      "platform": "Coursera",
+      "completion_date": "2025-10-31",
+      "start_date": null,
+      "end_date": null,
+      "duration": null,
+      "duration_hours": null,
+      "certificate_id": null,
+      "verification": {
+        "id": "LRH0IY8BIAB5",
+        "url": "https://coursera.org/verify/specialization/LRH0IY8BIAB5"
+      },
+      "included_courses": [
+        {
+          "title": "Exploratory Data Analysis for Machine Learning",
+          "hours": null
+        },
+        {
+          "title": "Supervised Machine Learning: Regression",
+          "hours": null
+        },
+        {
+          "title": "Supervised Machine Learning: Classification",
+          "hours": null
+        },
+        {
+          "title": "Unsupervised Machine Learning",
+          "hours": null
+        }
+      ],
+      "topics": []
+    },
+    {
+      "id": "cert_007",
+      "title": "Microsoft SQL Server",
+      "type": "Professional Certificate",
+      "provider": "Microsoft",
+      "platform": "Coursera",
+      "completion_date": "2025-11-13",
+      "start_date": null,
+      "end_date": null,
+      "duration": null,
+      "duration_hours": null,
+      "certificate_id": null,
+      "verification": {
+        "id": "BACDE4DBHYR5",
+        "url": "https://coursera.org/verify/professional-cert/BACDE4DBHYR5"
+      },
+      "included_courses": [
+        {
+          "title": "SQL Foundations",
+          "hours": null
+        },
+        {
+          "title": "Data Manipulation and Transactions in SQL Server",
+          "hours": null
+        },
+        {
+          "title": "Relational Database Design and Advanced Querying",
+          "hours": null
+        },
+        {
+          "title": "Indexing, Performance Optimization & Functions in SQL Server",
+          "hours": null
+        },
+        {
+          "title": "Security, Maintenance & Integration with BI Tools",
+          "hours": null
+        }
+      ],
+      "topics": []
+    },
+    {
+      "id": "cert_008",
+      "title": "AI for All: From Basics to GenAI Practice",
+      "type": "Certificate of Completion",
+      "provider": "NVIDIA",
+      "platform": "NVIDIA Deep Learning Institute",
+      "completion_date": "2025-11",
+      "start_date": null,
+      "end_date": null,
+      "duration": null,
+      "duration_hours": null,
+      "certificate_id": null,
+      "verification": null,
+      "included_courses": [],
+      "topics": []
+    },
+    {
+      "id": "cert_009",
+      "title": "NVIDIA DLI Summer Training Program: Generative AI (Beginner Level)",
+      "type": "Training Program",
+      "provider": "Information Technology Institute (ITI)",
+      "platform": "NVIDIA Deep Learning Institute",
+      "completion_date": null,
+      "start_date": "2025-11-16",
+      "end_date": "2025-12-03",
+      "duration": null,
+      "duration_hours": 35.0,
+      "certificate_id": null,
+      "verification": null,
+      "included_courses": [
+        {
+          "title": "Python Fundamentals",
+          "hours": 3.0
+        },
+        {
+          "title": "AI for All: From Basics to GenAI Practice",
+          "hours": 3.0
+        },
+        {
+          "title": "Generative AI Explained",
+          "hours": 3.0
+        },
+        {
+          "title": "Building LLM Applications with Prompt Engineering",
+          "hours": 17.0
+        },
+        {
+          "title": "Augment Your LLM Using RAG",
+          "hours": 9.0
+        }
+      ],
+      "topics": []
+    },
+    {
+      "id": "cert_010",
+      "title": "Introduction to Deep Learning",
+      "type": "Course",
+      "provider": "Mahara-Tech",
+      "platform": null,
+      "completion_date": "2026-01-26",
+      "start_date": null,
+      "end_date": null,
+      "duration": "6 hours 26 minutes",
+      "duration_hours": 6.433333333333334,
+      "certificate_id": "PTFA1lXRzA",
+      "verification": null,
+      "included_courses": [],
+      "topics": []
+    },
+    {
+      "id": "cert_011",
+      "title": "Building RAG Agents with LLMs",
+      "type": "Certificate of Competency",
+      "provider": "NVIDIA",
+      "platform": "NVIDIA Deep Learning Institute",
+      "completion_date": "2026-02-25",
+      "start_date": null,
+      "end_date": null,
+      "duration": null,
+      "duration_hours": null,
+      "certificate_id": "3vKkqgFTTtas7ejJbSkoEw",
+      "verification": null,
+      "included_courses": [],
+      "topics": []
+    },
+    {
+      "id": "cert_012",
+      "title": "Deep Learning",
+      "type": "Specialization",
+      "provider": "DeepLearning.AI",
+      "platform": "Coursera",
+      "completion_date": "2026-02-28",
+      "start_date": null,
+      "end_date": null,
+      "duration": null,
+      "duration_hours": null,
+      "certificate_id": null,
+      "verification": {
+        "id": "JXQMI3WHV8CC",
+        "url": "https://coursera.org/verify/specialization/JXQMI3WHV8CC"
+      },
+      "included_courses": [
+        {
+          "title": "Neural Networks and Deep Learning",
+          "hours": null
+        },
+        {
+          "title": "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization",
+          "hours": null
+        },
+        {
+          "title": "Structuring Machine Learning Projects",
+          "hours": null
+        },
+        {
+          "title": "Convolutional Neural Networks",
+          "hours": null
+        },
+        {
+          "title": "Sequence Models",
+          "hours": null
+        }
+      ],
+      "topics": []
+    },
+    {
+      "id": "cert_013",
+      "title": "Generative AI Engineering with LLMs",
+      "type": "Specialization",
+      "provider": "IBM",
+      "platform": "Coursera",
+      "completion_date": "2026-08-04",
+      "start_date": null,
+      "end_date": null,
+      "duration": null,
+      "duration_hours": null,
+      "certificate_id": null,
+      "verification": {
+        "id": "8IA87DFX0JVQ",
+        "url": "https://coursera.org/verify/specialization/8IA87DFX0JVQ"
+      },
+      "included_courses": [
+        {
+          "title": "Generative AI and LLMs: Architecture and Data Preparation",
+          "hours": null
+        },
+        {
+          "title": "Gen AI Foundational Models for NLP & Language Understanding",
+          "hours": null
+        },
+        {
+          "title": "Generative AI Language Modeling with Transformers",
+          "hours": null
+        },
+        {
+          "title": "Generative AI Engineering and Fine-Tuning Transformers",
+          "hours": null
+        },
+        {
+          "title": "Generative AI Advanced Fine-Tuning for LLMs",
+          "hours": null
+        },
+        {
+          "title": "Fundamentals of AI Agents Using RAG and LangChain",
+          "hours": null
+        },
+        {
+          "title": "Project: Generative AI Applications with RAG and LangChain",
+          "hours": null
+        }
+      ],
+      "topics": []
+    }
+  ]
+}

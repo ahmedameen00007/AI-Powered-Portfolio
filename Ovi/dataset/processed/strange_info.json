@@ -1,0 +1,65 @@
+{
+  "favorite_anime": {
+    "title": "Attack on Titan",
+    "preference_strength": "Extremely strong",
+    "description": "Attack on Titan is Ahmed's absolute favorite anime and one of the things he loves most in life."
+  },
+  "favorite_foods": [
+    {
+      "id": "food_1",
+      "rank": 1,
+      "name": "Koshary"
+    },
+    {
+      "id": "food_2",
+      "rank": 2,
+      "name": "Shawarma"
+    },
+    {
+      "id": "food_3",
+      "rank": 3,
+      "name": "Paneh"
+    }
+  ],
+  "pre_tech_interests": [
+    {
+      "interest": "Drawing",
+      "importance": "Primary interest before entering the technology field",
+      "description": "Before becoming interested in technology and AI, Ahmed had a strong passion for drawing and art."
+    }
+  ],
+  "previous_occupations_and_activities": [
+    {
+      "id": "occupation_1",
+      "role": "Graphic Designer",
+      "sequence": 1,
+      "status": "Past"
+    },
+    {
+      "id": "occupation_2",
+      "role": "Gym Trainer",
+      "sequence": 2,
+      "status": "Past"
+    },
+    {
+      "id": "occupation_3",
+      "role": "Calisthenics Trainer",
+      "sequence": 3,
+      "status": "Past"
+    },
+    {
+      "id": "occupation_4",
+      "role": "Boxing Trainer",
+      "sequence": 4,
+      "status": "Past"
+    }
+  ],
+  "training_career_status": {
+    "status": "Retired from training",
+    "description": "Ahmed eventually stopped working as a trainer after his experience in gym training, calisthenics, and boxing."
+  },
+  "physical_info": {
+    "height_cm": 192.0,
+    "weight_kg": 110.0
+  }
+}

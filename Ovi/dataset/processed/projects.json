@@ -1,0 +1,120 @@
+{
+  "projects": [
+    {
+      "id": "project_001",
+      "name": "SignMeasure AI",
+      "title": "Shop Signboard Measurement",
+      "description": "A Computer Vision system designed to identify and measure commercial shop signboards from images captured by shop owners. The system detects the signboard, determines its dimensions, and calculates its area, enabling local authorities to accurately assess sign sizes for regulatory purposes, fee calculations, and enforcement.",
+      "technologies": [
+        "Computer Vision",
+        "Object Detection",
+        "AI Measurement",
+        "Image Analysis",
+        "Data Extraction"
+      ],
+      "domains": [
+        "Smart Government",
+        "Government AI",
+        "Computer Vision"
+      ]
+    },
+    {
+      "id": "project_002",
+      "name": "National ID Reader",
+      "title": "Document Intelligence",
+      "description": "A Computer Vision and OCR system designed to extract structured information from Egyptian national ID card images. The system identifies the document, detects key data regions, extracts relevant information, and converts the extracted content into structured data suitable for integration with digital systems and applications.",
+      "technologies": [
+        "Computer Vision",
+        "OCR",
+        "Data Extraction",
+        "Document AI"
+      ],
+      "domains": [
+        "Document Intelligence",
+        "Government AI",
+        "Computer Vision"
+      ]
+    },
+    {
+      "id": "project_003",
+      "name": "Eagle Vision",
+      "title": "Exam Cheating Detection",
+      "description": "A Computer Vision system designed to monitor students during examinations in college computer laboratories. The system analyzes eye movement and visual behavior to detect potentially suspicious activity. When suspicious behavior is identified, the system alerts the responsible supervisor, who can choose to warn the student or automatically lock the student's device.",
+      "technologies": [
+        "Computer Vision",
+        "AI Monitoring",
+        "Behavior Analysis",
+        "Eye Tracking",
+        "Object Detection",
+        "Real-time Surveillance"
+      ],
+      "domains": [
+        "Education",
+        "AI Monitoring",
+        "Computer Vision",
+        "Real-time AI"
+      ]
+    },
+    {
+      "id": "project_004",
+      "name": "LeakLens",
+      "title": "AI-Powered Smart Water Management",
+      "description": "An AI-powered smart water management system designed to detect, analyze, and locate water leaks across water networks. The system analyzes network parameters such as flow rates and pressure levels to identify abnormal patterns, estimate leak severity, and determine potential leak locations. When a leak is detected, the system notifies responsible engineers, enabling rapid intervention. The system also includes a mobile application for engineers and citizens to facilitate communication, issue reporting, leak monitoring, and real-time status tracking.",
+      "technologies": [
+        "Artificial Intelligence",
+        "Anomaly Detection",
+        "IoT",
+        "Water Network Analysis",
+        "Mobile Application"
+      ],
+      "domains": [
+        "Smart Infrastructure",
+        "Water Management",
+        "IoT",
+        "AI Monitoring"
+      ]
+    },
+    {
+      "id": "project_005",
+      "name": "HR Validator",
+      "title": "Intelligent Document Validation",
+      "description": "An AI-powered system for validating HR and official documents. The system identifies document types, detects and extracts key information, and verifies multiple elements including stamps, document data, and information consistency. It combines Computer Vision, OCR, and specialized validation models to generate a validation result and provide reasons for any detected issues.",
+      "technologies": [
+        "Document AI",
+        "OCR",
+        "Computer Vision",
+        "Document Classification",
+        "Document Validation",
+        "Stamp Detection",
+        "Data Extraction"
+      ],
+      "domains": [
+        "HR Technology",
+        "Document Intelligence",
+        "AI Validation",
+        "Computer Vision"
+      ]
+    },
+    {
+      "id": "project_006",
+      "name": "Closer",
+      "title": "AI-Powered Assistive Communication Devices",
+      "description": "An AI-powered assistive communication system designed to facilitate interaction between deaf or hard-of-hearing individuals and blind or visually impaired individuals. The system consists of two integrated smart devices: AI-powered smart glasses and a smartwatch. It uses Artificial Intelligence, Computer Vision, NLP, LLMs, and Speech Recognition to translate and convert information across different communication modalities, enabling more accessible communication between users.",
+      "technologies": [
+        "Artificial Intelligence",
+        "Computer Vision",
+        "NLP",
+        "LLMs",
+        "Speech Recognition",
+        "Smart Glasses",
+        "Smartwatch"
+      ],
+      "domains": [
+        "Assistive Technology",
+        "Accessibility",
+        "AI",
+        "Human-Computer Interaction"
+      ]
+    }
+  ]
+}

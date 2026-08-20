@@ -1,0 +1,52 @@
+{
+  "activities": [
+    {
+      "id": "activity_001",
+      "name": "Huawei HiRE6 ITB Recruitment Expo",
+      "type": "Recruitment Expo",
+      "organizer": "Huawei",
+      "event_series": "HiRE6",
+      "date": "2025-10",
+      "participation": "Attended and actively participated",
+      "description": "Attended and actively participated in the Huawei HiRE6 ITB Recruitment Expo.",
+      "certificate": {
+        "type": "Certificate of Attendance",
+        "issuer": "Huawei",
+        "reference": "HiRE6"
+      }
+    },
+    {
+      "id": "activity_002",
+      "name": "University-Level Art Exhibition",
+      "type": "University Activity",
+      "organizer": "Faculty of Artificial Intelligence, Kafrelsheikh University",
+      "participation": "Participated",
+      "description": "Participated in the university-level art exhibition organized by the Faculty of Artificial Intelligence at Kafrelsheikh University.",
+      "recognition": "Received a certificate in recognition of participation.",
+      "certificate": {
+        "type": "Certificate of Participation",
+        "issuer": "Faculty of Artificial Intelligence, Kafrelsheikh University",
+        "signatories": [
+          "Prof. Dr. Tamer Medhat, Dean of the Faculty",
+          "Eng. Wael Sobhy, Faculty Secretary"
+        ]
+      }
+    },
+    {
+      "id": "activity_003",
+      "name": "DIGITOPIA",
+      "type": "Competition",
+      "organizer": "Ministry of Communications and Information Technology (MCIT)",
+      "edition": "First Edition",
+      "year": 2025,
+      "field": "Software and Artificial Intelligence",
+      "participation": "Active Participant",
+      "achievement": "Successfully completed the second stage of the competition.",
+      "description": "Actively participated in the DIGITOPIA competition organized by the Ministry of Communications and Information Technology, competing in the Software and Artificial Intelligence field and successfully completing the second stage of the first edition in 2025.",
+      "certificate": {
+        "type": "Certificate of Recognition",
+        "issuer": "Ministry of Communications and Information Technology"
+      }
+    }
+  ]
+}

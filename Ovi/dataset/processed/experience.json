@@ -1,0 +1,101 @@
+{
+  "experiences": [
+    {
+      "id": "exp_001",
+      "organization": {
+        "name": "KFS Gov",
+        "type": "Government Organization"
+      },
+      "role": "Generative AI & Data Science Intern",
+      "employment_type": "Internship",
+      "start_date": "2026-02",
+      "end_date": null,
+      "status": "Present",
+      "duration_hours": null,
+      "overall_score": null,
+      "responsibilities": [
+        "Developed and contributed to AI solutions designed for real-world governmental applications.",
+        "Collaborated on scalable AI applications aimed at improving operational efficiency and supporting data-driven decision-making."
+      ],
+      "technologies": [
+        "Generative AI",
+        "Data Science",
+        "Artificial Intelligence"
+      ]
+    },
+    {
+      "id": "exp_002",
+      "organization": {
+        "name": "Freelance",
+        "type": "Independent Work"
+      },
+      "role": "Generative AI Engineer & Data Scientist",
+      "employment_type": "Freelance",
+      "start_date": "2026-02",
+      "end_date": null,
+      "status": "Present",
+      "duration_hours": null,
+      "overall_score": null,
+      "responsibilities": [
+        "Developed projects involving Computer Vision, RAG systems, data analytics, and business intelligence dashboards.",
+        "Built AI-powered solutions using Python, TensorFlow, Scikit-learn, and Generative AI technologies."
+      ],
+      "technologies": [
+        "Python",
+        "TensorFlow",
+        "Scikit-learn",
+        "Generative AI",
+        "Computer Vision",
+        "RAG",
+        "Data Analytics",
+        "Business Intelligence"
+      ]
+    },
+    {
+      "id": "exp_003",
+      "organization": {
+        "name": "Hex Softwares Pvt. Ltd.",
+        "type": "Software Company"
+      },
+      "role": "Data Science Intern",
+      "employment_type": "Internship",
+      "start_date": "2026-01",
+      "end_date": "2026-02",
+      "status": "Completed",
+      "duration_hours": null,
+      "overall_score": null,
+      "responsibilities": [
+        "Applied data science and machine learning techniques to real-world datasets.",
+        "Developed practical experience in end-to-end data science project execution."
+      ],
+      "technologies": [
+        "Data Science",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "exp_004",
+      "organization": {
+        "name": "NTI",
+        "type": "Training Organization"
+      },
+      "role": "Big Data Analysis Trainee",
+      "employment_type": "Training",
+      "start_date": "2025-07-27",
+      "end_date": "2025-08-21",
+      "status": "Completed",
+      "duration_hours": 120.0,
+      "overall_score": 97.5,
+      "responsibilities": [
+        "Gained hands-on experience in data processing, large-scale dataset analysis, and analytics workflows.",
+        "Learned freelancing fundamentals, including project delivery, client communication, and professional practices."
+      ],
+      "technologies": [
+        "Big Data",
+        "Data Processing",
+        "Data Analysis",
+        "Analytics"
+      ]
+    }
+  ]
+}

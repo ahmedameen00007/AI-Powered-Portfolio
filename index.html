@@ -26,6 +26,9 @@
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/mobile.css">
 
+  <!-- Preload hero image for faster LCP -->
+  <link rel="preload" as="image" href="css/RECORCES/Ahmed.jpeg" fetchpriority="high">
+
   <!-- CRITICAL: Apply saved language BEFORE render to prevent English flash -->
   <script>
     (function() {
@@ -460,10 +463,11 @@
     </section>
   </main>
   <!-- JavaScript Files -->
-  <script src="js/navigation.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/i18n.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/i18n.js?v=1.0.1" defer></script>
+  <script src="js/chat.js?v=1.0.1" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>

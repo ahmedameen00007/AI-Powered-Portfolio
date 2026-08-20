@@ -1,0 +1,70 @@
+{
+  "activities": [
+    {
+      "id": "activity_001",
+      "name": "Huawei HiRE6 ITB Recruitment Expo",
+      "type": "Recruitment Expo",
+      "organizer": "Huawei",
+      "event_series": "HiRE6",
+      "edition": null,
+      "date": "2025-10",
+      "year": null,
+      "field": null,
+      "participation": "Attended and actively participated",
+      "achievement": null,
+      "recognition": null,
+      "description": "Attended and actively participated in the Huawei HiRE6 ITB Recruitment Expo.",
+      "certificate": {
+        "type": "Certificate of Attendance",
+        "issuer": "Huawei",
+        "reference": "HiRE6",
+        "signatories": []
+      }
+    },
+    {
+      "id": "activity_002",
+      "name": "University-Level Art Exhibition",
+      "type": "University Activity",
+      "organizer": "Faculty of Artificial Intelligence, Kafrelsheikh University",
+      "event_series": null,
+      "edition": null,
+      "date": null,
+      "year": null,
+      "field": null,
+      "participation": "Participated",
+      "achievement": null,
+      "recognition": "Received a certificate in recognition of participation.",
+      "description": "Participated in the university-level art exhibition organized by the Faculty of Artificial Intelligence at Kafrelsheikh University.",
+      "certificate": {
+        "type": "Certificate of Participation",
+        "issuer": "Faculty of Artificial Intelligence, Kafrelsheikh University",
+        "reference": null,
+        "signatories": [
+          "Prof. Dr. Tamer Medhat, Dean of the Faculty",
+          "Eng. Wael Sobhy, Faculty Secretary"
+        ]
+      }
+    },
+    {
+      "id": "activity_003",
+      "name": "DIGITOPIA",
+      "type": "Competition",
+      "organizer": "Ministry of Communications and Information Technology (MCIT)",
+      "event_series": null,
+      "edition": "First Edition",
+      "date": null,
+      "year": 2025,
+      "field": "Software and Artificial Intelligence",
+      "participation": "Active Participant",
+      "achievement": "Successfully completed the second stage of the competition.",
+      "recognition": null,
+      "description": "Actively participated in the DIGITOPIA competition organized by the Ministry of Communications and Information Technology, competing in the Software and Artificial Intelligence field and successfully completing the second stage of the first edition in 2025.",
+      "certificate": {
+        "type": "Certificate of Recognition",
+        "issuer": "Ministry of Communications and Information Technology",
+        "reference": null,
+        "signatories": []
+      }
+    }
+  ]
+}
