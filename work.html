@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ahmed Ameen — Work Showcase. Watch project demos and case study videos.">
+  <meta name="description" content="Ahmed Ameen â€” Work Showcase. Watch project demos and case study videos.">
   <title data-i18n="page_title">Work Showcase | Ahmed Ameen</title>
 
   <link rel="icon" type="image/svg+xml" href="images/logo.svg">
@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="css/mobile.css">
 
   <style>
-    /* ── Work Page Styles ── */
+    /* â”€â”€ Work Page Styles â”€â”€ */
     .work-page {
       min-height: 100vh;
       background: var(--color-bg);
@@ -36,7 +36,7 @@
       padding: var(--spacing-64) var(--spacing-24);
     }
 
-    /* ── Back Button ── */
+    /* â”€â”€ Back Button â”€â”€ */
     .back-nav {
       margin-bottom: var(--spacing-48);
     }
@@ -67,7 +67,7 @@
       transform: translateX(-5px);
     }
 
-    /* ── Page Header ── */
+    /* â”€â”€ Page Header â”€â”€ */
     .work-header {
       text-align: center;
       margin-bottom: var(--spacing-80);
@@ -128,7 +128,7 @@
       z-index: 1;
     }
 
-    /* ── Video Grid ── */
+    /* â”€â”€ Video Grid â”€â”€ */
     .videos-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -166,7 +166,7 @@
       opacity: 1;
     }
 
-    /* ── Video Description (Above Video) ── */
+    /* â”€â”€ Video Description (Above Video) â”€â”€ */
     .video-description-area {
       padding: var(--spacing-32) var(--spacing-32) var(--spacing-24);
       position: relative;
@@ -231,7 +231,7 @@
       letter-spacing: 0.5px;
     }
 
-    /* ── Video Player Area ── */
+    /* â”€â”€ Video Player Area â”€â”€ */
     .video-player-wrapper {
       position: relative;
       width: 100%;
@@ -263,7 +263,7 @@
       opacity: 1;
     }
 
-    /* ── Empty State ── */
+    /* â”€â”€ Empty State â”€â”€ */
     .work-empty {
       text-align: center;
       padding: var(--spacing-96) var(--spacing-24);
@@ -291,7 +291,7 @@
       line-height: 1.6;
     }
 
-    /* ── Footer note ── */
+    /* â”€â”€ Footer note â”€â”€ */
     .work-footer-note {
       text-align: center;
       margin-top: var(--spacing-80);
@@ -301,7 +301,7 @@
       font-size: var(--text-sm);
     }
 
-    /* ── RTL support ── */
+    /* â”€â”€ RTL support â”€â”€ */
     [dir="rtl"] *,
     [dir="rtl"] body,
     [dir="rtl"] h1,
@@ -323,12 +323,12 @@
       flex-direction: row-reverse;
     }
 
-    /* In RTL: swap ← to → without rotation */
+    /* In RTL: swap â† to â†’ without rotation */
     [dir="rtl"] .btn-back .btn-back-arrow {
-      font-size: 0;       /* hide the ← character */
+      font-size: 0;       /* hide the â† character */
     }
     [dir="rtl"] .btn-back .btn-back-arrow::before {
-      content: '→';      /* show → instead */
+      content: 'â†’';      /* show â†’ instead */
       font-size: 0.875rem;
     }
 
@@ -336,7 +336,7 @@
       transform: translateX(5px); /* slide right for RTL */
     }
 
-    /* ── Responsive ── */
+    /* â”€â”€ Responsive â”€â”€ */
     @media (max-width: 768px) {
       .work-container {
         padding: var(--spacing-48) var(--spacing-16);
@@ -372,18 +372,18 @@
     z-index: 9999; transition: width 0.1s linear; pointer-events: none;
   "></div>
 
-  <!-- ══ NAVIGATION ══ -->
+  <!-- â•â• NAVIGATION â•â• -->
   <nav class="navigation" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
 
       <!-- Brand & Home Group -->
       <div style="display: flex; align-items: center; gap: var(--spacing-16); z-index: 10;">
         <!-- Brand Logo -->
-        <a href="identity.html" class="nav-brand nav-brand--glow" aria-label="Ahmed Ameen — Home">
+        <a href="identity.html" class="nav-brand nav-brand--glow" aria-label="Ahmed Ameen â€” Home">
           <img src="images/Logo.png" alt="Ahmed Ameen Logo" class="nav-logo-img"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
           <span class="nav-logo-fallback">
-            <span class="logo-letter">A</span><span class="logo-dot">·</span><span class="logo-letter">A</span>
+            <span class="logo-letter">A</span><span class="logo-dot">Â·</span><span class="logo-letter">A</span>
           </span>
         </a>
         <!-- Home Button -->
@@ -399,20 +399,20 @@
       <div class="lang-switcher" id="lang-switcher" role="group" aria-label="Language selection">
         <button class="lang-btn lang-btn--active" id="btn-en" data-lang="en" aria-pressed="true">EN</button>
         <span class="lang-divider">|</span>
-        <button class="lang-btn" id="btn-ar" data-lang="ar" aria-pressed="false">عربية</button>
+        <button class="lang-btn" id="btn-ar" data-lang="ar" aria-pressed="false">Ø¹Ø±Ø¨ÙŠØ©</button>
       </div>
 
     </div>
   </nav>
 
-  <!-- ══ MAIN CONTENT ══ -->
+  <!-- â•â• MAIN CONTENT â•â• -->
   <main class="work-page">
     <div class="work-container">
 
       <!-- Back Navigation -->
       <nav class="back-nav" aria-label="Breadcrumb">
         <a href="index.html?return=true" class="btn-back" id="btn-back">
-          <span class="btn-back-arrow" aria-hidden="true">←</span>
+          <span class="btn-back-arrow" aria-hidden="true">â†</span>
           <span data-i18n="back_btn">Back to Portfolio</span>
         </a>
       </nav>
@@ -426,18 +426,18 @@
         </p>
       </header>
 
-      <!-- Videos Grid — injected by JS -->
+      <!-- Videos Grid â€” injected by JS -->
       <div id="videos-grid" class="videos-grid">
         <!-- Loading state -->
         <div id="work-loading" style="text-align:center; padding: var(--spacing-96) 0; color: var(--color-text-muted);">
-          <div style="font-size: 2.5rem; margin-bottom: var(--spacing-16);">⏳</div>
-          <p data-i18n="loading_text">Loading videos…</p>
+          <div style="font-size: 2.5rem; margin-bottom: var(--spacing-16);">â³</div>
+          <p data-i18n="loading_text">Loading videosâ€¦</p>
         </div>
       </div>
 
       <!-- Footer note -->
       <p class="work-footer-note" data-i18n="footer_note">
-        More projects coming soon — stay tuned!
+        More projects coming soon â€” stay tuned!
       </p>
 
     </div>
@@ -446,8 +446,8 @@
   <!-- JavaScript Files -->
   <script src="js/navigation.js" defer></script>
   <script src="js/animations.js" defer></script>
-  <script src="js/i18n.js?v=1.0.1" defer></script>
-  <script src="js/chat.js?v=1.0.1" defer></script>
+  <script src="js/i18n.js?v=1.0.2" defer></script>
+  <script src="js/chat.js?v=1.0.2" defer></script>
   <script src="js/work.js" defer></script>
 
 </body>

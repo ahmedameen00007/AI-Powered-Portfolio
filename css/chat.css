@@ -125,10 +125,19 @@
     flex: 1;
     padding: var(--spacing-32);
     overflow-y: auto;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-20);
-    scroll-behavior: smooth;
+    /* GPU compositing layer — eliminates jank during rapid scroll updates */
+    will-change: scroll-position;
+    /* iOS momentum scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* Contain layout to this element so scrollHeight queries don't reflow the page */
+    contain: layout;
+    /* Remove CSS smooth scroll — it fights JS-driven scrollTop assignments every 18ms */
+    scroll-behavior: auto;
+    overscroll-behavior: contain;
 }
 
 /* Message styling */

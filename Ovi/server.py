@@ -176,8 +176,37 @@ def chat():
     # Sanitize input
     raw_message = raw_message[:1000].replace("<", "").replace(">", "")
 
+    # Prompt injection detection pre-screening
+    def detect_injection(text: str) -> str | None:
+        has_arabic = any("\u0600" <= ch <= "\u06ff" for ch in text)
+        msg_lower = text.lower()
+        injection_indicators = [
+            "ignore previous instructions", "ignore all instructions", "ignore instructions",
+            "forget previous", "forget all", "forget instructions", "system prompt",
+            "system instructions", "system message", "you are now", "act as a", "act as an",
+            "new role", "jailbreak", "override prompt", "reveal prompt", "print your instructions",
+            "reveal system prompt", "tell me your system instructions",
+            "تجاهل التعليمات", "انسى التعليمات", "موجه النظام", "تجاهل القواعد", "تجاهل قواعد"
+        ]
+        for phrase in injection_indicators:
+            if phrase in msg_lower:
+                if has_arabic:
+                    return "عذرًا، يمكنني فقط الإجابة على الأسئلة المتعلقة بأحمد أمين وخلفيته المهنية. لا يمكنني تجاهل التعليمات أو تغيير دوري."
+                else:
+                    return "I'm sorry, but I can only answer questions about Ahmed Ameen and his professional background. I cannot ignore my instructions or change my role."
+        return None
+
     def generate_stream():
         try:
+            # Check for prompt injection
+            safety_warning = detect_injection(raw_message)
+            if safety_warning:
+                # Yield the warning token and exit
+                payload = json.dumps({"token": safety_warning})
+                yield f"data: {payload}\n\n"
+                yield "data: [DONE]\n\n"
+                return
+
             # 1. Expand query
             expansion = query_expander.expand(raw_message)
             language = expansion["language"]

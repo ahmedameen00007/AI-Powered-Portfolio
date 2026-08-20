@@ -9,6 +9,7 @@
     const API_KEY_STORAGE = 'ovi_groq_api_key';
     let chatHistory = [];
     let isProcessing = false;
+    let pendingMessage = '';    // queued while bot is responding
 
     // ── Load CSS ─────────────────────────────────────────────────────────────
     const link = document.createElement('link');
@@ -454,6 +455,25 @@
         }
     }
 
+    // ── Smart auto-scroll ─────────────────────────────────────────────────────
+    // Throttled via requestAnimationFrame so we never trigger more than one
+    // layout-reflow per paint frame, regardless of how fast text streams in.
+    let _scrollPending = false;
+    function scrollToBottom(area, force = false) {
+        if (!area) return;
+        if (_scrollPending) return;          // already queued for this frame
+        _scrollPending = true;
+        requestAnimationFrame(() => {
+            _scrollPending = false;
+            // Only scroll if the user is within 80px of the bottom (or forced).
+            // This lets the user scroll up to read without being dragged back down.
+            const distanceFromBottom = area.scrollHeight - area.scrollTop - area.clientHeight;
+            if (force || distanceFromBottom < 80) {
+                area.scrollTop = area.scrollHeight;
+            }
+        });
+    }
+
     // ── Append a finished message (with formatting) ───────────────────────────
     function appendMessage(text, sender, stream = false, isGreeting = false) {
         const area = document.getElementById('chat-messages');
@@ -483,7 +503,7 @@
         div.appendChild(ts);
         if (indicator) area.insertBefore(div, indicator);
         else area.appendChild(div);
-        area.scrollTop = area.scrollHeight;
+        scrollToBottom(area, true);   // force=true: always scroll for new message
         return bubble;
     }
 
@@ -518,7 +538,7 @@
                 if (sseDone) {
                     // All chars shown and stream complete → switch to markdown
                     bubble.innerHTML = parseMarkdown(fullText);
-                    area.scrollTop   = area.scrollHeight;
+                    scrollToBottom(area, true);
                     resolveTyping();
                     return;
                 }
@@ -534,7 +554,7 @@
             // Show raw text slice + blinking cursor while typing
             bubble.innerHTML = escapeHtml(fullText.slice(0, displayed))
                              + '<span class="ovi-cursor">▍</span>';
-            area.scrollTop = area.scrollHeight;
+            scrollToBottom(area);   // throttled — one rAF per paint frame max
 
             setTimeout(tick, CHAR_DELAY);
         }
@@ -578,17 +598,26 @@
 
 
     // ── Send Message ──────────────────────────────────────────────────────────
-    async function sendMessage() {
-        if (isProcessing) return;
-        const inputEl  = document.getElementById('chat-input');
-        const sendBtn  = document.getElementById('send-btn');
+    async function sendMessage(overrideText) {
+        const inputEl   = document.getElementById('chat-input');
+        const sendBtn   = document.getElementById('send-btn');
         const indicator = document.getElementById('typing-indicator');
-        const area     = document.getElementById('chat-messages');
+        const area      = document.getElementById('chat-messages');
         const t = (window.i18n && window.i18n.t) || (k => k);
 
         if (!inputEl) return;
-        const text = inputEl.value.trim();
+
+        // Use the override (queued message) or whatever is in the input
+        const text = (overrideText || inputEl.value).trim();
         if (!text) return;
+
+        // If already processing, queue this message and return
+        if (isProcessing) {
+            pendingMessage = text;
+            inputEl.value = '';
+            inputEl.placeholder = '⏳ Queued — will send when Ovi finishes...';
+            return;
+        }
 
         // If there is no API key at all, open the modal and keep the typed text
         const apiKey = getApiKey();
@@ -599,12 +628,17 @@
 
         isProcessing = true;
         inputEl.value = '';
-        inputEl.disabled = true;
-        if (sendBtn) sendBtn.disabled = true;
+        // Input stays ENABLED so the user can type their next question
+        // Only the send button is disabled to prevent double-sends
+        if (sendBtn) {
+            sendBtn.disabled = true;
+            sendBtn.style.opacity = '0.45';
+            sendBtn.title = 'Ovi is typing...';
+        }
 
         appendMessage(text, 'user');
         if (indicator) indicator.style.display = 'flex';
-        if (area) area.scrollTop = area.scrollHeight;
+        if (area) scrollToBottom(area, true);
 
         let fullResponseText = '';
         let aiBubble = null;
@@ -621,7 +655,7 @@
             });
 
             if (indicator) indicator.style.display = 'none';
-            
+
             if (!res.ok) {
                 let errText = `HTTP ${res.status}`;
                 try {
@@ -648,9 +682,23 @@
             else appendMessage(errMsg, 'ai');
         } finally {
             isProcessing = false;
-            inputEl.disabled = false;
-            if (sendBtn) sendBtn.disabled = false;
+            if (sendBtn) {
+                sendBtn.disabled = false;
+                sendBtn.style.opacity = '';
+                sendBtn.title = '';
+            }
+            // Restore input placeholder
+            const t2 = (window.i18n && window.i18n.t) || (k => k);
+            const placeholder = t2('chat_placeholder') || 'Ask anything about Ahmed...';
+            inputEl.placeholder = placeholder;
             setTimeout(() => inputEl.focus(), 50);
+
+            // If the user typed a follow-up while we were processing, send it now
+            if (pendingMessage) {
+                const queued = pendingMessage;
+                pendingMessage = '';
+                await sendMessage(queued);
+            }
         }
     }
 
