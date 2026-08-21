@@ -5,7 +5,14 @@
  */
 
 (function () {
-    const API_URL = 'http://localhost:5050/chat';
+    // ── API Configuration ───────────────────────────────────────────────────
+    // Replace OVI_PROD_API_URL with your actual hosted backend domain (e.g. on Render, Railway)
+    const OVI_PROD_API_URL = 'https://YOUR-OVI-BACKEND-URL.com/chat'; 
+    
+    const API_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+        ? 'http://localhost:5050/chat'
+        : OVI_PROD_API_URL;
+        
     const API_KEY_STORAGE = 'ovi_groq_api_key';
     let chatHistory = [];
     let isProcessing = false;
