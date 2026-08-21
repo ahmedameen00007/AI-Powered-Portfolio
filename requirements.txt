@@ -1,0 +1,8 @@
+pydantic
+numpy
+groq
+python-dotenv
+colorama
+flask
+flask-cors
+requests

@@ -126,6 +126,7 @@ def init_pipeline() -> bool:
 # ── Routes ────────────────────────────────────────────────────────────────────
 
 @app.route("/health", methods=["GET"])
+@app.route("/api/health", methods=["GET"])
 def health():
     """Simple health check."""
     pipeline_ready = retriever is not None and generator is not None
@@ -139,6 +140,7 @@ def health():
 
 
 @app.route("/chat", methods=["POST"])
+@app.route("/api/chat", methods=["POST"])
 def chat():
     """
     Main chat endpoint. Accepts JSON body:
