@@ -13,6 +13,7 @@ Usage:
   python server.py
 
 The server runs on http://localhost:5050 by default.
+# Vercel Deployment Trigger
 """
 
 from __future__ import annotations
