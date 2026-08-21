@@ -20,7 +20,7 @@
     // ── Load CSS ─────────────────────────────────────────────────────────────
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = 'css/chat.css';
+    link.href = 'css/chat.css?v=1.0.5';
     document.head.appendChild(link);
 
     // ── Markdown + RTL/LTR Formatter ─────────────────────────────────────────
@@ -207,7 +207,7 @@
             </div>
         </div>
 
-        <aside class="chatbot-container is-closed" id="chatbot">
+        <aside class="chatbot-container is-closed" id="chatbot" style="transition: none !important;">
             <div class="chat-header">
                 <div class="chat-header-info">
                     <div class="chat-avatar">
@@ -219,6 +219,14 @@
                     </div>
                 </div>
                 <div style="display:flex;align-items:center;gap:8px">
+                    <button class="chat-resize-btn" id="chat-resize-btn" aria-label="Resize chat panel" title="Expand panel">
+                        <svg class="icon-expand" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:block">
+                            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                        </svg>
+                        <svg class="icon-minimize" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+                            <path d="M4 14h6v6M20 10h-6V4M14 10l7-7M10 14l-7 7"/>
+                        </svg>
+                    </button>
                     <button class="chat-key-btn" id="chat-key-btn" aria-label="Change API key" title="Change API Key">
                         <svg viewBox="0 0 24 24" width="15" height="15" xmlns="http://www.w3.org/2000/svg">
                             <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -443,6 +451,20 @@
         if (!chatbot) return;
         if (forceClose) {
             chatbot.classList.add('is-closed');
+            chatbot.classList.remove('is-expanded');
+            
+            // Reset resize button title and icons
+            const resizeBtn = document.getElementById('chat-resize-btn');
+            if (resizeBtn) {
+                const iconExpand = resizeBtn.querySelector('.icon-expand');
+                const iconMinimize = resizeBtn.querySelector('.icon-minimize');
+                if (iconExpand && iconMinimize) {
+                    iconExpand.style.display = 'block';
+                    iconMinimize.style.display = 'none';
+                }
+                resizeBtn.title = 'Expand panel';
+            }
+
             document.body.classList.remove('chat-active');
             hideKeyModal();
         } else {
@@ -457,6 +479,7 @@
                     setTimeout(() => { const i = document.getElementById('chat-input'); if (i) i.focus(); }, 120);
                 }
             } else {
+                chatbot.classList.remove('is-expanded');
                 hideKeyModal();
             }
         }
@@ -523,7 +546,7 @@
     //
     // This decoupling means the display speed is always smooth (18ms/char) regardless
     // of whether the server sends one token at a time or one big chunk.
-    async function streamIntoElem(bubble, reader, area) {
+    async function streamIntoElem(reader, area, getBubbleCallback) {
         const CHAR_DELAY  = 18;   // ms between each character reveal
         const MAX_BATCH   = 4;    // chars per tick when catching up (queue > 150 chars behind)
 
@@ -533,6 +556,7 @@
         let displayed  = 0;    // chars currently shown in the bubble
         let sseDone    = false;
         let inactiveTicks = 0; // safety watchdog for network hang
+        let bubble = null;     // lazy initialized when the first token actually streams in
 
         // Promise that resolves when typewriter finishes
         let resolveTyping;
@@ -545,7 +569,9 @@
             if (pending === 0) {
                 if (sseDone) {
                     // All chars shown and stream complete → switch to markdown
-                    bubble.innerHTML = parseMarkdown(fullText);
+                    if (bubble) {
+                        bubble.innerHTML = parseMarkdown(fullText);
+                    }
                     scrollToBottom(area, true);
                     resolveTyping();
                     return;
@@ -556,7 +582,9 @@
                     inactiveTicks++;
                     if (inactiveTicks > 100) {
                         console.warn('[Ovi] Watchdog triggered: Stream inactive for 3s. Unlocking chat.');
-                        bubble.innerHTML = parseMarkdown(fullText);
+                        if (bubble) {
+                            bubble.innerHTML = parseMarkdown(fullText);
+                        }
                         scrollToBottom(area, true);
                         resolveTyping();
                         return;
@@ -570,13 +598,20 @@
 
             inactiveTicks = 0; // reset watchdog on new text
 
+            // Lazy create the AI bubble inside the DOM only when the first token arrives!
+            if (!bubble && getBubbleCallback) {
+                bubble = getBubbleCallback();
+            }
+
             // Adaptive batch: if very far behind, reveal more chars per tick
             const batch = pending > 150 ? Math.min(Math.ceil(pending / 25), MAX_BATCH) : 1;
             displayed = Math.min(displayed + batch, fullText.length);
 
             // Show raw text slice + blinking cursor while typing
-            bubble.innerHTML = escapeHtml(fullText.slice(0, displayed))
-                             + '<span class="ovi-cursor">▍</span>';
+            if (bubble) {
+                bubble.innerHTML = escapeHtml(fullText.slice(0, displayed))
+                                 + '<span class="ovi-cursor">▍</span>';
+            }
             scrollToBottom(area);   // throttled — one rAF per paint frame max
 
             setTimeout(tick, CHAR_DELAY);
@@ -694,10 +729,18 @@
                 throw new Error(errText);
             }
 
-            // Create empty AI bubble ready for streaming
-            aiBubble = appendMessage('', 'ai', true);
-
-            fullResponseText = await streamIntoElem(aiBubble, res.body.getReader(), area);
+            // The AI bubble will be created dynamically only when the first token arrives
+            // This keeps the global typing indicator active during server thinking time
+            fullResponseText = await streamIntoElem(
+                res.body.getReader(),
+                area,
+                () => {
+                    // Triggered when first character streams in:
+                    if (indicator) indicator.style.display = 'none';
+                    aiBubble = appendMessage('', 'ai', true);
+                    return aiBubble;
+                }
+            );
 
             chatHistory.push({ role: 'user',      content: text });
             chatHistory.push({ role: 'assistant', content: fullResponseText });
@@ -737,13 +780,32 @@
         const closeBtn = document.getElementById('close-chat');
         const inputEl  = document.getElementById('chat-input');
         const sendBtn  = document.getElementById('send-btn');
-
+        const resizeBtn = document.getElementById('chat-resize-btn');
+ 
         if (trigger)  trigger.addEventListener('click', () => toggleChat());
         if (closeBtn) closeBtn.addEventListener('click', () => toggleChat(true));
         if (inputEl)  inputEl.addEventListener('keydown', e => {
             if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
         });
         if (sendBtn)  sendBtn.addEventListener('click', sendMessage);
+        
+        if (resizeBtn) {
+            resizeBtn.addEventListener('click', () => {
+                const chatbot = document.getElementById('chatbot');
+                if (chatbot) {
+                    chatbot.classList.toggle('is-expanded');
+                    const isExpanded = chatbot.classList.contains('is-expanded');
+                    const iconExpand = resizeBtn.querySelector('.icon-expand');
+                    const iconMinimize = resizeBtn.querySelector('.icon-minimize');
+                    if (iconExpand && iconMinimize) {
+                        iconExpand.style.display = isExpanded ? 'none' : 'block';
+                        iconMinimize.style.display = isExpanded ? 'block' : 'none';
+                    }
+                    resizeBtn.title = isExpanded ? 'Minimize panel' : 'Expand panel';
+                }
+            });
+        }
+
         document.addEventListener('langchange', translateChatUI);
     }
 
@@ -754,6 +816,13 @@
         initKeyModal();
         translateChatUI();
         await checkServerKey(); // Check if server has key configured in .env
+        
+        // Remove style attribute to restore transitions once layout completes
+        setTimeout(() => {
+            const cb = document.getElementById('chatbot');
+            if (cb) cb.removeAttribute('style');
+        }, 150);
+
         console.log('[Ovi Chatbot] Ready.');
     }
 
