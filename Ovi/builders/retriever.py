@@ -75,49 +75,134 @@ def _keyword_boost(query: str, entity_type: str) -> float:
     return 0.0
 
 
-class HfInferenceModel:
+class BM25Retriever:
     """
-    A lightweight fallback that queries Hugging Face's free Inference API
-    to get query embeddings. Exposes the same .encode() interface as
-    SentenceTransformer so the Retriever can use it transparently.
+    A self-contained BM25 keyword search fallback.
+
+    Used when sentence-transformers is not available (e.g. Vercel serverless).
+    Reads directly from the committed dataset/chunks/chunks.jsonl file —
+    no network access, no ML models, no extra dependencies required.
     """
-    def __init__(self, model_name: str):
-        self.model_name = model_name
-        import os
-        self.token = os.environ.get("HF_TOKEN", "")
 
-    def encode(self, texts: list[str], normalize_embeddings: bool = True, convert_to_numpy: bool = True) -> list:
-        import requests
-        import numpy as np
+    def __init__(self, chunks_dir: Path) -> None:
+        self._chunks: list[dict[str, Any]] = []
+        chunks_path = chunks_dir / "chunks.jsonl"
+        with chunks_path.open("r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    self._chunks.append(json.loads(line))
 
-        api_url = f"https://api-inference.huggingface.co/pipeline/feature-extraction/{self.model_name}"
-        headers = {}
-        if self.token:
-            headers["Authorization"] = f"Bearer {self.token}"
+        self._N = len(self._chunks)
+        self._tf: list[dict[str, float]] = []
+        self._df: dict[str, int] = {}
+        self._dl: list[int] = []
+        self._build_index()
 
-        response = requests.post(api_url, headers=headers, json={"inputs": texts[0]}, timeout=10)
-        response.raise_for_status()
+    # ── BM25 helpers ──────────────────────────────────────────────────────────
 
-        result = response.json()
+    @staticmethod
+    def _tokenize(text: str) -> list[str]:
+        import re
+        return re.findall(r"[a-z0-9]+", text.lower())
 
-        # If result is nested list, extract inner vector
-        if isinstance(result, list) and len(result) > 0 and isinstance(result[0], list):
-            vector = np.array(result[0])
-        else:
-            vector = np.array(result)
+    @staticmethod
+    def _chunk_text(chunk: dict[str, Any]) -> str:
+        content = chunk.get("content", {})
+        if isinstance(content, dict):
+            return " ".join(str(v) for v in content.values() if v)
+        return str(content or "")
 
-        if normalize_embeddings:
-            norm = np.linalg.norm(vector)
-            if norm > 0:
-                vector = vector / norm
+    def _build_index(self) -> None:
+        import math
+        for chunk in self._chunks:
+            tokens = self._tokenize(self._chunk_text(chunk))
+            self._dl.append(len(tokens))
+            tf: dict[str, float] = {}
+            for t in tokens:
+                tf[t] = tf.get(t, 0) + 1
+            self._tf.append(tf)
+            for t in set(tokens):
+                self._df[t] = self._df.get(t, 0) + 1
+        self._avgdl = (sum(self._dl) / self._N) if self._N else 1
 
-        return [vector]
+    def _bm25_score(self, query_tokens: list[str], doc_idx: int,
+                    k1: float = 1.5, b: float = 0.75) -> float:
+        import math
+        score = 0.0
+        tf = self._tf[doc_idx]
+        dl = self._dl[doc_idx]
+        for t in query_tokens:
+            if t not in tf:
+                continue
+            n = self._df.get(t, 0)
+            idf = math.log((self._N - n + 0.5) / (n + 0.5) + 1)
+            tf_norm = (tf[t] * (k1 + 1)) / (tf[t] + k1 * (1 - b + b * dl / self._avgdl))
+            score += idf * tf_norm
+        return score
+
+    # ── Public search ─────────────────────────────────────────────────────────
+
+    def search(
+        self,
+        query: str,
+        top_k: int = 5,
+        entity_type_filter: str | None = None,
+    ) -> list[dict[str, Any]]:
+        query_tokens = self._tokenize(query)
+        scores = [
+            self._bm25_score(query_tokens, i) + _keyword_boost(query, self._chunks[i].get("entity_type", ""))
+            for i in range(self._N)
+        ]
+        if entity_type_filter:
+            for i, chunk in enumerate(self._chunks):
+                if chunk.get("entity_type") != entity_type_filter:
+                    scores[i] = 0.0
+
+        top_indices = sorted(range(self._N), key=lambda i: scores[i], reverse=True)[:top_k]
+        results = []
+        for idx in top_indices:
+            chunk = self._chunks[idx]
+            results.append({
+                "chunk_id": chunk.get("chunk_id", str(idx)),
+                "entity_id": chunk.get("entity_id", ""),
+                "entity_type": chunk.get("entity_type", ""),
+                "source_file": chunk.get("source_file", ""),
+                "score": scores[idx],
+                "boosted_score": scores[idx],
+                "content": chunk.get("content"),
+            })
+        return results
+
+    def search_multi(
+        self,
+        queries: list[str],
+        top_k: int = 15,
+    ) -> list[dict[str, Any]]:
+        best: dict[str, dict] = {}
+        for q in queries:
+            for result in self.search(q, top_k=top_k):
+                cid = result["chunk_id"]
+                if cid not in best or result["boosted_score"] > best[cid]["boosted_score"]:
+                    best[cid] = result
+        merged = sorted(best.values(), key=lambda r: r["boosted_score"], reverse=True)
+        return merged[:top_k]
+
+    def get_entity_counts(self) -> dict[str, int]:
+        counts: dict[str, int] = {}
+        for chunk in self._chunks:
+            etype = chunk.get("entity_type", "unknown")
+            counts[etype] = counts.get(etype, 0) + 1
+        return counts
 
 
 class Retriever:
     """
     Loads the persisted embedding index and answers similarity
     queries against it.
+
+    Falls back to BM25Retriever automatically when sentence-transformers
+    is not available (e.g. Vercel serverless), with no network calls needed.
     """
 
     def __init__(
@@ -135,24 +220,25 @@ class Retriever:
         self._vectors = None
         self._manifest: list[dict[str, Any]] | None = None
         self._chunks_by_id: dict[str, dict[str, Any]] | None = None
+        self._bm25: BM25Retriever | None = None   # populated when ST unavailable
+        self._use_bm25 = False
 
     # ------------------------------------------------------------------
     # Loading
     # ------------------------------------------------------------------
 
     def _load_model(self):
-        if self._model is not None:
+        if self._model is not None or self._use_bm25:
             return self._model
 
         try:
             from sentence_transformers import SentenceTransformer
             self._model = SentenceTransformer(self.model_name)
         except ImportError:
-            # sentence-transformers is not installed (e.g. Vercel deployment)
-            # Fall back to Hugging Face cloud Inference API
-            self._model = HfInferenceModel(self.model_name)
+            # sentence-transformers not available — switch to BM25 mode
+            self._use_bm25 = True
+            self._bm25 = BM25Retriever(self.chunks_dir)
         except Exception as exc:
-            # Other errors (e.g. failure loading model weights offline)
             raise EmbeddingBackendUnavailable(
                 f"Could not load embedding model '{self.model_name}': {exc}"
             ) from exc
@@ -219,16 +305,26 @@ class Retriever:
         """
         Embed `query` and return the top_k most similar chunks.
 
+        Falls back to BM25 automatically when sentence-transformers is
+        unavailable (no embedding model or network required).
+
         Each result contains: chunk_id, entity_id, entity_type,
         source_file, score, and the chunk's structured content.
         """
+
+        # Trigger model loading (sets _use_bm25 if ST is unavailable)
+        self._load_model()
+
+        # BM25 fallback: delegate fully to BM25Retriever
+        if self._use_bm25 and self._bm25 is not None:
+            return self._bm25.search(query, top_k=top_k)
 
         import numpy as np
 
         self._load_index()
         self._load_chunks()
 
-        model = self._load_model()
+        model = self._model
 
         query_vector = model.encode(
             [query],
@@ -272,22 +368,13 @@ class Retriever:
     ) -> list[dict]:
         """
         Run search() on each query variant, merge results, and deduplicate.
-
-        This is used by the Query Expansion pipeline: the QueryExpander returns
-        2-3 English search variants, and this method unions their results so
-        that a chunk found by *any* variant is included in the context.
-
-        Deduplication strategy: keep the highest boosted_score a chunk achieves
-        across all variants. Final list is sorted by that max score descending,
-        capped at top_k.
-
-        Args:
-            queries: List of English search query strings (1-3 items typical).
-            top_k:   Maximum number of unique chunks to return.
-
-        Returns:
-            Merged, deduplicated, re-ranked list of chunk result dicts.
+        Delegates to BM25Retriever.search_multi when in BM25 mode.
         """
+        # BM25 fallback path
+        self._load_model()
+        if self._use_bm25 and self._bm25 is not None:
+            return self._bm25.search_multi(queries, top_k=top_k)
+
         best: dict[str, dict] = {}  # chunk_id -> best result dict
 
         for q in queries:
@@ -304,11 +391,12 @@ class Retriever:
         """
         Return a dict mapping each entity_type to its total count in the full
         knowledge base (as persisted in the manifest).
-
-        This is used by the answer generator to inform the user when only a
-        partial list is shown in a response (e.g. "Ahmed has 13 certifications
-        in total — here are the most relevant ones. Ask for more if needed.").
         """
+        # BM25 fallback path
+        self._load_model()
+        if self._use_bm25 and self._bm25 is not None:
+            return self._bm25.get_entity_counts()
+
         self._load_index()
 
         counts: dict[str, int] = {}
