@@ -75,6 +75,11 @@ entity_counts: dict = {}
 DEFAULT_MODEL = "openai/gpt-oss-120b"
 TOP_K = 15
 
+# ── Initialize pipeline at import time (required for Vercel serverless) ───────
+# On serverless platforms the __main__ block never runs, so we must initialize
+# the RAG pipeline here at module level when the app object is first imported.
+_pipeline_initialized = False
+
 
 def init_pipeline() -> bool:
     """Initialize all RAG components. Returns True on success."""
@@ -121,6 +126,16 @@ def init_pipeline() -> bool:
         query_expander = _FallbackExpander()  # type: ignore[assignment]
 
     return True
+
+
+# ── Lazy initialization hook (for serverless / Vercel) ───────────────────────
+@app.before_request
+def ensure_pipeline():
+    """Lazily initialize the RAG pipeline on the first request."""
+    global _pipeline_initialized
+    if not _pipeline_initialized:
+        init_pipeline()
+        _pipeline_initialized = True
 
 
 # ── Routes ────────────────────────────────────────────────────────────────────
