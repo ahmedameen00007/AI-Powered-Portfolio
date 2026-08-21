@@ -827,7 +827,7 @@
 
                 chatbot.classList.add('is-resizing');
                 chatbot.classList.remove('is-expanded'); // Clear preset expand class if dragging
-                document.body.style.cursor = 'col-resize';
+                document.body.style.cursor = 'ew-resize';
                 document.body.style.userSelect = 'none';
 
                 // Reset preset expand button icons

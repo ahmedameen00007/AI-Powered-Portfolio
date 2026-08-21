@@ -1059,7 +1059,7 @@ body.chat-active #chat-trigger {
     top: 0;
     width: 6px;
     height: 100%;
-    cursor: col-resize;
+    cursor: ew-resize;
     z-index: 9999;
     background: transparent;
     transition: background 0.2s ease;
