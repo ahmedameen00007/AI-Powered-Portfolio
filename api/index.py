@@ -1,10 +1,13 @@
 ﻿import sys
+import os
 from pathlib import Path
 
-# Add project root and Ovi folder to sys.path so server can find its modules
-project_root = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(project_root))
-sys.path.insert(0, str(project_root / "Ovi"))
+# Make the Ovi folder importable as a package root
+ovi_dir = Path(__file__).resolve().parent.parent / "Ovi"
+sys.path.insert(0, str(ovi_dir))
 
-# Import the Flask application instance
-from Ovi.server import app
+# Set working dir so relative paths in server.py (dataset/indexes etc.) resolve correctly
+os.chdir(str(ovi_dir))
+
+# Import the Flask app — Vercel will expose this as the serverless function
+from server import app
