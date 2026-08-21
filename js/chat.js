@@ -551,14 +551,16 @@
                     return;
                 }
                 
-                // If stream is active but no new text has arrived for ~1 second (33 ticks * 30ms)
-                inactiveTicks++;
-                if (inactiveTicks > 33) {
-                    console.warn('[Ovi] Watchdog triggered: Stream inactive for 1s. Unlocking chat.');
-                    bubble.innerHTML = parseMarkdown(fullText);
-                    scrollToBottom(area, true);
-                    resolveTyping();
-                    return;
+                // If streaming has started but no new text has arrived for ~3 seconds (100 ticks * 30ms)
+                if (fullText.length > 0) {
+                    inactiveTicks++;
+                    if (inactiveTicks > 100) {
+                        console.warn('[Ovi] Watchdog triggered: Stream inactive for 3s. Unlocking chat.');
+                        bubble.innerHTML = parseMarkdown(fullText);
+                        scrollToBottom(area, true);
+                        resolveTyping();
+                        return;
+                    }
                 }
 
                 // No new chars yet; wait a bit for more from the SSE reader
