@@ -260,7 +260,8 @@ if __name__ == "__main__":
         logger.error("Failed to initialize RAG pipeline. Exiting.")
         sys.exit(1)
 
-    logger.info("Server starting at http://localhost:5050")
+    port = int(os.environ.get("PORT", 5050))
+    logger.info(f"Server starting at http://localhost:{port}")
     logger.info("═" * 55)
 
-    app.run(host="0.0.0.0", port=5050, debug=False, threaded=True)
+    app.run(host="0.0.0.0", port=port, debug=False, threaded=True)
