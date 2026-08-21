@@ -208,6 +208,7 @@
         </div>
 
         <aside class="chatbot-container is-closed" id="chatbot" style="transition: none !important;">
+            <div class="chat-resize-handle" id="chat-resize-handle" title="Drag to resize"></div>
             <div class="chat-header">
                 <div class="chat-header-info">
                     <div class="chat-avatar">
@@ -452,6 +453,7 @@
         if (forceClose) {
             chatbot.classList.add('is-closed');
             chatbot.classList.remove('is-expanded');
+            chatbot.style.width = ''; // reset custom width
             
             // Reset resize button title and icons
             const resizeBtn = document.getElementById('chat-resize-btn');
@@ -480,6 +482,7 @@
                 }
             } else {
                 chatbot.classList.remove('is-expanded');
+                chatbot.style.width = ''; // reset custom width
                 hideKeyModal();
             }
         }
@@ -793,6 +796,7 @@
             resizeBtn.addEventListener('click', () => {
                 const chatbot = document.getElementById('chatbot');
                 if (chatbot) {
+                    chatbot.style.width = ''; // reset custom width to use CSS class widths
                     chatbot.classList.toggle('is-expanded');
                     const isExpanded = chatbot.classList.contains('is-expanded');
                     const iconExpand = resizeBtn.querySelector('.icon-expand');
@@ -803,6 +807,72 @@
                     }
                     resizeBtn.title = isExpanded ? 'Minimize panel' : 'Expand panel';
                 }
+            });
+        }
+
+        // Draggable edge resizing
+        const handle = document.getElementById('chat-resize-handle');
+        if (handle && chatbot) {
+            let startX = 0;
+            let startWidth = 0;
+            let isResizing = false;
+
+            handle.addEventListener('mousedown', (e) => {
+                if (e.button !== 0) return; // Left click only
+                if (window.innerWidth <= 768) return; // No resizing on mobile full-screen
+
+                isResizing = true;
+                startX = e.clientX;
+                startWidth = chatbot.getBoundingClientRect().width;
+
+                chatbot.classList.add('is-resizing');
+                chatbot.classList.remove('is-expanded'); // Clear preset expand class if dragging
+                document.body.style.cursor = 'col-resize';
+                document.body.style.userSelect = 'none';
+
+                // Reset preset expand button icons
+                if (resizeBtn) {
+                    const iconExpand = resizeBtn.querySelector('.icon-expand');
+                    const iconMinimize = resizeBtn.querySelector('.icon-minimize');
+                    if (iconExpand && iconMinimize) {
+                        iconExpand.style.display = 'block';
+                        iconMinimize.style.display = 'none';
+                    }
+                    resizeBtn.title = 'Expand panel';
+                }
+
+                e.preventDefault();
+            });
+
+            window.addEventListener('mousemove', (e) => {
+                if (!isResizing) return;
+
+                const dir = document.documentElement.getAttribute('dir') || 'ltr';
+                const deltaX = e.clientX - startX;
+
+                let newWidth;
+                if (dir === 'rtl') {
+                    // RTL: Dragging left increases width, dragging right decreases
+                    newWidth = startWidth - deltaX;
+                } else {
+                    // LTR: Dragging right increases width, dragging left decreases
+                    newWidth = startWidth + deltaX;
+                }
+
+                const minWidth = 320;
+                const maxWidth = window.innerWidth * 0.85; // cap at 85% of viewport width
+
+                if (newWidth >= minWidth && newWidth <= maxWidth) {
+                    chatbot.style.width = newWidth + 'px';
+                }
+            });
+
+            window.addEventListener('mouseup', () => {
+                if (!isResizing) return;
+                isResizing = false;
+                chatbot.classList.remove('is-resizing');
+                document.body.style.cursor = '';
+                document.body.style.userSelect = '';
             });
         }
 

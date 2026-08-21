@@ -1051,3 +1051,33 @@ body.chat-active #chat-trigger {
         display: none !important;
     }
 }
+
+/* ── Drag Resize Handle ─────────────────────────────────────────────── */
+
+.chat-resize-handle {
+    position: absolute;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    cursor: col-resize;
+    z-index: 9999;
+    background: transparent;
+    transition: background 0.2s ease;
+    right: 0;
+    left: auto;
+}
+
+[dir="rtl"] .chat-resize-handle {
+    right: auto;
+    left: 0;
+}
+
+.chat-resize-handle:hover,
+.chatbot-container.is-resizing .chat-resize-handle {
+    background: rgba(73, 31, 223, 0.3) !important;
+}
+
+/* Disable transitions entirely while user is actively dragging edge */
+.chatbot-container.is-resizing {
+    transition: none !important;
+}
