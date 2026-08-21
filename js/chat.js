@@ -532,6 +532,7 @@
         let fullText   = '';    // grows as SSE tokens arrive
         let displayed  = 0;    // chars currently shown in the bubble
         let sseDone    = false;
+        let inactiveTicks = 0; // safety watchdog for network hang
 
         // Promise that resolves when typewriter finishes
         let resolveTyping;
@@ -549,10 +550,23 @@
                     resolveTyping();
                     return;
                 }
+                
+                // If stream is active but no new text has arrived for ~1 second (33 ticks * 30ms)
+                inactiveTicks++;
+                if (inactiveTicks > 33) {
+                    console.warn('[Ovi] Watchdog triggered: Stream inactive for 1s. Unlocking chat.');
+                    bubble.innerHTML = parseMarkdown(fullText);
+                    scrollToBottom(area, true);
+                    resolveTyping();
+                    return;
+                }
+
                 // No new chars yet; wait a bit for more from the SSE reader
                 setTimeout(tick, 30);
                 return;
             }
+
+            inactiveTicks = 0; // reset watchdog on new text
 
             // Adaptive batch: if very far behind, reveal more chars per tick
             const batch = pending > 150 ? Math.min(Math.ceil(pending / 25), MAX_BATCH) : 1;
