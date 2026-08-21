@@ -101,23 +101,60 @@ class Retriever:
     # Loading
     # ------------------------------------------------------------------
 
-    def _load_model(self):
+class HfInferenceModel:
+    """
+    A lightweight fallback that queries Hugging Face's free Inference API
+    to get query embeddings. Exposes the same .encode() interface as
+    SentenceTransformer so the Retriever can use it transparently.
+    """
+    def __init__(self, model_name: str):
+        self.model_name = model_name
+        import os
+        self.token = os.environ.get("HF_TOKEN", "")
 
+    def encode(self, texts: list[str], normalize_embeddings: bool = True, convert_to_numpy: bool = True) -> list:
+        import requests
+        import numpy as np
+
+        api_url = f"https://api-inference.huggingface.co/pipeline/feature-extraction/{self.model_name}"
+        headers = {}
+        if self.token:
+            headers["Authorization"] = f"Bearer {self.token}"
+
+        # Call HF inference API
+        # We embed the first query since Retriever only calls search on single strings
+        response = requests.post(api_url, headers=headers, json={"inputs": texts[0]}, timeout=10)
+        response.raise_for_status()
+
+        result = response.json()
+        
+        # If result is nested list, extract inner vector
+        if isinstance(result, list) and len(result) > 0 and isinstance(result[0], list):
+            vector = np.array(result[0])
+        else:
+            vector = np.array(result)
+
+        if normalize_embeddings:
+            norm = np.linalg.norm(vector)
+            if norm > 0:
+                vector = vector / norm
+
+        return [vector]
+
+
+    def _load_model(self):
         if self._model is not None:
             return self._model
 
         try:
             from sentence_transformers import SentenceTransformer
-
-        except ImportError as exc:
-            raise EmbeddingBackendUnavailable(
-                "sentence-transformers is not installed."
-            ) from exc
-
-        try:
             self._model = SentenceTransformer(self.model_name)
-
+        except ImportError:
+            # sentence-transformers is not installed (e.g. Vercel deployment)
+            # Fall back to Hugging Face cloud Inference API
+            self._model = HfInferenceModel(self.model_name)
         except Exception as exc:
+            # Other errors (e.g. failure loading model weights offline)
             raise EmbeddingBackendUnavailable(
                 f"Could not load embedding model '{self.model_name}': {exc}"
             ) from exc

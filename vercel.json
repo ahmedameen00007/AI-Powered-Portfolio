@@ -1,0 +1,19 @@
+﻿{
+  "version": 2,
+  "builds": [
+    {
+      "src": "Ovi/server.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/chat",
+      "dest": "Ovi/server.py"
+    },
+    {
+      "src": "/health",
+      "dest": "Ovi/server.py"
+    }
+  ]
+}
