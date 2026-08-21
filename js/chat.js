@@ -6,8 +6,7 @@
 
 (function () {
     // ── API Configuration ───────────────────────────────────────────────────
-    // Replace OVI_PROD_API_URL with your actual hosted backend domain (e.g. on Render, Railway)
-    const OVI_PROD_API_URL = 'https://YOUR-OVI-BACKEND-URL.com/chat'; 
+    const OVI_PROD_API_URL = 'https://ai-powered-portfolio-alpha.vercel.app/api/chat';
     
     const API_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
         ? 'http://localhost:5050/chat'
@@ -281,7 +280,8 @@
      */
     async function checkServerKey() {
         try {
-            const res = await fetch(API_URL.replace('/chat', '/health'), { method: 'GET' });
+            const healthUrl = API_URL.replace('/api/chat', '/api/health').replace('/chat', '/health');
+            const res = await fetch(healthUrl, { method: 'GET' });
             if (res.ok) {
                 const data = await res.json();
                 if (data.ready) {
