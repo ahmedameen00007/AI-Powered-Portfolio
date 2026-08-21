@@ -570,7 +570,8 @@
         tick();
 
         // ── SSE reader ───────────────────────────────────────────────────────
-        while (true) {
+        let doneSignal = false;
+        while (!doneSignal) {
             const { done, value } = await reader.read();
             if (done) break;
 
@@ -582,7 +583,12 @@
                 const clean = line.trim();
                 if (!clean.startsWith('data: ')) continue;
                 const data = clean.slice(6).trim();
-                if (data === '[DONE]') { sseBuffer = ''; break; }
+                if (data === '[DONE]') {
+                    sseBuffer = '';
+                    doneSignal = true;
+                    try { await reader.cancel(); } catch (_) {}
+                    break;
+                }
 
                 try {
                     const parsed = JSON.parse(data);
