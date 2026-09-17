@@ -96,6 +96,30 @@
         "Data Analysis",
         "Analytics"
       ]
+    },
+    {
+      "id": "exp_005",
+      "organization": {
+        "name": "NTI",
+        "type": "Training Organization"
+      },
+      "role": "Lead AI Instructor",
+      "employment_type": "Instructor",
+      "start_date": "2026-07",
+      "end_date": null,
+      "status": "Present",
+      "duration_hours": null,
+      "overall_score": null,
+      "responsibilities": [
+        "Led and delivered AI training sessions covering AI, Machine Learning, and Generative AI.",
+        "Mentored trainees through hands-on exercises and AI projects."
+      ],
+      "technologies": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Generative AI",
+        "Python"
+      ]
     }
   ]
 }

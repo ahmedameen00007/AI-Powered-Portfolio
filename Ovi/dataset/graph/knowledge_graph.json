@@ -24,18 +24,7 @@
           "Thoughtful",
           "Overthinker"
         ],
-        "hobbies": [
-          "Anime",
-          "Movies",
-          "Gaming",
-          "Graphic Design",
-          "Art",
-          "Music",
-          "Boxing",
-          "Gym",
-          "Calisthenics",
-          "Powerlifting"
-        ],
+        "hobbies": [],
         "languages": [
           {
             "language": "Arabic",
@@ -420,6 +409,17 @@
       }
     },
     {
+      "id": "cert_014_agentic_ai_with_langchain_and_langgraph",
+      "type": "Certification",
+      "name": "Agentic AI with LangChain and LangGraph",
+      "aliases": [],
+      "attributes": {
+        "type": "Course",
+        "completion_date": "2026-08-15",
+        "platform": "Coursera"
+      }
+    },
+    {
       "id": "organization_kfs_gov",
       "type": "Organization",
       "name": "KFS Gov",
@@ -578,6 +578,13 @@
       "id": "technology_analytics",
       "type": "Technology",
       "name": "Analytics",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "role_lead_ai_instructor",
+      "type": "Role",
+      "name": "Lead AI Instructor",
       "aliases": [],
       "attributes": {}
     },
@@ -1011,6 +1018,37 @@
       "name": "Ministry of Communications and Information Technology (MCIT)",
       "aliases": [],
       "attributes": {}
+    },
+    {
+      "id": "activity_004_sketch_your_future_(syf)",
+      "type": "Achievement",
+      "name": "Sketch Your Future (SYF)",
+      "aliases": [],
+      "attributes": {
+        "type": "Honor / Award",
+        "participation": "Award Recipient",
+        "date": null,
+        "year": null
+      }
+    },
+    {
+      "id": "organization_sketch_your_future",
+      "type": "Organization",
+      "name": "Sketch Your Future",
+      "aliases": [],
+      "attributes": {}
+    },
+    {
+      "id": "activity_005_iti_success_story_recognition",
+      "type": "Achievement",
+      "name": "ITI Success Story Recognition",
+      "aliases": [],
+      "attributes": {
+        "type": "Honor / Recognition",
+        "participation": "Featured Success Story",
+        "date": null,
+        "year": null
+      }
     },
     {
       "id": "skill_generative_ai_and_llm-based_applications",
@@ -1816,6 +1854,39 @@
     },
     {
       "source_id": "ahmed_ameen",
+      "relationship_type": "completed",
+      "target_id": "cert_014_agentic_ai_with_langchain_and_langgraph",
+      "source_dataset": "courses",
+      "source_record_id": "cert_014",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": "2026-08-15",
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_014_agentic_ai_with_langchain_and_langgraph",
+      "relationship_type": "provided_by",
+      "target_id": "organization_ibm",
+      "source_dataset": "courses",
+      "source_record_id": "cert_014",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "cert_014_agentic_ai_with_langchain_and_langgraph",
+      "relationship_type": "hosted_on",
+      "target_id": "platform_coursera",
+      "source_dataset": "courses",
+      "source_record_id": "cert_014",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
       "relationship_type": "worked_at",
       "target_id": "organization_kfs_gov",
       "source_dataset": "experience",
@@ -2100,6 +2171,76 @@
       "target_id": "technology_analytics",
       "source_dataset": "experience",
       "source_record_id": "exp_004",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "worked_at",
+      "target_id": "organization_nti",
+      "source_dataset": "experience",
+      "source_record_id": "exp_005",
+      "confidence": 1.0,
+      "start_date": "2026-07",
+      "end_date": null,
+      "metadata": {
+        "role": "Lead AI Instructor",
+        "employment_type": "Instructor",
+        "status": "Present"
+      }
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "worked_as",
+      "target_id": "role_lead_ai_instructor",
+      "source_dataset": "experience",
+      "source_record_id": "exp_005",
+      "confidence": 1.0,
+      "start_date": "2026-07",
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_artificial_intelligence",
+      "source_dataset": "experience",
+      "source_record_id": "exp_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_machine_learning",
+      "source_dataset": "experience",
+      "source_record_id": "exp_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_generative_ai",
+      "source_dataset": "experience",
+      "source_record_id": "exp_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "uses_technology",
+      "target_id": "technology_python",
+      "source_dataset": "experience",
+      "source_record_id": "exp_005",
       "confidence": 1.0,
       "start_date": null,
       "end_date": null,
@@ -2864,6 +3005,56 @@
     },
     {
       "source_id": "ahmed_ameen",
+      "relationship_type": "achieved",
+      "target_id": "activity_004_sketch_your_future_(syf)",
+      "source_dataset": "achievements",
+      "source_record_id": "activity_004",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {
+        "date": null,
+        "year": null
+      }
+    },
+    {
+      "source_id": "activity_004_sketch_your_future_(syf)",
+      "relationship_type": "organized_by",
+      "target_id": "organization_sketch_your_future",
+      "source_dataset": "achievements",
+      "source_record_id": "activity_004",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
+      "relationship_type": "achieved",
+      "target_id": "activity_005_iti_success_story_recognition",
+      "source_dataset": "achievements",
+      "source_record_id": "activity_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {
+        "date": null,
+        "year": null
+      }
+    },
+    {
+      "source_id": "activity_005_iti_success_story_recognition",
+      "relationship_type": "organized_by",
+      "target_id": "organization_information_technology_institute_(iti)",
+      "source_dataset": "achievements",
+      "source_record_id": "activity_005",
+      "confidence": 1.0,
+      "start_date": null,
+      "end_date": null,
+      "metadata": {}
+    },
+    {
+      "source_id": "ahmed_ameen",
       "relationship_type": "skilled_in",
       "target_id": "skill_generative_ai_and_llm-based_applications",
       "source_dataset": "benefits",
@@ -2975,7 +3166,7 @@
   ],
   "timeline": [
     {
-      "event_id": "event_0024",
+      "event_id": "event_0026",
       "event_type": "achievement_received",
       "date": "2025",
       "date_precision": "year",
@@ -3002,7 +3193,7 @@
       }
     },
     {
-      "event_id": "event_0021",
+      "event_id": "event_0022",
       "event_type": "job_started",
       "date": "2025-07-27",
       "date_precision": "day",
@@ -3016,7 +3207,7 @@
       }
     },
     {
-      "event_id": "event_0022",
+      "event_id": "event_0023",
       "event_type": "job_ended",
       "date": "2025-08-21",
       "date_precision": "day",
@@ -3069,7 +3260,7 @@
       "metadata": {}
     },
     {
-      "event_id": "event_0023",
+      "event_id": "event_0025",
       "event_type": "achievement_received",
       "date": "2025-10",
       "date_precision": "month",
@@ -3171,7 +3362,7 @@
       "metadata": {}
     },
     {
-      "event_id": "event_0019",
+      "event_id": "event_0020",
       "event_type": "job_started",
       "date": "2026-01",
       "date_precision": "month",
@@ -3199,7 +3390,7 @@
       }
     },
     {
-      "event_id": "event_0017",
+      "event_id": "event_0018",
       "event_type": "job_started",
       "date": "2026-02",
       "date_precision": "month",
@@ -3213,7 +3404,7 @@
       }
     },
     {
-      "event_id": "event_0018",
+      "event_id": "event_0019",
       "event_type": "job_started",
       "date": "2026-02",
       "date_precision": "month",
@@ -3227,7 +3418,7 @@
       }
     },
     {
-      "event_id": "event_0020",
+      "event_id": "event_0021",
       "event_type": "job_ended",
       "date": "2026-02",
       "date_precision": "month",
@@ -3269,6 +3460,20 @@
       }
     },
     {
+      "event_id": "event_0024",
+      "event_type": "job_started",
+      "date": "2026-07",
+      "date_precision": "month",
+      "entity_id": "exp_005",
+      "description": "Started as Lead AI Instructor at NTI",
+      "source_dataset": "experience",
+      "source_record_id": "exp_005",
+      "metadata": {
+        "role": "Lead AI Instructor",
+        "organization": "NTI"
+      }
+    },
+    {
       "event_id": "event_0016",
       "event_type": "course_completed",
       "date": "2026-08-04",
@@ -3280,6 +3485,20 @@
       "metadata": {
         "provider": "IBM",
         "type": "Specialization"
+      }
+    },
+    {
+      "event_id": "event_0017",
+      "event_type": "course_completed",
+      "date": "2026-08-15",
+      "date_precision": "day",
+      "entity_id": "cert_014",
+      "description": "Completed: Agentic AI with LangChain and LangGraph",
+      "source_dataset": "courses",
+      "source_record_id": "cert_014",
+      "metadata": {
+        "provider": "IBM",
+        "type": "Course"
       }
     },
     {
@@ -3298,9 +3517,9 @@
   ],
   "statistics": {
     "datasets_processed": 8,
-    "entities_created": 132,
-    "relationships_created": 169,
-    "timeline_events": 24,
+    "entities_created": 137,
+    "relationships_created": 182,
+    "timeline_events": 26,
     "errors": []
   }
 }

@@ -221,6 +221,16 @@
         "Fundamentals of AI Agents Using RAG and LangChain",
         "Project: Generative AI Applications with RAG and LangChain"
       ]
+    },
+    {
+      "id": "cert_014",
+      "title": "Agentic AI with LangChain and LangGraph",
+      "type": "Course",
+      "provider": "IBM",
+      "platform": "Coursera",
+      "completion_date": "2026-08-15",
+      "verification": null,
+      "included_courses": []
     }
   ]
 }

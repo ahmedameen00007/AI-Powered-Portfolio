@@ -53,6 +53,11 @@ var translations = {
     exp_label:         'Journey',
     exp_title:         'Experience',
 
+    exp0_title:        'NTI – Lead AI Instructor',
+    exp0_date:         'Jul 2026 – Present',
+    exp0_bullet1:      'Led and delivered AI training sessions covering AI, Machine Learning, and Generative AI.',
+    exp0_bullet2:      'Mentored trainees through hands-on exercises and AI projects.',
+
     exp1_title:        'KFS Gov – Gen AI & Data Science Intern',
     exp1_date:         'Feb 2026 – Present',
     exp1_bullet1:      'Developed and contributed to AI solutions designed for real-world governmental applications across KFS Gov.',
@@ -195,6 +200,11 @@ var translations = {
     // ── Experience ───────────────────────────────────────────────────
     exp_label:         'المسيرة المهنية',
     exp_title:         'الخبرات',
+
+    exp0_title:        'المعهد القومي للاتصالات (NTI) – محاضر ذكاء اصطناعي رئيسي',
+    exp0_date:         'يوليو 2026 – حتى الآن',
+    exp0_bullet1:      'قدت وقدّمت جلسات تدريبية تناولت الذكاء الاصطناعي، والتعلم الآلي، والذكاء الاصطناعي التوليدي.',
+    exp0_bullet2:      'قمت بتوجيه المتدربين ومساعدتهم خلال التمارين العملية ومشاريع الذكاء الاصطناعي.',
 
     exp1_title:        'مبنى محافظة كفر الشيخ — متدرب ذكاء اصطناعي توليدي وعلوم بيانات',
     exp1_date:         'فبراير 2026 – حتى الآن',

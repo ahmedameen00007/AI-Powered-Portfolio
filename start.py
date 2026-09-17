@@ -46,7 +46,7 @@ def start_backend():
 def start_frontend():
     print(f"{YELLOW}Starting frontend     (port {FRONTEND_PORT})...{RESET}", flush=True)
     return subprocess.Popen(
-        [sys.executable, "-u", "-m", "http.server", str(FRONTEND_PORT)],
+        [sys.executable, "-u", "serve_frontend.py", str(FRONTEND_PORT)],
         cwd=str(ROOT),
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
@@ -66,8 +66,8 @@ def wait_for_backend(proc, timeout=15):
             # Safely handle characters that standard Windows CP1252 console can't show
             safe_line = line.encode(enc, errors="replace").decode(enc)
             print(f"  [Backend] {safe_line.strip()}", flush=True)
-        if "Running on" in line or "Serving Flask" in line:
-            return True
+            if any(marker in line for marker in ["Running on", "Serving Flask", "Answer generator ready", "Server starting"]):
+                return True
     return True
 
 def main():

@@ -65,6 +65,38 @@
         "reference": null,
         "signatories": []
       }
+    },
+    {
+      "id": "activity_004",
+      "name": "Sketch Your Future (SYF)",
+      "type": "Honor / Award",
+      "organizer": "Sketch Your Future",
+      "event_series": null,
+      "edition": null,
+      "date": null,
+      "year": null,
+      "field": null,
+      "participation": "Award Recipient",
+      "achievement": "Honored with the Sketch Your Future (SYF) Excellence Recognition Award.",
+      "recognition": "Honors & Excellence Recognition",
+      "description": "Received the Sketch Your Future (SYF) award in recognition of honors and excellence.",
+      "certificate": null
+    },
+    {
+      "id": "activity_005",
+      "name": "ITI Success Story Recognition",
+      "type": "Honor / Recognition",
+      "organizer": "Information Technology Institute (ITI)",
+      "event_series": null,
+      "edition": null,
+      "date": null,
+      "year": null,
+      "field": null,
+      "participation": "Featured Success Story",
+      "achievement": "Honored and featured by the Information Technology Institute (ITI) as an outstanding Success Story.",
+      "recognition": "Honored as an ITI Success Story",
+      "description": "Honored and recognized by the Information Technology Institute (ITI) as an outstanding Success Story celebrating achievements and excellence in Artificial Intelligence and Data Science.",
+      "certificate": null
     }
   ]
 }

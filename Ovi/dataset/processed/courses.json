@@ -377,6 +377,22 @@
         }
       ],
       "topics": []
+    },
+    {
+      "id": "cert_014",
+      "title": "Agentic AI with LangChain and LangGraph",
+      "type": "Course",
+      "provider": "IBM",
+      "platform": "Coursera",
+      "completion_date": "2026-08-15",
+      "start_date": null,
+      "end_date": null,
+      "duration": null,
+      "duration_hours": null,
+      "certificate_id": null,
+      "verification": null,
+      "included_courses": [],
+      "topics": []
     }
   ]
 }

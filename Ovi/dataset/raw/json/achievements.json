@@ -47,6 +47,26 @@
         "type": "Certificate of Recognition",
         "issuer": "Ministry of Communications and Information Technology"
       }
+    },
+    {
+      "id": "activity_004",
+      "name": "Sketch Your Future (SYF)",
+      "type": "Honor / Award",
+      "organizer": "Sketch Your Future",
+      "participation": "Award Recipient",
+      "achievement": "Honored with the Sketch Your Future (SYF) Excellence Recognition Award.",
+      "description": "Received the Sketch Your Future (SYF) award in recognition of honors and excellence.",
+      "recognition": "Honors & Excellence Recognition"
+    },
+    {
+      "id": "activity_005",
+      "name": "ITI Success Story Recognition",
+      "type": "Honor / Recognition",
+      "organizer": "Information Technology Institute (ITI)",
+      "participation": "Featured Success Story",
+      "achievement": "Honored and featured by the Information Technology Institute (ITI) as an outstanding Success Story.",
+      "description": "Honored and recognized by the Information Technology Institute (ITI) as an outstanding Success Story celebrating achievements and excellence in Artificial Intelligence and Data Science.",
+      "recognition": "Honored as an ITI Success Story"
     }
   ]
 }
